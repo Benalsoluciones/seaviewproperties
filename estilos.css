@@ -1,0 +1,230 @@
+/* ==========================================
+   1. RESETEO Y ESTILOS GENERALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* ==========================================
+   2. CABECERA (HEADER)
+   ========================================== */
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #0d2c54; /* Azul oscuro */
+}
+
+.logo h1 span {
+    color: #00a8cc; /* Turquesa mar */
+    font-weight: 400;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00a8cc;
+}
+
+/* ==========================================
+   3. SECCIÓN HERO (PORTADA)
+   ========================================== */
+.hero {
+    background: linear-gradient(rgba(13, 44, 84, 0.7), rgba(13, 44, 84, 0.4)), 
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   4. SECCIÓN DE FILTROS
+   ========================================== */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.filtros-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filtros-seccion h3 {
+    color: #0d2c54;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.botones-filtro {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-filtro {
+    background-color: white;
+    border: 2px solid #0d2c54;
+    color: #0d2c54;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-filtro:hover, .btn-filtro.activo {
+    background-color: #0d2c54;
+    color: white;
+}
+
+/* ==========================================
+   5. GRID Y TARJETAS DE PROPIEDADES
+   ========================================== */
+.grid-propiedades {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.cargando {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    padding: 40px;
+}
+
+.tarjeta-propiedad {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-propiedad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.tarjeta-propiedad img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Evita que la foto se deforme */
+}
+
+.tarjeta-propiedad .info {
+    padding: 20px;
+}
+
+/* Etiquetas Venta / Alquiler */
+.etiqueta {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.etiqueta.venta {
+    background-color: #e3fcef;
+    color: #0ea75a;
+}
+
+.etiqueta.alquiler {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.tarjeta-propiedad h3 {
+    font-size: 18px;
+    color: #0d2c54;
+    margin-bottom: 10px;
+    height: 54px; /* Altura fija para que alineen los textos */
+    overflow: hidden;
+}
+
+.tarjeta-propiedad .precio {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00a8cc;
+    margin-bottom: 10px;
+}
+
+.tarjeta-propiedad p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-contacto {
+    width: 100%;
+    background-color: #f4f7f6;
+    border: 1px solid #ddd;
+    color: #555;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #00a8cc;
+    color: white;
+    border-color: #00a8cc;
+}
+
+/* ==========================================
+   6. PIE DE PÁGINA (FOOTER)
+   ========================================== */
+footer {
+    background-color: #0d2c54;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 14px;
+}

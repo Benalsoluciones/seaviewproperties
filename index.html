@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeaView Properties | Inmobiliaria</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <!-- Cabecera / Navegación -->
+    <header>
+        <div class="logo">
+            <h1>Seaview <span>Properties</span></h1>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#propiedades">Inmuebles</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección Principal / Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Encuentra tu hogar frente al mar</h2>
+            <p>Tu inmobiliaria de confianza con las mejores oportunidades del mercado.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Propiedades y Filtros -->
+    <main id="propiedades" class="contenedor-principal">
+        
+        <section class="filtros-seccion">
+            <h3>Buscar Inmuebles</h3>
+            <div class="botones-filtro">
+                <!-- Usamos data-attributes para que JS sepa qué filtrar -->
+                <button class="btn-filtro activo" data-tipo="todos">Todos</button>
+                <button class="btn-filtro" data-tipo="venta">Venta</button>
+                <button class="btn-filtro" data-tipo="alquiler">Alquiler</button>
+            </div>
+        </section>
+
+        <!-- Aquí es donde JavaScript va a "renderizar" las tarjetas -->
+        <section id="contenedor-propiedades" class="grid-propiedades">
+            <!-- Las tarjetas se cargarán dinámicamente desde el JSON -->
+            <p class="cargando">Cargando propiedades...</p>
+        </section>
+
+    </main>
+
+    <!-- Pie de página sencillo -->
+    <footer>
+        <p>&copy; 2026 Seaview Properties. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Conexión con el archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
