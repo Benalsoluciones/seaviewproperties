@@ -347,3 +347,10 @@ footer {
 .btn-enviar:hover {
     background-color: #0d2c54;
 }
+
+/* Resaltar la página actual en el menú */
+nav a.activo-nav {
+    color: #00a8cc;
+    border-bottom: 2px solid #00a8cc;
+    padding-bottom: 5px;
+}

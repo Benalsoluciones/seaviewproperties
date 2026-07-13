@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmuebles | Seaview Properties</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Cabecera idéntica -->
+    <header>
+        <div class="logo">
+            <h1>Seaview <span>Properties</span></h1>
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="inmuebles.html" class="activo-nav">Inmuebles</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Catálogo -->
+    <main class="contenedor-principal">
+        <section class="filtros-seccion">
+            <h2>Nuestro Catálogo de Propiedades</h2>
+            <p>Usa los filtros para encontrar lo que buscas</p>
+            <div class="botones-filtro">
+                <button class="btn-filtro activo" data-tipo="todos">Todos</button>
+                <button class="btn-filtro" data-tipo="venta">Venta</button>
+                <button class="btn-filtro" data-tipo="alquiler">Alquiler</button>
+            </div>
+        </section>
+
+        <section id="contenedor-propiedades" class="grid-propiedades">
+            <p class="cargando">Cargando catálogo...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Seaview Properties. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Seguimos usando el mismo app.js porque buscará el contenedor-propiedades aquí también -->
+    <script src="app.js"></script>
+</body>
+</html>
