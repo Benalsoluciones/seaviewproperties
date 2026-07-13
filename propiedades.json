@@ -2,7 +2,7 @@
   {
     "id": 1,
     "titulo": "Chalet con piscina cerca de la playa",
-    "precio": 280000,
+    "precio": 420000,
     "tipo": "venta",
     "habitaciones": 3,
     "imagen": "img/chalet-playa/principal.jpg",
@@ -16,5 +16,14 @@
     "habitaciones": 1,
     "imagen": "img/piso-centro/principal.jpg",
     "descripcion": "Ideal para parejas. Totalmente amueblado y reformado."
+  },
+  {
+    "id": 3,
+    "titulo": "Piso con piscina cerca de la playa",
+    "precio": 380000,
+    "tipo": "venta",
+    "habitaciones": 2,
+    "imagen": "img/chalet-playa/principal.jpg",
+    "descripcion": "Precioso piso con dos habitaciones, jardín y piscina privada."
   }
 ]

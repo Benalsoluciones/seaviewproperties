@@ -435,3 +435,48 @@ nav a.activo-nav {
     background: linear-gradient(rgba(13, 44, 84, 0.75), rgba(13, 44, 84, 0.45)), 
                 url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
 }
+
+ /* ==========================================
+   10. LOGO Y NOMBRE COMBINADOS
+   ========================================== */
+.enlace-logo {
+    display: flex;
+    align-items: center;  /* Alinea el logo y el texto verticalmente en el centro */
+    gap: 12px;            /* Deja un espacio limpio de separación entre el logo y el texto */
+    text-decoration: none;
+}
+
+.logo img {
+    height: 60px;         /* Reducimos un pelín la altura para que armonice con el texto */
+    width: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+/* Estilos para el texto del logo al lado de la imagen */
+.texto-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0d2c54;       /* El color azul oscuro principal */
+    letter-spacing: 0.5px;
+}
+
+.texto-logo span {
+    color: #00a8cc;       /* El toque turquesa que ya tenías */
+}
+
+/* Efecto hover en todo el conjunto */
+.enlace-logo:hover img {
+    transform: scale(1.05);
+}
+
+.enlace-logo:hover .texto-logo {
+    opacity: 0.9;
+}
+
+/* Ajuste general para la cabecera */
+header {
+    align-items: center; 
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
