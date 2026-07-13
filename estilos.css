@@ -228,3 +228,122 @@ footer {
     margin-top: 60px;
     font-size: 14px;
 }
+
+/* ==========================================
+   7. SECCIÓN DE CONTACTO
+   ========================================== */
+.seccion-contacto {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.contenedor-contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+}
+
+.info-contacto h2 {
+    color: #0d2c54;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.info-contacto p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botones de acción rápida */
+.vias-rapidas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.vias-rapidas a {
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.vias-rapidas a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.btn-telefono {
+    background-color: #0d2c54;
+    color: white;
+}
+
+.datos-oficina p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* Estilos del Formulario */
+.formulario-contacto {
+    background-color: #f4f7f6;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #0d2c54;
+    font-size: 14px;
+}
+
+.grupo-input input, .grupo-input textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.grupo-input input:focus, .grupo-input textarea:focus {
+    border-color: #00a8cc;
+}
+
+.btn-enviar {
+    width: 100%;
+    background-color: #00a8cc;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #0d2c54;
+}

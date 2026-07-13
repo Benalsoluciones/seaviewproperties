@@ -78,3 +78,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// 4. Para que el formulario no recargue la página de golpe y podamos mostrar un mensaje de agradecimiento
+const formulario = document.getElementById("form-contacto");
+
+if (formulario) {
+    formulario.addEventListener("submit", (e) => {
+        e.preventDefault(); // Evitamos que la web se refresque
+        
+        // Recogemos los datos (por si los necesitas en el futuro)
+        const nombre = document.getElementById("nombre").value;
+
+        // Simulamos el envío de forma elegante
+        alert(`¡Gracias, ${nombre}! Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.`);
+        
+        formulario.reset(); // Vaciamos los campos
+    });
+}
