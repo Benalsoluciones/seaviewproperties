@@ -354,3 +354,58 @@ nav a.activo-nav {
     border-bottom: 2px solid #00a8cc;
     padding-bottom: 5px;
 }
+
+/* ==========================================
+   8. DETALLES VISUALES EXTRA (ICONOS Y MAPA)
+   ========================================== */
+
+/* Contenedor de la imagen de la tarjeta para posicionar la etiqueta encima */
+.imagen-contenedor {
+    position: relative;
+}
+
+.imagen-contenedor .etiqueta {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Fila de características (Habitaciones, Baños, Metros) */
+.caracteristicas {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f8fafc;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #555;
+    border: 1px solid #edf2f7;
+}
+
+.caracteristicas i {
+    color: #00a8cc; /* Color turquesa para los iconos */
+    margin-right: 4px;
+}
+
+/* Ajuste de descripción en la tarjeta */
+.tarjeta-propiedad .descripcion {
+    height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Efecto hover suave para el mapa de contacto */
+.mapa-contenedor iframe {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s;
+}
+
+.mapa-contenedor iframe:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}

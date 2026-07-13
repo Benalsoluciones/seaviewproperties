@@ -64,34 +64,44 @@ document.addEventListener("DOMContentLoaded", () => {
             const textoAlquiler = piso.tipo === 'alquiler' ? '/mes' : '';
 
             tarjeta.innerHTML = `
-                <img src="${piso.imagen}" alt="${piso.titulo}">
-                <div class="info">
+                <div class="imagen-contenedor">
+                    <img src="${piso.imagen}" alt="${piso.titulo}">
                     <span class="etiqueta ${piso.tipo}">${piso.tipo.toUpperCase()}</span>
+                </div>
+                <div class="info">
                     <h3>${piso.titulo}</h3>
                     <p class="precio">${precioFormateado} €${textoAlquiler}</p>
-                    <p>${piso.descripcion}</p>
+        
+                    <!-- NUEVO: Características del inmueble -->
+                    <div class="caracteristicas">
+                        <span><i class="fa-solid fa-bed"></i> ${piso.habitaciones || 3} Hab</span>
+                        <span><i class="fa-solid fa-bath"></i> 2 Baños</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 120 m²</span>
+                    </div>
+
+                    <p class="descripcion">${piso.descripcion}</p>
                     <button class="btn-contacto">Ver detalles</button>
                 </div>
             `;
 
-            contenedor.appendChild(tarjeta);
+                contenedor.appendChild(tarjeta);
         });
     }
 });
 
-// 4. Para que el formulario no recargue la página de golpe y podamos mostrar un mensaje de agradecimiento
-const formulario = document.getElementById("form-contacto");
+                // 4. Para que el formulario no recargue la página de golpe y podamos mostrar un mensaje de agradecimiento
+                const formulario = document.getElementById("form-contacto");
 
-if (formulario) {
-    formulario.addEventListener("submit", (e) => {
-        e.preventDefault(); // Evitamos que la web se refresque
-        
-        // Recogemos los datos (por si los necesitas en el futuro)
-        const nombre = document.getElementById("nombre").value;
+                if (formulario) {
+                    formulario.addEventListener("submit", (e) => {
+                        e.preventDefault(); // Evitamos que la web se refresque
 
-        // Simulamos el envío de forma elegante
-        alert(`¡Gracias, ${nombre}! Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.`);
-        
-        formulario.reset(); // Vaciamos los campos
-    });
+                        // Recogemos los datos (por si los necesitas en el futuro)
+                        const nombre = document.getElementById("nombre").value;
+
+                        // Simulamos el envío de forma elegante
+                        alert(`¡Gracias, ${nombre}! Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.`);
+
+                        formulario.reset(); // Vaciamos los campos
+                    });
 }
