@@ -409,3 +409,29 @@ nav a.activo-nav {
 .mapa-contenedor iframe:hover {
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
+
+/* ==========================================
+   9. BANNERS PARA PÁGINAS INTERNAS
+   ========================================== */
+
+/* Estilo común para los banners internos (más cortos que el index) */
+.hero-paginas {
+    height: 25vh; /* Bajamos de 40vh a 25vh */
+    margin-bottom: 20px;
+}
+
+.hero-paginas h2 {
+    font-size: 30px;
+}
+
+/* Imagen de fondo para la página de Inmuebles */
+.hero-inmuebles {
+    background: linear-gradient(rgba(13, 44, 84, 0.75), rgba(13, 44, 84, 0.45)), 
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+}
+
+/* Imagen de fondo para la página de Contacto */
+.hero-contacto {
+    background: linear-gradient(rgba(13, 44, 84, 0.75), rgba(13, 44, 84, 0.45)), 
+                url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+}
