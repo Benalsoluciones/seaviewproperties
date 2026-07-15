@@ -480,3 +480,56 @@ header {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
 }
+
+/* ==========================================
+   11. SECCIÓN REDES SOCIALES (FOOTER)
+   ========================================== */
+.redes-sociales {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+}
+
+.redes-sociales h3 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre círculos */
+}
+
+.icono-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente por defecto */
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Efectos hover personalizados con los colores de marca de cada red */
+.icono-social.facebook:hover {
+    background-color: #1877f2; /* Azul Facebook */
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+}
+
+.icono-social.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Degradado Instagram */
+    transform: translateY(-3px);
+}
+
+.icono-social.whatsapp:hover {
+    background-color: #25d366; /* Verde WhatsApp */
+    transform: translateY(-3px);
+}
