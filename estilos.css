@@ -486,15 +486,15 @@ header {
    ========================================== */
 .redes-sociales {
     text-align: center;
-    margin-top: 20px;
-    padding-top: 15px;
+    margin-top: 30px;
+    padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
 }
 
 .redes-sociales h3 {
     font-size: 16px;
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 500;
 }
 
@@ -502,6 +502,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 15px; /* Espacio entre círculos */
+    margin-bottom: 25px;
 }
 
 .icono-social {
