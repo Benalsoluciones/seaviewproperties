@@ -105,3 +105,32 @@ document.addEventListener("DOMContentLoaded", () => {
                         formulario.reset(); // Vaciamos los campos
                     });
 }
+
+// ==========================================
+// MENÚ RESPONSIVE INDEPENDIENTE
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        const iconoMenu = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('activo');
+            if (navMenu.classList.contains('activo')) {
+                iconoMenu.className = 'fa-solid fa-xmark';
+            } else {
+                iconoMenu.className = 'fa-solid fa-bars';
+            }
+        });
+
+        const enlaces = document.querySelectorAll('.nav-menu a');
+        enlaces.forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                navMenu.classList.remove('activo');
+                iconoMenu.className = 'fa-solid fa-bars';
+            });
+        });
+    }
+});
