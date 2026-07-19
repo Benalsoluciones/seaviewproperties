@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmuebles | Seaview Properties</title>
+    <title>SeaView Properties | Inmobiliaria</title>
     <link rel="icon" type="image/png" href="img/logo_navegador.png">
+    <!-- Fuentes de Google: Montserrat para logos/títulos e Inter para menús/textos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Enlace para activar los iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
 <body>
+
+    <!-- Barra superior de contacto rápido -->
+    <div class="top-bar">
+        <div class="top-bar-contenido">
+            <!-- Bloque Izquierda: Teléfonos -->
+            <div class="top-bar-izquierda">
+                <a href="tel:+34600000000"><i class="fa-solid fa-phone"></i> +34 654830333</a>
+                <a href="https://wa.me/34654830333" target="_blank" class="enlace-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <!-- Bloque Derecha: Email -->
+            <div class="top-bar-derecha">
+                <a href="mailto:info@seaviewproperties.com"><i class="fa-solid fa-envelope"></i> info@seaviewproperties.com</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Cabecera idéntica -->
     <header>
         <!-- Logo de imagen transparente para el header -->
         <div class="logo">
-            <a href="index.html" class="enlace-logo">
+            <a href="index.html" class="enlace-logo" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
                 <img src="img/logo_tranparente.png" alt="Seaview Properties Logo">
-                <span class="texto-logo">Seaview <span>Properties</span></span>
+                <span class="texto-logo" style="font-weight: 700; color: #0d2c54;">Sea<span style="color: #d4af37;">view</span> <span style="color: #00a8cc; font-weight: 400;">Properties</span>
+                </span>
             </a>
         </div>
+        
         <!-- Botón hamburguesa (solo se verá en móviles) -->
         <button class="menu-toggle" aria-label="Abrir menú">
             <i class="fa-solid fa-bars"></i>
@@ -29,6 +48,7 @@
             <!-- Menú de navegación actual -->
         <nav class="nav-menu">
             <a href="index.html">Inicio</a>
+            <a href="#quienes-somos">Quiénes Somos</a>
             <a href="inmuebles.html" class="activo-nav">Inmuebles</a>
             <a href="contacto.html">Contacto</a>
         </nav>

@@ -5,20 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeaView Properties | Inmobiliaria</title>
     <link rel="icon" type="image/png" href="img/logo_navegador.png">
+    <!-- Fuentes de Google: Montserrat para logos/títulos e Inter para menús/textos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Enlace para activar los iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- Barra superior de contacto rápido -->
+    <div class="top-bar">
+        <div class="top-bar-contenido">
+            <!-- Bloque Izquierda: Teléfonos -->
+            <div class="top-bar-izquierda">
+                <a href="tel:+34600000000"><i class="fa-solid fa-phone"></i> +34 654830333</a>
+                <a href="https://wa.me/34654830333" target="_blank" class="enlace-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <!-- Bloque Derecha: Email -->
+            <div class="top-bar-derecha">
+                <a href="mailto:info@seaviewproperties.com"><i class="fa-solid fa-envelope"></i> info@seaviewproperties.com</a>
+            </div>
+        </div>
+    </div>
     
     <!-- Cabecera / Navegación -->
     <header>
         <!-- Logo de imagen transparente para el header -->
         <div class="logo">
-            <a href="index.html" class="enlace-logo">
+            <a href="index.html" class="enlace-logo" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
                 <img src="img/logo_tranparente.png" alt="Seaview Properties Logo">
-                <span class="texto-logo">Seaview <span>Properties</span></span>
+                <span class="texto-logo" style="font-weight: 700; color: #0d2c54;">Sea<span style="color: #d4af37;">view</span> <span style="color: #00a8cc; font-weight: 400;">Properties</span>
+                </span>
             </a>
         </div>
         <!-- Botón hamburguesa (solo se verá en móviles) -->
@@ -28,7 +46,8 @@
 
         <!-- Menú de navegación actual -->
         <nav class="nav-menu">
-            <a href="index.html">Inicio</a>
+            <a href="index.html" class="activo-nav">Inicio</a>
+            <a href="#quienes-somos">Quiénes Somos</a>
             <a href="inmuebles.html">Inmuebles</a>
             <a href="contacto.html">Contacto</a>
         </nav>
@@ -42,11 +61,30 @@
         </div>
     </section>
 
+    
+
     <!-- Sección de Propiedades y Filtros -->
     <main id="propiedades" class="contenedor-principal">
+
+        <section class="bienvenida-intro">
+            <div class="contenido-bienvenida">
+                <span class="subtitulo-seccion">Bienvenidos a Seaview Properties</span>
+                <h1>Tu hogar ideal, sin complicaciones</h1>
+                <p class="texto-manifiesto">
+                    En <strong class="marca-texto"><span class="color-sea">Sea </span><span class="color-oro">view </span> <span class="color-mar">Properties</span></strong> entendemos que la búsqueda de tu propiedad ideal es el inicio de una nueva etapa. Somos una firma inmobiliaria contemporánea en la Costa del Sol, impulsada por dos mujeres emprendedoras unidas por una visión clara: redefinir la experiencia inmobiliaria a través de la transparencia, la cercanía y la absoluta tranquilidad.
+                </p>
+                <p class="texto-manifiesto-secundario">
+                    Para nosotras, cada cliente representa una historia única y cada hogar, el escenario de un sueño cumplido. Tu confianza es nuestro mayor compromiso.
+                </p>
+            </div>
+        </section>
+
+        <hr class="divisor-dorado">
         
         <section class="filtros-seccion">
-            <h3>Buscar Inmuebles</h3>
+            <span class="subtitulo-seccion" style="display:block; color:#00a8cc; font-size:14px; text-transform:uppercase; font-weight:600; letter-spacing:1px; margin-bottom:10px; text-align:center;">Nuestra Selección</span>
+            <h2 style="text-align: center; color: #0d2c54; font-size: 36px; margin-bottom: 20px; font-weight: 700;">Inmuebles Destacados</h2>
+            
             <div class="botones-filtro">
                 <!-- Usamos data-attributes para que JS sepa qué filtrar -->
                 <button class="btn-filtro activo" data-tipo="todos">Todos</button>
@@ -60,6 +98,50 @@
             <!-- Las tarjetas se cargarán dinámicamente desde el JSON -->
             <p class="cargando">Cargando propiedades...</p>
         </section>
+    </main>
+
+        <hr class="divisor-dorado">
+
+        <!-- Sección: Quiénes Somos -->
+        <section id="quienes-somos" class="seccion-nosotros">
+            <div class="contenedor-nosotros">
+                
+                <!-- Columna 1: Texto e Historia -->
+                <div class="nosotros-texto">
+                    <span class="subtitulo-seccion">Conoce a tu agencia de confianza</span>
+                    <h2>Sobre Seaview Properties</h2>
+                    <p class="parrafo-destacado">
+                        Nacimos con un propósito claro: transformar la búsqueda de la propiedad ideal en una experiencia mediterránea fluida, transparente y completamente personalizada.
+                    </p>
+                    <p>
+                        En Seaview Properties no solo vendemos inmuebles; ayudamos a nuestros clientes a encontrar su rincón perfecto frente al mar. Nos especializamos en la costa, seleccionando minuciosamente cada propiedad para asegurar los más altos estándares de calidad, ubicación y diseño.
+                    </p>
+                    <p>
+                        Nuestra filosofía se basa en la honestidad y en el conocimiento profundo del mercado local. Te acompañamos en cada paso del camino, desde la primera visita hasta la firma, garantizando tu total tranquilidad.
+                    </p>
+                    
+                    <!-- Pequeños datos de valor -->
+                    <div class="nosotros-datos">
+                        <div class="dato-item">
+                            <span class="dato-numero">+10</span>
+                            <span class="dato-etiqueta">Años de Experiencia</span>
+                        </div>
+                        <div class="dato-item">
+                            <span class="dato-numero">100%</span>
+                            <span class="dato-etiqueta">Clientes Satisfechos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Imagen Corporativa -->
+                <div class="nosotros-imagen">
+                    <img src="img/terraza_seaview_logo.png" alt="Vistas al mar desde una propiedad de lujo de Seaview Properties">
+                </div>
+
+            </div>
+        </section>
+
+    <hr class="divisor-dorado">
 
     <!-- Sección de Contacto -->
     <section id="contacto" class="seccion-contacto">
@@ -118,7 +200,6 @@
         </div>
     </section>
 
-    </main>
 
     <!-- Pie de página sencillo -->
     <footer>
