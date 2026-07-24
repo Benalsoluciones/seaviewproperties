@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,14 @@
     <!-- Fuentes de Google: Montserrat para logos/títulos e Inter para menús/textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <!-- Enlace para activar los iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <!-- Barra superior de contacto rápido -->
     <div class="top-bar">
@@ -20,22 +24,27 @@
             <!-- Bloque Izquierda: Teléfonos -->
             <div class="top-bar-izquierda">
                 <a href="tel:+34600000000"><i class="fa-solid fa-phone"></i> +34 654830333</a>
-                <a href="https://wa.me/34654830333" target="_blank" class="enlace-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://wa.me/34654830333" target="_blank" class="enlace-whatsapp"><i
+                        class="fa-brands fa-whatsapp"></i> WhatsApp</a>
             </div>
             <!-- Bloque Derecha: Email -->
             <div class="top-bar-derecha">
-                <a href="mailto:info@seaviewproperties.com"><i class="fa-solid fa-envelope"></i> info@seaviewproperties.com</a>
+                <a href="mailto:seaviewproperties@hotmail.com"><i
+                        class="fa-solid fa-envelope"></i>seaviewproperties@hotmail.com</a>
             </div>
         </div>
     </div>
-    
+
     <!-- Cabecera / Navegación -->
     <header>
         <!-- Logo de imagen transparente para el header -->
         <div class="logo">
-            <a href="index.html" class="enlace-logo" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+            <a href="index.html" class="enlace-logo"
+                style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
                 <img src="img/logo_tranparente.png" alt="Seaview Properties Logo">
-                <span class="texto-logo" style="font-weight: 700; color: #0d2c54;">Sea<span style="color: #d4af37;">view</span> <span style="color: #00a8cc; font-weight: 400;">Properties</span>
+                <span class="texto-logo" style="font-weight: 700; color: #0d2c54;">Sea<span
+                        style="color: #d4af37;">view</span> <span
+                        style="color: #00a8cc; font-weight: 400;">Properties</span>
                 </span>
             </a>
         </div>
@@ -61,7 +70,7 @@
         </div>
     </section>
 
-    
+
 
     <!-- Sección de Propiedades y Filtros -->
     <main id="propiedades" class="contenedor-principal">
@@ -71,20 +80,28 @@
                 <span class="subtitulo-seccion">Bienvenidos a Seaview Properties</span>
                 <h1>Tu hogar ideal, sin complicaciones</h1>
                 <p class="texto-manifiesto">
-                    En <strong class="marca-texto"><span class="color-sea">Sea </span><span class="color-oro">view </span> <span class="color-mar">Properties</span></strong> entendemos que la búsqueda de tu propiedad ideal es el inicio de una nueva etapa. Somos una firma inmobiliaria contemporánea en la Costa del Sol, impulsada por dos mujeres emprendedoras unidas por una visión clara: redefinir la experiencia inmobiliaria a través de la transparencia, la cercanía y la absoluta tranquilidad.
+                    En <strong class="marca-texto"><span class="color-sea">Sea </span><span class="color-oro">view
+                        </span> <span class="color-mar">Properties</span></strong> entendemos que la búsqueda de tu
+                    propiedad ideal es el inicio de una nueva etapa. Somos una firma inmobiliaria contemporánea en la
+                    Costa del Sol, impulsada por dos mujeres emprendedoras unidas por una visión clara: redefinir la
+                    experiencia inmobiliaria a través de la transparencia, la cercanía y la absoluta tranquilidad.
                 </p>
                 <p class="texto-manifiesto-secundario">
-                    Para nosotras, cada cliente representa una historia única y cada hogar, el escenario de un sueño cumplido. Tu confianza es nuestro mayor compromiso.
+                    Para nosotras, cada cliente representa una historia única y cada hogar, el escenario de un sueño
+                    cumplido. Tu confianza es nuestro mayor compromiso.
                 </p>
             </div>
         </section>
 
         <hr class="divisor-dorado">
-        
+
         <section class="filtros-seccion">
-            <span class="subtitulo-seccion" style="display:block; color:#00a8cc; font-size:14px; text-transform:uppercase; font-weight:600; letter-spacing:1px; margin-bottom:10px; text-align:center;">Nuestra Selección</span>
-            <h2 style="text-align: center; color: #0d2c54; font-size: 36px; margin-bottom: 20px; font-weight: 700;">Inmuebles Destacados</h2>
-            
+            <span class="subtitulo-seccion"
+                style="display:block; color:#00a8cc; font-size:14px; text-transform:uppercase; font-weight:600; letter-spacing:1px; margin-bottom:10px; text-align:center;">Nuestra
+                Selección</span>
+            <h2 style="text-align: center; color: #0d2c54; font-size: 36px; margin-bottom: 20px; font-weight: 700;">
+                Inmuebles Destacados</h2>
+
             <div class="botones-filtro">
                 <!-- Usamos data-attributes para que JS sepa qué filtrar -->
                 <button class="btn-filtro activo" data-tipo="todos">Todos</button>
@@ -100,61 +117,69 @@
         </section>
     </main>
 
-        <hr class="divisor-dorado">
+    <hr class="divisor-dorado">
 
-        <!-- Sección: Quiénes Somos -->
-        <section id="quienes-somos" class="seccion-nosotros">
-            <div class="contenedor-nosotros">
-                
-                <!-- Columna 1: Texto e Historia -->
-                <div class="nosotros-texto">
-                    <span class="subtitulo-seccion">Conoce a tu agencia de confianza</span>
-                    <h2>Sobre Seaview Properties</h2>
-                    <p class="parrafo-destacado">
-                        Nacimos con un propósito claro: transformar la búsqueda de la propiedad ideal en una experiencia mediterránea fluida, transparente y completamente personalizada.
-                    </p>
-                    <p>
-                        En Seaview Properties no solo vendemos inmuebles; ayudamos a nuestros clientes a encontrar su rincón perfecto frente al mar. Nos especializamos en la costa, seleccionando minuciosamente cada propiedad para asegurar los más altos estándares de calidad, ubicación y diseño.
-                    </p>
-                    <p>
-                        Nuestra filosofía se basa en la honestidad y en el conocimiento profundo del mercado local. Te acompañamos en cada paso del camino, desde la primera visita hasta la firma, garantizando tu total tranquilidad.
-                    </p>
-                    
-                    <!-- Pequeños datos de valor -->
-                    <div class="nosotros-datos">
-                        <div class="dato-item">
-                            <span class="dato-numero">+10</span>
-                            <span class="dato-etiqueta">Años de Experiencia</span>
-                        </div>
-                        <div class="dato-item">
-                            <span class="dato-numero">100%</span>
-                            <span class="dato-etiqueta">Clientes Satisfechos</span>
-                        </div>
+    <!-- Sección: Quiénes Somos -->
+    <section id="quienes-somos" class="seccion-nosotros">
+        <div class="contenedor-nosotros">
+
+            <!-- Columna 1: Texto e Historia -->
+            <div class="nosotros-texto">
+                <span class="subtitulo-seccion">Conoce a tu agencia de confianza</span>
+                <h2>Sobre Seaview Properties</h2>
+                <p class="parrafo-destacado">
+                    Nacimos con un propósito claro: transformar la búsqueda de la propiedad ideal en una experiencia
+                    mediterránea fluida, transparente y completamente personalizada.
+                </p>
+                <p>
+                    En Seaview Properties no solo vendemos inmuebles; ayudamos a nuestros clientes a encontrar su rincón
+                    perfecto frente al mar. Nos especializamos en la costa, seleccionando minuciosamente cada propiedad
+                    para asegurar los más altos estándares de calidad, ubicación y diseño.
+                </p>
+                <p>
+                    Nuestra filosofía se basa en la honestidad y en el conocimiento profundo del mercado local. Te
+                    acompañamos en cada paso del camino, desde la primera visita hasta la firma, garantizando tu total
+                    tranquilidad.
+                </p>
+
+                <!-- Pequeños datos de valor -->
+                <div class="nosotros-datos">
+                    <div class="dato-item">
+                        <span class="dato-numero">+10</span>
+                        <span class="dato-etiqueta">Años de Experiencia</span>
+                    </div>
+                    <div class="dato-item">
+                        <span class="dato-numero">100%</span>
+                        <span class="dato-etiqueta">Clientes Satisfechos</span>
                     </div>
                 </div>
-
-                <!-- Columna 2: Imagen Corporativa -->
-                <div class="nosotros-imagen">
-                    <img src="img/terraza_seaview_logo.png" alt="Vistas al mar desde una propiedad de lujo de Seaview Properties">
-                </div>
-
             </div>
-        </section>
+
+            <!-- Columna 2: Imagen Corporativa -->
+            <div class="nosotros-imagen">
+                <img src="img/terraza_seaview_logo.png"
+                    alt="Vistas al mar desde una propiedad de lujo de Seaview Properties">
+            </div>
+
+        </div>
+    </section>
 
     <hr class="divisor-dorado">
 
     <!-- Sección de Contacto -->
     <section id="contacto" class="seccion-contacto">
         <div class="contenedor-contacto">
-            
+
             <!-- Bloque Izquierdo: Datos y Accesos Rápidos -->
             <div class="info-contacto">
                 <h2>Contacta con Nosotros</h2>
-                <p>¿Has visto una propiedad que te interesa o quieres vender la tuya? Habla con nuestro equipo hoy mismo.</p>
-                
+                <p>¿Has visto una propiedad que te interesa o quieres vender la tuya? Habla con nuestro equipo hoy
+                    mismo.</p>
+
                 <div class="vias-rapidas">
                     <!-- Enlace directo a WhatsApp (Cambia el número por el real) -->
-                    <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado%20en%20una%20propiedad%20de%20Seaview%20Properties" target="_blank" class="btn-whatsapp">
+                    <a href="https://wa.me/34600000000?text=Hola,%20estoy%20interesado%20en%20una%20propiedad%20de%20Seaview%20Properties"
+                        target="_blank" class="btn-whatsapp">
                         💬 Escríbenos por WhatsApp
                     </a>
                     <!-- Enlace directo a llamada telefónica -->
@@ -177,7 +202,7 @@
                         <label for="nombre">Nombre Completo</label>
                         <input type="text" id="nombre" required placeholder="Tu nombre">
                     </div>
-                    
+
                     <div class="grupo-input">
                         <label for="email">Correo Electrónico</label>
                         <input type="email" id="email" required placeholder="tu@email.com">
@@ -190,7 +215,8 @@
 
                     <div class="grupo-input">
                         <label for="mensaje">¿En qué podemos ayudarte?</label>
-                        <textarea id="mensaje" rows="5" required placeholder="Estoy interesado en el chalet de la playa..."></textarea>
+                        <textarea id="mensaje" rows="5" required
+                            placeholder="Estoy interesado en el chalet de la playa..."></textarea>
                     </div>
 
                     <button type="submit" class="btn-enviar">Enviar Mensaje</button>
@@ -201,27 +227,69 @@
     </section>
 
 
-    <!-- Pie de página sencillo -->
-    <footer>
-        <!-- Iconos y enlaces a RR.SS. -->
-        <div class="redes-sociales">
-            <h3>Síguenos en nuestras redes</h3>
-            <div class="iconos-redes">
-                <!-- Instagram -->
-                <a href="https://instagram.com/_seaviewproperties" target="_blank" rel="noopener noreferrer" class="icono-social instagram" title="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
+    <!-- FOOTER, Pie de página -->
+
+    <footer class="pie-pagina">
+        <div class="pie-contenedor">
+
+            <!-- Columna Izquierda: Logo y Contacto -->
+            <div class="pie-columna pie-marca">
+                <a href="index.html" class="enlace-logo-pie">
+                    <img src="img/logo_fondo_blanco.png" alt="Seaview Properties Logo" class="logo-img-pie">
+                    <div class="texto-logo-pie">SeaView <span>Properties</span></div>
                 </a>
-                <!-- WhatsApp Directo -->
-                <a href="https://wa.me/34654830333?text=Hola,%20estoy%20interesado%20en%20vuestras%20propiedades" target="_blank" rel="noopener noreferrer" class="icono-social whatsapp" title="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
+                <div class="pie-contacto-info">
+                    <p><i class="fa-solid fa-phone"></i> <a href="tel:+34654830333">+34 654830333</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/34654830333" target="_blank">+34
+                            654830333</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> <a
+                            href="mailto:seaviewproperties@hotmail.com">seaviewproperties@hotmail.com</a></p>
+                </div>
             </div>
+
+            <!-- Columna Central: Redes Sociales -->
+            <div class="pie-columna pie-redes">
+                <span class="pie-titulo-redes">Síguenos en nuestras redes</span>
+                <div class="pie-redes-iconos">
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@seaviewproperties" target="_blank" class="icono-tiktok"
+                        title="Síguenos en TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/_seaviewproperties" target="_blank" rel="noopener noreferrer"
+                        class="icono-social instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <!-- WhatsApp Directo -->
+                    <a href="https://wa.me/34654830333?text=Hola,%20estoy%20interesado%20en%20vuestras%20propiedades"
+                        target="_blank" rel="noopener noreferrer" class="icono-social whatsapp" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Enlaces Legales -->
+            <div class="pie-columna pie-legal">
+                <ul>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                </ul>
+            </div>
+
         </div>
-        <p>&copy; 2026 Seaview Properties. Todos los derechos reservados.<br>
-        Página creada por Benalsoluciones S.A.</p>
+
+        <!-- Cierre inferior de Copyright -->
+        <div class="pie-derechos">
+            <p>&copy; 2026 Seaview Properties. Todos los derechos reservados.<br>
+                Página creada por Benalsoluciones S.A.</p>
+        </div>
     </footer>
 
     <!-- Conexión con el archivo JavaScript -->
     <script src="app.js"></script>
 </body>
+
 </html>

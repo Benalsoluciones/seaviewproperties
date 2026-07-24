@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeaView Properties | Inmobiliaria</title>
     <link rel="icon" type="image/png" href="img/logo_navegador.png">
     <!-- Fuentes de Google: Montserrat para logos/títulos e Inter para menús/textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <!-- Enlace para activar los iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <body>
 
     <!-- Barra superior de contacto rápido -->
@@ -20,11 +24,13 @@
             <!-- Bloque Izquierda: Teléfonos -->
             <div class="top-bar-izquierda">
                 <a href="tel:+34600000000"><i class="fa-solid fa-phone"></i> +34 654830333</a>
-                <a href="https://wa.me/34654830333" target="_blank" class="enlace-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://wa.me/34654830333" target="_blank" class="enlace-whatsapp"><i
+                        class="fa-brands fa-whatsapp"></i> WhatsApp</a>
             </div>
             <!-- Bloque Derecha: Email -->
             <div class="top-bar-derecha">
-                <a href="mailto:info@seaviewproperties.com"><i class="fa-solid fa-envelope"></i> info@seaviewproperties.com</a>
+                <a href="mailto:seaviewproperties@hotmail.com"><i class="fa-solid fa-envelope"></i>
+                    seaviewproperties@hotmail.com</a>
             </div>
         </div>
     </div>
@@ -33,19 +39,22 @@
     <header>
         <!-- Logo de imagen transparente para el header -->
         <div class="logo">
-            <a href="index.html" class="enlace-logo" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+            <a href="index.html" class="enlace-logo"
+                style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
                 <img src="img/logo_tranparente.png" alt="Seaview Properties Logo">
-                <span class="texto-logo" style="font-weight: 700; color: #0d2c54;">Sea<span style="color: #d4af37;">view</span> <span style="color: #00a8cc; font-weight: 400;">Properties</span>
+                <span class="texto-logo" style="font-weight: 700; color: #0d2c54;">Sea<span
+                        style="color: #d4af37;">view</span> <span
+                        style="color: #00a8cc; font-weight: 400;">Properties</span>
                 </span>
             </a>
         </div>
-        
+
         <!-- Botón hamburguesa (solo se verá en móviles) -->
         <button class="menu-toggle" aria-label="Abrir menú">
             <i class="fa-solid fa-bars"></i>
         </button>
 
-            <!-- Menú de navegación actual -->
+        <!-- Menú de navegación actual -->
         <nav class="nav-menu">
             <a href="index.html">Inicio</a>
             <a href="#quienes-somos">Quiénes Somos</a>
@@ -79,26 +88,69 @@
         </section>
     </main>
 
-    <footer>
-        <!-- Iconos y enlaces a RR.SS. -->
-        <div class="redes-sociales">
-            <h3>Síguenos en nuestras redes</h3>
-            <div class="iconos-redes">
-                <!-- Instagram -->
-                <a href="https://instagram.com/_seaviewproperties" target="_blank" rel="noopener noreferrer" class="icono-social instagram" title="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
+    <!-- FOOTER, Pie de página -->
+
+    <footer class="pie-pagina">
+        <div class="pie-contenedor">
+
+            <!-- Columna Izquierda: Logo y Contacto -->
+            <div class="pie-columna pie-marca">
+                <a href="index.html" class="enlace-logo-pie">
+                    <img src="img/logo_fondo_blanco.png" alt="Seaview Properties Logo" class="logo-img-pie">
+                    <div class="texto-logo-pie">SeaView <span>Properties</span></div>
                 </a>
-                <!-- WhatsApp Directo -->
-                <a href="https://wa.me/34654830333?text=Hola,%20estoy%20interesado%20en%20vuestras%20propiedades" target="_blank" rel="noopener noreferrer" class="icono-social whatsapp" title="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
+                <div class="pie-contacto-info">
+                    <p><i class="fa-solid fa-phone"></i> <a href="tel:+34654830333">+34 654830333</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/34654830333" target="_blank">+34
+                            654830333</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> <a
+                            href="mailto:seaviewproperties@hotmail.com">seaviewproperties@hotmail.com</a></p>
+                </div>
             </div>
+
+            <!-- Columna Central: Redes Sociales -->
+            <div class="pie-columna pie-redes">
+                <span class="pie-titulo-redes">Síguenos en nuestras redes</span>
+                <div class="pie-redes-iconos">
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@seaviewproperties" target="_blank" class="icono-tiktok"
+                        title="Síguenos en TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/_seaviewproperties" target="_blank" rel="noopener noreferrer"
+                        class="icono-social instagram" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <!-- WhatsApp Directo -->
+                    <a href="https://wa.me/34654830333?text=Hola,%20estoy%20interesado%20en%20vuestras%20propiedades"
+                        target="_blank" rel="noopener noreferrer" class="icono-social whatsapp" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Enlaces Legales -->
+            <div class="pie-columna pie-legal">
+                <ul>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="aviso-legal.html">Aviso Legal</a></li>
+                </ul>
+            </div>
+
         </div>
-        <p>&copy; 2026 Seaview Properties. Todos los derechos reservados.<br>
-        Página creada por Benalsoluciones S.A.</p>
+
+        <!-- Cierre inferior de Copyright -->
+        <div class="pie-derechos">
+            <p>&copy; 2026 Seaview Properties. Todos los derechos reservados.<br>
+                Página creada por Benalsoluciones S.A.</p>
+        </div>
     </footer>
 
     <!-- Seguimos usando el mismo app.js porque buscará el contenedor-propiedades aquí también -->
     <script src="app.js"></script>
 </body>
+
 </html>
