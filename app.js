@@ -4,6 +4,16 @@ let todasLasPropiedades = [];
 document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("contenedor-propiedades");
     const botonesFiltro = document.querySelectorAll(".btn-filtro");
+    
+    // Elementos del Modal Principal
+    const modal = document.getElementById("modal-detalle");
+    const btnCerrarModal = document.getElementById("cerrar-modal");
+    const contenidoModal = document.getElementById("contenido-modal-inmueble");
+
+    // Elementos del Visor de Imagen Ampliada (Zoom)
+    const visorImagen = document.getElementById("visor-imagen");
+    const imagenAmpliada = document.getElementById("imagen-ampliada");
+    const btnCerrarVisor = document.getElementById("cerrar-visor");
 
     // 1. Cargar los datos desde el archivo JSON
     fetch("propiedades.json")
@@ -15,25 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(datos => {
             todasLasPropiedades = datos;
-            // Mostramos todas las propiedades al cargar la web por primera vez
             renderizarPropiedades(todasLasPropiedades);
         })
         .catch(error => {
             console.error("Error:", error);
-            contenedor.innerHTML = `<p class="cargando">Error al cargar las propiedades. Por favor, inténtelo más tarde.</p>`;
+            if (contenedor) {
+                contenedor.innerHTML = `<p class="cargando">Error al cargar las propiedades. Por favor, inténtelo más tarde.</p>`;
+            }
         });
 
     // 2. Lógica de los botones de Filtro
     botonesFiltro.forEach(boton => {
         boton.addEventListener("click", (e) => {
-            // Quitar la clase 'activo' del botón anterior y ponérsela al que se ha pulsado
             botonesFiltro.forEach(b => b.classList.remove("activo"));
             e.target.classList.add("activo");
 
-            // Saber qué tipo de filtro quiere el usuario (todos, venta o alquiler)
             const filtroSeleccionado = e.target.getAttribute("data-tipo");
 
-            // Filtrar el array de propiedades
             if (filtroSeleccionado === "todos") {
                 renderizarPropiedades(todasLasPropiedades);
             } else {
@@ -45,23 +53,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3. Función encargada de pintar el HTML de las tarjetas
     function renderizarPropiedades(listaDePropiedades) {
-        // Limpiamos el contenedor (así quitamos el texto de "Cargando...")
+        if (!contenedor) return;
+
         contenedor.innerHTML = "";
 
-        // Si no hay propiedades que coincidan con el filtro
         if (listaDePropiedades.length === 0) {
             contenedor.innerHTML = `<p class="cargando">No hay propiedades disponibles en este momento bajo este criterio.</p>`;
             return;
         }
 
-        // Recorremos la lista y creamos el HTML de cada tarjeta
         listaDePropiedades.forEach(piso => {
             const tarjeta = document.createElement("div");
             tarjeta.classList.add("tarjeta-propiedad");
 
-            // Formateamos el precio para que tenga puntos (ej: 150.000)
-            const precioFormateado = piso.precio.toLocaleString('es-ES');
+            const precioFormateado = piso.precio ? piso.precio.toLocaleString('es-ES') : 'Consultar';
             const textoAlquiler = piso.tipo === 'alquiler' ? '/mes' : '';
+            const nBanos = piso.banos || piso.baños || 1;
+            const nMetros = piso.metros_cuadrados || piso.metros || 0;
 
             tarjeta.innerHTML = `
                 <div class="imagen-contenedor">
@@ -72,39 +80,117 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h3>${piso.titulo}</h3>
                     <p class="precio">${precioFormateado} €${textoAlquiler}</p>
         
-                    <!-- NUEVO: Características del inmueble -->
                     <div class="caracteristicas">
-                        <span><i class="fa-solid fa-bed"></i> ${piso.habitaciones || 3} Hab</span>
-                        <span><i class="fa-solid fa-bath"></i> 2 Baños</span>
-                        <span><i class="fa-solid fa-ruler-combined"></i> 120 m²</span>
+                        <span><i class="fa-solid fa-bed"></i> ${piso.habitaciones || 1} Hab</span>
+                        <span><i class="fa-solid fa-bath"></i> ${nBanos} Baños</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> ${nMetros} m²</span>
                     </div>
 
                     <p class="descripcion">${piso.descripcion}</p>
-                    <button class="btn-contacto">Ver detalles</button>
+                    
+                    <button class="btn-contacto btn-ver-detalle" data-id="${piso.id}">Ver detalles</button>
                 </div>
             `;
 
-                contenedor.appendChild(tarjeta);
+            contenedor.appendChild(tarjeta);
+        });
+
+        // Asignar evento click a todos los botones "Ver detalles"
+        document.querySelectorAll(".btn-ver-detalle").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const idPropiedad = parseInt(e.target.getAttribute("data-id"));
+                abrirModalInmueble(idPropiedad);
+            });
+        });
+    }
+
+    // 4. Función para llenar y abrir el Modal Emergente
+    function abrirModalInmueble(id) {
+        const propiedad = todasLasPropiedades.find(p => p.id === id);
+        if (!propiedad || !modal) return;
+
+        const fotos = propiedad.galeria || [propiedad.imagen];
+        const fotosHTML = fotos.map(foto => `<img src="${foto}" alt="${propiedad.titulo}" class="foto-galeria-item">`).join('');
+
+        const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
+
+        contenidoModal.innerHTML = `
+            <div class="modal-header">
+                <h2>${propiedad.titulo}</h2>
+                <p class="ubicacion"><i class="fa-solid fa-location-dot"></i> ${propiedad.ubicacion}</p>
+            </div>
+
+            <div class="modal-precio">${precioFormateado} €</div>
+
+            <div class="modal-caracteristicas">
+                <span><i class="fa-solid fa-bed"></i> ${propiedad.habitaciones || 1} Hab</span>
+                <span><i class="fa-solid fa-bath"></i> ${propiedad.banos || propiedad.baños || 1} Baños</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> ${propiedad.metros_cuadrados || 0} m²</span>
+            </div>
+
+            <h3>Galería de fotos <small style="font-size: 0.8em; color: #64748b; font-weight: normal;">(haz clic en cualquier foto para ampliarla)</small></h3>
+            <div class="modal-galeria">
+                ${fotosHTML}
+            </div>
+
+            <h3>Descripción</h3>
+            <p>${propiedad.descripcion}</p>
+        `;
+
+        modal.classList.add("activo");
+
+        // Asignar clic a cada foto individual de la galería para hacer Zoom
+        document.querySelectorAll(".foto-galeria-item").forEach(img => {
+            img.addEventListener("click", (e) => {
+                if (visorImagen && imagenAmpliada) {
+                    imagenAmpliada.src = e.target.src;
+                    visorImagen.classList.add("activo");
+                }
+            });
+        });
+    }
+
+    // Eventos para cerrar el Modal Principal
+    if (btnCerrarModal) {
+        btnCerrarModal.addEventListener("click", () => {
+            modal.classList.remove("activo");
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.classList.remove("activo");
+            }
+        });
+    }
+
+    // Eventos para cerrar el Visor a Pantalla Completa
+    if (btnCerrarVisor) {
+        btnCerrarVisor.addEventListener("click", () => {
+            visorImagen.classList.remove("activo");
+        });
+    }
+
+    if (visorImagen) {
+        visorImagen.addEventListener("click", (e) => {
+            if (e.target === visorImagen) {
+                visorImagen.classList.remove("activo");
+            }
+        });
+    }
+
+    // 5. Formulario de contacto
+    const formulario = document.getElementById("form-contacto");
+    if (formulario) {
+        formulario.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            alert(`¡Gracias, ${nombre}! Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.`);
+            formulario.reset();
         });
     }
 });
-
-                // 4. Para que el formulario no recargue la página de golpe y podamos mostrar un mensaje de agradecimiento
-                const formulario = document.getElementById("form-contacto");
-
-                if (formulario) {
-                    formulario.addEventListener("submit", (e) => {
-                        e.preventDefault(); // Evitamos que la web se refresque
-
-                        // Recogemos los datos (por si los necesitas en el futuro)
-                        const nombre = document.getElementById("nombre").value;
-
-                        // Simulamos el envío de forma elegante
-                        alert(`¡Gracias, ${nombre}! Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.`);
-
-                        formulario.reset(); // Vaciamos los campos
-                    });
-}
 
 // ==========================================
 // MENÚ RESPONSIVE INDEPENDIENTE

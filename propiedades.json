@@ -1,19 +1,42 @@
 [
   {
     "id": 1,
-    "titulo": "Chalet con piscina cerca de la playa",
+    "titulo": "Apartamento en Los Patos",
     "precio": 420000,
+    "ubicacion": "Benalmádena, Málaga",
     "tipo": "venta",
-    "habitaciones": 3,
-    "imagen": "img/chalet-playa/principal.jpg",
-    "descripcion": "Precioso chalet independiente con jardín y piscina privada."
+    "habitaciones": 1,
+    "banos": 1,
+    "metros_cuadrados": 50,
+    "etiqueta": "Exclusiva",
+    "descripcion": "Acogedor apartamento de 1 dormitorio en la zona de Los Patos, ideal para inversión o segunda residencia.",
+    "imagen": "img/los-patos/IMG-20260706-WA0046.jpg",
+    "galeria": [
+      "img/los-patos/IMG-20260706-WA0047.jpg",
+      "img/los-patos/IMG-20260706-WA0048.jpg",
+      "img/los-patos/IMG-20260706-WA0049.jpg",
+      "img/los-patos/IMG-20260706-WA0050.jpg",
+      "img/los-patos/IMG-20260706-WA0051.jpg",
+      "img/los-patos/IMG-20260706-WA0052.jpg",
+      "img/los-patos/IMG-20260706-WA0053.jpg",
+      "img/los-patos/IMG-20260706-WA0054.jpg",
+      "img/los-patos/IMG-20260706-WA0055.jpg",
+      "img/los-patos/IMG-20260706-WA0056.jpg",
+      "img/los-patos/IMG-20260706-WA0057.jpg",
+      "img/los-patos/IMG-20260706-WA0058.jpg",
+      "img/los-patos/IMG-20260706-WA0059.jpg"
+    ]
   },
   {
     "id": 2,
     "titulo": "Apartamento coqueto en el centro",
     "precio": 850,
+    "ubicacion": "Benalmádena, Málaga",
     "tipo": "alquiler",
     "habitaciones": 1,
+    "baños": 1,
+    "metros_cuadrados": 85,
+    "etiqueta": "Destacado",
     "imagen": "img/piso-centro/principal.jpg",
     "descripcion": "Ideal para parejas. Totalmente amueblado y reformado."
   },
@@ -21,8 +44,12 @@
     "id": 3,
     "titulo": "Piso con piscina cerca de la playa",
     "precio": 380000,
+    "ubicacion": "Benalmádena, Málaga",
     "tipo": "venta",
     "habitaciones": 2,
+    "baños": 2,
+    "metros_cuadrados": 120,
+    "etiqueta": "Exclusiva",
     "imagen": "img/chalet-playa/principal.jpg",
     "descripcion": "Precioso piso con dos habitaciones, jardín y piscina privada."
   }
