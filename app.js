@@ -2,9 +2,17 @@
 let todasLasPropiedades = [];
 let mapaInstancia = null; // Instancia global para el mapa interactivo
 
+// Variables globales para guardar la selección de los filtros
+let filtroTipoActual = "todos";
+let filtroZonaActual = "todas";
+
 document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("contenedor-propiedades");
-    const botonesFiltro = document.querySelectorAll(".btn-filtro");
+
+    // CAMBIO AQUÍ: En lugar de 'const botonesFiltro = document.querySelectorAll(".btn-filtro");'
+    // seleccionamos los dos grupos por sus clases específicas:
+    const botonesTipo = document.querySelectorAll(".btn-filtro-tipo");
+    const botonesZona = document.querySelectorAll(".btn-filtro-zona");
     
     // Elementos del Modal Principal
     const modal = document.getElementById("modal-detalle");
@@ -35,22 +43,44 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-    // 2. Lógica de los botones de Filtro
-    botonesFiltro.forEach(boton => {
+    // 2. Lógica combinada de los botones de Filtro (Tipo y Zona)
+
+    // Eventos para botones de Tipo (Todos / Venta / Alquiler)
+    botonesTipo.forEach(boton => {
         boton.addEventListener("click", (e) => {
-            botonesFiltro.forEach(b => b.classList.remove("activo"));
+            botonesTipo.forEach(b => b.classList.remove("activo"));
             e.target.classList.add("activo");
 
-            const filtroSeleccionado = e.target.getAttribute("data-tipo");
-
-            if (filtroSeleccionado === "todos") {
-                renderizarPropiedades(todasLasPropiedades);
-            } else {
-                const propiedadesFiltradas = todasLasPropiedades.filter(piso => piso.tipo === filtroSeleccionado);
-                renderizarPropiedades(propiedadesFiltradas);
-            }
+            filtroTipoActual = e.target.getAttribute("data-tipo");
+            aplicarFiltrosCombinados();
         });
     });
+
+    // Eventos para botones de Zona (Todas / Benalmádena / Fuengirola / etc.)
+    botonesZona.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            botonesZona.forEach(b => b.classList.remove("activo"));
+            e.target.classList.add("activo");
+
+            filtroZonaActual = e.target.getAttribute("data-zona");
+            aplicarFiltrosCombinados();
+        });
+    });
+
+    // Función que evalúa ambos criterios a la vez
+    function aplicarFiltrosCombinados() {
+        const resultado = todasLasPropiedades.filter(piso => {
+            const tipoPiso = (piso.tipo || '').trim().toLowerCase();
+            const zonaPiso = (piso.municipio || piso.zona || '').trim().toLowerCase();
+
+            const coincideTipo = (filtroTipoActual === "todos") || (tipoPiso === filtroTipoActual);
+            const coincideZona = (filtroZonaActual === "todas") || (zonaPiso === filtroZonaActual);
+
+            return coincideTipo && coincideZona;
+        });
+
+        renderizarPropiedades(resultado);
+    }
 
     // 3. Función encargada de pintar el HTML de las tarjetas
     function renderizarPropiedades(listaDePropiedades) {
@@ -105,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    
+
 // 4. Función para llenar y abrir el Modal Emergente
     function abrirModalInmueble(id) {
         const propiedad = todasLasPropiedades.find(p => p.id === id);

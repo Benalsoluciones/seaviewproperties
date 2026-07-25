@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="estilos.css">
     <!-- Enlace para activar los iconos de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <body>
 
@@ -74,12 +76,21 @@
     <!-- Sección de Catálogo -->
     <main class="contenedor-principal">
         <section class="filtros-seccion">
-            <h2>Nuestro Catálogo de Propiedades</h2>
-            <p>Usa los filtros para encontrar lo que buscas</p>
+            <h2>Nuestro Catálogo de Propiedades</h2><br>
+            <p>Usa los filtros para encontrar lo que buscas</p><br>
+            <!-- Grupo 1: Filtros de Operación -->
+            <div class="botones-filtro" style="margin-bottom: 12px;">
+                <button class="btn-filtro btn-filtro-tipo activo" data-tipo="todos">Todos</button>
+                <button class="btn-filtro btn-filtro-tipo" data-tipo="venta">Venta</button>
+                <button class="btn-filtro btn-filtro-tipo" data-tipo="alquiler">Alquiler</button>
+            </div>
+
+            <!-- Grupo 2: Filtros por Municipio / Zona -->
             <div class="botones-filtro">
-                <button class="btn-filtro activo" data-tipo="todos">Todos</button>
-                <button class="btn-filtro" data-tipo="venta">Venta</button>
-                <button class="btn-filtro" data-tipo="alquiler">Alquiler</button>
+                <button class="btn-filtro btn-filtro-zona activo" data-zona="todas">Todas las zonas</button>
+                <button class="btn-filtro btn-filtro-zona" data-zona="benalmadena">Benalmádena</button>
+                <button class="btn-filtro btn-filtro-zona" data-zona="fuengirola">Fuengirola</button>
+                <button class="btn-filtro btn-filtro-zona" data-zona="torremolinos">Torremolinos</button>
             </div>
         </section>
 
@@ -148,6 +159,21 @@
                 Página creada por Benalsoluciones S.A.</p>
         </div>
     </footer>
+
+        <!-- MODAL DE DETALLES E IMÁGENES -->
+        <div id="modal-detalle" class="modal-oculto">
+            <div class="modal-contenido">
+                <button id="cerrar-modal" class="btn-cerrar-modal">&times;</button>
+                <div id="contenido-modal-inmueble">
+                    <!-- JavaScript inyectará aquí las fotos y la info -->
+                </div>
+            </div>
+        </div>
+        <!-- VISOR DE IMAGEN A PANTALLA COMPLETA -->
+        <div id="visor-imagen" class="visor-oculto">
+            <span id="cerrar-visor" class="btn-cerrar-visor">&times;</span>
+            <img id="imagen-ampliada" src="" alt="Imagen ampliada">
+        </div>
 
     <!-- Seguimos usando el mismo app.js porque buscará el contenedor-propiedades aquí también -->
     <script src="app.js"></script>
