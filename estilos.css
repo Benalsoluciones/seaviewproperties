@@ -884,6 +884,46 @@ header {
     }
 }
 
+/* ==========================================
+   TOP-BAR RESPONSIVE (MÓVIL)
+   ========================================== */
+@media (max-width: 600px) {
+    .top-bar-contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 12px;
+    }
+
+    .top-bar-izquierda,
+    .top-bar-derecha {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Ocultamos la dirección de correo larga */
+    .top-bar-derecha .texto-email {
+        display: none;
+    }
+
+    /* Añadimos la palabra corta "Email" al lado del icono solo en móvil */
+    .top-bar-derecha a::after {
+        content: " Email";
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /* Ajustamos tamaños para que todo encaje en una sola línea elegante */
+    .top-bar a {
+        font-size: 13px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+    }
+}
+
 
 /* ==========================================
    14. SECCIÓN QUIÉNES SOMOS
