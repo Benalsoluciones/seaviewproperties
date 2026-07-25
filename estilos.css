@@ -1271,3 +1271,72 @@ header {
     border: 1px solid #cbd5e1;
     z-index: 1; /* Para evitar conflictos de capas con el modal */
 }
+
+/* --- CONTENEDOR DE FILTROS RESPONSIVE PARA LOS BOTONES DE FILTROS--- */
+
+.filtros-seccion {
+    padding: 20px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Fila de botones de filtro */
+.botones-filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* En pantallas medianas se adaptan en varias filas */
+    gap: 8px; /* Espacio uniforme entre botones */
+    margin-bottom: 12px;
+}
+
+/* Estilo individual de cada botón de filtro */
+.btn-filtro {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px; /* Bordes redondeados más elegantes */
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap; /* Evita que el texto de un botón se rompa en 2 líneas */
+}
+
+/* Estado activo y hover */
+.btn-filtro:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.btn-filtro.activo {
+    background-color: #0d2c54; /* El color azul oscuro de tu marca */
+    color: #ffffff;
+    border-color: #0d2c54;
+    box-shadow: 0 2px 6px rgba(13, 44, 84, 0.25);
+}
+
+/* --- ADAPTACIÓN ESPECIAL PARA MÓVILES (Menos de 600px) --- */
+@media (max-width: 600px) {
+    .botones-filtro {
+        /* En móviles permitimos carrusel/scroll horizontal si hay muchos municipios */
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+        scrollbar-width: none; /* Oculta barra de scroll en Firefox */
+    }
+
+    /* Ocultar barra de scroll visual en Chrome/Safari para mantener diseño limpio */
+    .botones-filtro::-webkit-scrollbar {
+        display: none;
+    }
+
+    .btn-filtro {
+        padding: 7px 14px;
+        font-size: 13px;
+        flex-shrink: 0; /* Impide que los botones se deformen o aplasten */
+    }
+}

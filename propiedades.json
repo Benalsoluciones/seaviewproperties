@@ -85,9 +85,9 @@
   {
     "id": 3,
     "titulo": "Apartamento de lujo en exclusiva zona de Fuengirola.",
-    "precio": 380000,
+    "precio": 1900000,
     "municipio":"fuengirola",
-    "ubicacion": "Fuengirola, Málaga",
+    "ubicacion": "Avda. Santa Amalia, Fuengirola, Málaga",
     "tipo": "venta",
     "habitaciones": 3,
     "baños": 2,
