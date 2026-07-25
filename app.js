@@ -1,5 +1,6 @@
 // Variable global para guardar los inmuebles una vez cargados
 let todasLasPropiedades = [];
+let mapaInstancia = null; // Instancia global para el mapa interactivo
 
 document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("contenedor-propiedades");
@@ -104,7 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Función para llenar y abrir el Modal Emergente
+    
+// 4. Función para llenar y abrir el Modal Emergente
     function abrirModalInmueble(id) {
         const propiedad = todasLasPropiedades.find(p => p.id === id);
         if (!propiedad || !modal) return;
@@ -113,6 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const fotosHTML = fotos.map(foto => `<img src="${foto}" alt="${propiedad.titulo}" class="foto-galeria-item">`).join('');
 
         const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
+
+        // Si el piso no tiene coordenadas asignadas en el JSON, usamos unas por defecto (Benalmádena)
+        const lat = (propiedad.coordenadas && propiedad.coordenadas.lat) ? propiedad.coordenadas.lat : 36.5962;
+        const lng = (propiedad.coordenadas && propiedad.coordenadas.lng) ? propiedad.coordenadas.lng : -4.5273;
 
         contenidoModal.innerHTML = `
             <div class="modal-header">
@@ -134,7 +140,13 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <h3>Descripción</h3>
-            <p>${propiedad.descripcion}</p>
+            <p class="descripcion-modal">${propiedad.descripcion.replace(/\n/g, "<br>")}</p>
+
+            <!-- CONTENEDOR DEL MAPA INTERACTIVO -->
+            <div class="contenedor-mapa">
+                <h3>Ubicación en el mapa</h3>
+                <div id="mapa-inmueble"></div>
+            </div>
         `;
 
         modal.classList.add("activo");
@@ -148,6 +160,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+
+        // Inicialización del Mapa de Leaflet (damos 300ms para que la animación del modal termine)
+        setTimeout(() => {
+            if (mapaInstancia) {
+                mapaInstancia.remove(); // Limpia el mapa anterior antes de renderizar el nuevo
+                mapaInstancia = null;
+            }
+
+            const elMapa = document.getElementById('mapa-inmueble');
+            if (elMapa && typeof L !== 'undefined') {
+                mapaInstancia = L.map('mapa-inmueble').setView([lat, lng], 15);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; OpenStreetMap'
+                }).addTo(mapaInstancia);
+
+                L.marker([lat, lng]).addTo(mapaInstancia)
+                    .bindPopup(`<b>${propiedad.titulo}</b><br>${propiedad.ubicacion}`)
+                    .openPopup();
+
+                mapaInstancia.invalidateSize(); // Renderizado correcto de teselas
+            }
+        }, 300);
     }
 
     // Eventos para cerrar el Modal Principal
