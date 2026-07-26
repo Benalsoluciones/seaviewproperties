@@ -93,7 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        listaDePropiedades.forEach(piso => {
+        // 💡 COMPROBACIÓN: Detectamos si estamos en la portada (index.html o ruta raíz)
+        const ruta = window.location.pathname;
+        const esIndex = ruta.endsWith('index.html') || ruta.endsWith('/') || ruta === '';
+
+        // Si es el index, limitamos a los 3 primeros. Si no, mostramos todos.
+        const propiedadesAMostrar = esIndex ? listaDePropiedades.slice(0, 3) : listaDePropiedades;
+
+        propiedadesAMostrar.forEach(piso => {
             const tarjeta = document.createElement("div");
             tarjeta.classList.add("tarjeta-propiedad");
 
@@ -147,8 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
 
         // Si el piso no tiene coordenadas asignadas en el JSON, usamos unas por defecto (Benalmádena)
-        const lat = (propiedad.coordenadas && propiedad.coordenadas.lat) ? propiedad.coordenadas.lat : 36.5962;
-        const lng = (propiedad.coordenadas && propiedad.coordenadas.lng) ? propiedad.coordenadas.lng : -4.5273;
+        // ✅ AHORA (Acepta 'latitud'/'longitud' o 'lat'/'lng'):
+        const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
+        const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
 
         contenidoModal.innerHTML = `
             <div class="modal-header">
@@ -210,8 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 L.marker([lat, lng]).addTo(mapaInstancia)
                     .bindPopup(`<b>${propiedad.titulo}</b><br>${propiedad.ubicacion}`)
                     .openPopup();
-
-                mapaInstancia.invalidateSize(); // Renderizado correcto de teselas
+                setTimeout(() => {
+                    mapaInstancia.invalidateSize(); // Renderizado correcto de teselas
+                },100);
             }
         }, 300);
     }
