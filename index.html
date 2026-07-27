@@ -67,13 +67,23 @@
         </nav>
     </header>
 
-    <!-- Sección Principal / Hero -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h2>Encuentra tu hogar frente al mar</h2>
-            <p>Tu inmobiliaria de confianza con las mejores oportunidades del mercado.</p>
-        </div>
-    </section>
+    <!-- Sección Principal / Hero con Vídeo -->
+<section id="inicio" class="hero">
+    <!-- El vídeo de fondo -->
+    <video autoplay muted loop playsinline class="video-fondo">
+        <source src="img/playa-portada.mp4" type="video/mp4">
+        Tu navegador no soporta vídeos.
+    </video>
+
+    <!-- Oscurece un poco el vídeo para que el texto resalte -->
+    <div class="hero-overlay"></div>
+
+    <!-- Tu contenido actual -->
+    <div class="hero-content">
+        <h2>Encuentra tu hogar frente al mar</h2>
+        <p>Tu inmobiliaria de confianza con las mejores oportunidades del mercado.</p>
+    </div>
+</section>
 
 
 
@@ -120,7 +130,7 @@
                 <button class="btn-filtro btn-filtro-zona" data-zona="malaga">Málaga</button>
                 <button class="btn-filtro btn-filtro-zona" data-zona="benalmadena">Benalmádena</button>
                 <button class="btn-filtro btn-filtro-zona" data-zona="fuengirola">Fuengirola</button>
-                <button class="btn-filtro btn-filtro-zona" data-zona="torremolinos">Torremolinos</button>
+                <button class="btn-filtro btn-filtro-zona" data-zona="mijas">Mijas</button>
             </div>
         </section>
 
@@ -303,6 +313,14 @@
                 Página creada por Benalsoluciones S.A.</p>
         </div>
     </footer>
+
+    <!-- BANNER EMERGENTE DE COOKIES -->
+        <div id="banner-cookies" class="banner-cookies">
+            <div class="cookies-contenido">
+                <p>Utilizamos cookies propias y de terceros para analizar el tráfico y mostrar la ubicación exacta de nuestras propiedades en el mapa. Puedes obtener más información en nuestra <a href="politica-cookies.html">Política de Cookies</a>.</p>
+                <button id="btn-aceptar-cookies" class="btn-cookies">Aceptar todo</button>
+            </div>
+        </div>
 
     <!-- MODAL DE DETALLES E IMÁGENES -->
         <div id="modal-detalle" class="modal-oculto">

@@ -9,8 +9,6 @@ let filtroZonaActual = "todas";
 document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("contenedor-propiedades");
 
-    // CAMBIO AQUÍ: En lugar de 'const botonesFiltro = document.querySelectorAll(".btn-filtro");'
-    // seleccionamos los dos grupos por sus clases específicas:
     const botonesTipo = document.querySelectorAll(".btn-filtro-tipo");
     const botonesZona = document.querySelectorAll(".btn-filtro-zona");
     
@@ -93,11 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // 💡 COMPROBACIÓN: Detectamos si estamos en la portada (index.html o ruta raíz)
         const ruta = window.location.pathname;
         const esIndex = ruta.endsWith('index.html') || ruta.endsWith('/') || ruta === '';
 
-        // Si es el index, limitamos a los 3 primeros. Si no, mostramos todos.
         const propiedadesAMostrar = esIndex ? listaDePropiedades.slice(0, 3) : listaDePropiedades;
 
         propiedadesAMostrar.forEach(piso => {
@@ -133,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
             contenedor.appendChild(tarjeta);
         });
 
-        // Asignar evento click a todos los botones "Ver detalles"
         document.querySelectorAll(".btn-ver-detalle").forEach(btn => {
             btn.addEventListener("click", (e) => {
                 const idPropiedad = parseInt(e.target.getAttribute("data-id"));
@@ -142,8 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-// 4. Función para llenar y abrir el Modal Emergente
+    // 4. Función para llenar y abrir el Modal Emergente
     function abrirModalInmueble(id) {
         const propiedad = todasLasPropiedades.find(p => p.id === id);
         if (!propiedad || !modal) return;
@@ -153,8 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
 
-        // Si el piso no tiene coordenadas asignadas en el JSON, usamos unas por defecto (Benalmádena)
-        // ✅ AHORA (Acepta 'latitud'/'longitud' o 'lat'/'lng'):
         const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
         const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
 
@@ -180,7 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>Descripción</h3>
             <p class="descripcion-modal">${propiedad.descripcion.replace(/\n/g, "<br>")}</p>
 
-            <!-- CONTENEDOR DEL MAPA INTERACTIVO -->
             <div class="contenedor-mapa">
                 <h3>Ubicación en el mapa</h3>
                 <div id="mapa-inmueble"></div>
@@ -189,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         modal.classList.add("activo");
 
-        // Asignar clic a cada foto individual de la galería para hacer Zoom
         document.querySelectorAll(".foto-galeria-item").forEach(img => {
             img.addEventListener("click", (e) => {
                 if (visorImagen && imagenAmpliada) {
@@ -199,10 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // Inicialización del Mapa de Leaflet (damos 300ms para que la animación del modal termine)
         setTimeout(() => {
             if (mapaInstancia) {
-                mapaInstancia.remove(); // Limpia el mapa anterior antes de renderizar el nuevo
+                mapaInstancia.remove();
                 mapaInstancia = null;
             }
 
@@ -219,8 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     .bindPopup(`<b>${propiedad.titulo}</b><br>${propiedad.ubicacion}`)
                     .openPopup();
                 setTimeout(() => {
-                    mapaInstancia.invalidateSize(); // Renderizado correcto de teselas
-                },100);
+                    mapaInstancia.invalidateSize();
+                }, 100);
             }
         }, 300);
     }
@@ -263,6 +252,25 @@ document.addEventListener("DOMContentLoaded", () => {
             const nombre = document.getElementById("nombre").value;
             alert(`¡Gracias, ${nombre}! Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.`);
             formulario.reset();
+        });
+    }
+
+    // ==========================================
+    // 6. GESTIÓN DEL BANNER DE COOKIES
+    // ==========================================
+    const bannerCookies = document.getElementById("banner-cookies");
+    const btnAceptarCookies = document.getElementById("btn-aceptar-cookies");
+
+    if (bannerCookies && btnAceptarCookies) {
+        // Si el usuario ya aceptó previamente las cookies, ocultamos el aviso
+        if (localStorage.getItem("cookiesAceptadas") === "true") {
+            bannerCookies.style.display = "none";
+        }
+
+        // Guardamos la decisión cuando el usuario presiona "Aceptar todo"
+        btnAceptarCookies.addEventListener("click", () => {
+            localStorage.setItem("cookiesAceptadas", "true");
+            bannerCookies.style.display = "none";
         });
     }
 });
