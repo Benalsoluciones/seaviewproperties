@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        setTimeout(() => {
+       setTimeout(() => {
             if (mapaInstancia) {
                 mapaInstancia.remove();
                 mapaInstancia = null;
@@ -197,22 +197,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const elMapa = document.getElementById('mapa-inmueble');
             if (elMapa && typeof L !== 'undefined') {
-                mapaInstancia = L.map('mapa-inmueble').setView([lat, lng], 15);
+                // Zoom en 14 para encuadrar bien la zona
+                mapaInstancia = L.map('mapa-inmueble').setView([lat, lng], 14);
 
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     maxZoom: 19,
                     attribution: '&copy; OpenStreetMap'
                 }).addTo(mapaInstancia);
 
-                L.marker([lat, lng]).addTo(mapaInstancia)
-                    .bindPopup(`<b>${propiedad.titulo}</b><br>${propiedad.ubicacion}`)
-                    .openPopup();
+                // Círculo del área en lugar del marcador exacto
+                const circuloArea = L.circle([lat, lng], {
+                    color: '#0d2c54',       // Borde azul corporativo
+                    fillColor: '#0d2c54',   // Relleno azul
+                    fillOpacity: 0.25,      // Transparencia suave
+                    radius: 350             // Área de 350 metros
+                }).addTo(mapaInstancia);
+
+                circuloArea.bindPopup(`<b>Ubicación aproximada</b><br>${propiedad.municipio || propiedad.zona || 'Zona residencial'}`);
+
                 setTimeout(() => {
                     mapaInstancia.invalidateSize();
                 }, 100);
             }
         }, 300);
-    }
+    } 
 
     // Eventos para cerrar el Modal Principal
     if (btnCerrarModal) {
