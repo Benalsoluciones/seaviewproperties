@@ -9,8 +9,8 @@
     "habitaciones": 1,
     "banos": 1,
     "metros_cuadrados": 50,
-    "Garaje":"Si",
-    "Trastero":"Si",
+    "garaje":"Si",
+    "trastero":"Si",
     "coordenadas": {
       "latitud": 36.5863,
       "longitud": -4.5360
@@ -42,10 +42,10 @@
     "ubicacion": "Calle Faro,22, Benalmádena, Málaga",
     "tipo": "venta",
     "habitaciones": 2,
-    "baños": 2,
+    "banos": 2,
     "metros_cuadrados": 135,
-    "Garaje":"Si",
-    "Trastero":"No",
+    "garaje":"Si",
+    "trastero":"No",
     "coordenadas": {
       "latitud": 36.5827,
       "longitud": -4.5572
@@ -90,10 +90,10 @@
     "ubicacion": "Avda. Santa Amalia, Fuengirola, Málaga",
     "tipo": "venta",
     "habitaciones": 3,
-    "baños": 2,
+    "banos": 2,
     "metros_cuadrados": 120,
-    "Garaje":"",
-    "Trastero":"",
+    "garaje":"",
+    "trastero":"",
     "coordenadas": {
       "latitud": 36.5321,
       "longitud": -4.6296
@@ -145,10 +145,10 @@
     "ubicacion": "Calle Doña, Olletas, Málaga",
     "tipo": "venta",
     "habitaciones": 2,
-    "baños": 1,
+    "banos": 1,
     "metros_cuadrados": 70,
-    "Garaje":"",
-    "Trastero":"Si",
+    "garaje":"",
+    "trastero":"Si",
     "coordenadas": {
       "latitud": 36.7352,
       "longitud": -4.4147
@@ -186,10 +186,10 @@
     "ubicacion": "Calle Competa, La Cala de Mijas, Málaga",
     "tipo": "venta",
     "habitaciones": 3,
-    "baños": 2,
+    "banos": 2,
     "metros_cuadrados": 106,
-    "Garaje":"",
-    "Trastero":"Si",
+    "garaje":"",
+    "trastero":"Si",
     "coordenadas": {
       "latitud": 36.4987,
       "longitud": -4.6891
@@ -218,10 +218,10 @@
     "ubicacion": "Los Alamos, Torremolinos",
     "tipo": "venta",
     "habitaciones": 1,
-    "baños": 1,
+    "banos": 1,
     "metros_cuadrados": 110,
-    "Garaje":"",
-    "Trastero":"",
+    "garaje":"",
+    "trastero":"",
     "coordenadas": {
       "latitud": 36.6437,
       "longitud": -4.4837
@@ -283,10 +283,10 @@
     "ubicacion": "Torreblanca",
     "tipo": "venta",
     "habitaciones": 1,
-    "baños": 1,
+    "banos": 1,
     "metros_cuadrados": 47,
-    "Garaje":"si",
-    "Trastero":"",
+    "garaje":"si",
+    "trastero":"",
     "coordenadas": {
       "latitud": 36.5684,
       "longitud": -4.6205
@@ -332,10 +332,10 @@
     "ubicacion": "Calle Ancla, Benalmádena, Málaga",
     "tipo": "venta",
     "habitaciones": 2,
-    "baños": 1,
+    "banos": 1,
     "metros_cuadrados": 92,
-    "Garaje":"si",
-    "Trastero":"Si",
+    "garaje":"si",
+    "trastero":"Si",
     "coordenadas": {
       "latitud": 36.5845,
       "longitud": -4.5553
