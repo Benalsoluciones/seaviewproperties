@@ -31,7 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
             return respuesta.json();
         })
         .then(datos => {
-            todasLasPropiedades = datos;
+            // Si el JSON tiene la clave "propiedades", usas esa lista. Si no, usa datos directamente.
+            todasLasPropiedades = datos.propiedades || datos;
+            
             renderizarPropiedades(todasLasPropiedades);
         })
         .catch(error => {
