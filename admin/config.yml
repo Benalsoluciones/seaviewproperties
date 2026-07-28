@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main # o master, según el nombre de tu rama principal
+
+media_folder: "img/propiedades" # Dónde se guardarán las fotos que suba el cliente
+public_folder: "img/propiedades"
+
+collections:
+  - name: "propiedades"
+    label: "Propiedades"
+    files:
+      - file: "propiedades.json"
+        label: "Lista de Inmuebles"
+        name: "lista_propiedades"
+        fields:
+          - label: "Propiedades"
+            name: "propiedades"
+            widget: "list"
+            summary: '{{fields.titulo}} - {{fields.precio}} €'
+            fields:
+              - { label: "ID Único", name: "id", widget: "number", value_type: "int" }
+              - { label: "Título de la Propiedad", name: "titulo", widget: "string" }
+              - { label: "Tipo", name: "tipo", widget: "select", options: ["venta", "alquiler"] }
+              - { label: "Municipio / Zona", name: "municipio", widget: "string" }
+              - { label: "Ubicación visible", name: "ubicacion", widget: "string" }
+              - { label: "Precio (€)", name: "precio", widget: "number", value_type: "int" }
+              - { label: "Habitaciones", name: "habitaciones", widget: "number", default: 1 }
+              - { label: "Baños", name: "banos", widget: "number", default: 1 }
+              - { label: "Metros Cuadrados (m²)", name: "metros_cuadrados", widget: "number", default: 0 }
+              - { label: "Imagen Principal", name: "imagen", widget: "image" }
+              - { label: "Galería de Fotos", name: "galeria", widget: "list", field: { label: "Foto", name: "foto", widget: "image" } }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - label: "Coordenadas del Mapa (Aproximadas)"
+                name: "coordenadas"
+                widget: "object"
+                fields:
+                  - { label: "Latitud", name: "latitud", widget: "number", value_type: "float", default: 36.5962 }
+                  - { label: "Longitud", name: "longitud", widget: "number", value_type: "float", default: -4.5273 }

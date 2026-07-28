@@ -379,10 +379,10 @@
     "ubicacion": "Calle Faro, Torrequebreda, Benalmádena",
     "tipo": "venta",
     "habitaciones": 3,
-    "baños": 3,
+    "banos": 3,
     "metros_cuadrados": 271,
-    "Garaje":"",
-    "Trastero":"si",
+    "garaje":"",
+    "trastero":"si",
     "coordenadas": {
       "latitud": 36.5834,
       "longitud": -4.5569
@@ -432,10 +432,10 @@
     "ubicacion": "Calle Don José de Orbaneja, 36, Sitio de Calahonda, Mijas",
     "tipo": "venta",
     "habitaciones": 4,
-    "baños": 3,
+    "banos": 3,
     "metros_cuadrados": 170,
-    "Garaje":"",
-    "Trastero":"Si",
+    "garaje":"",
+    "trastero":"Si",
     "coordenadas": {
       "latitud": 36.5041,
       "longitud": -4.7256
