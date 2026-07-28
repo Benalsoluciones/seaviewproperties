@@ -1,40 +1,40 @@
 backend:
   name: git-gateway
-  branch: main # Si tu rama principal se llama "master", cámbialo por "master"
+  branch: main # Si tu rama principal en GitHub se llama master, cambia "main" por "master"
 
 media_folder: "img"
 public_folder: "img"
 
 collections:
-  - name: "propiedades_list"
-    label: "Gestión de Inmuebles"
+  - name: "catalogo_propiedades"
+    label: "Propiedades"
     files:
       - file: "propiedades.json"
-        label: "Catálogo de Propiedades"
-        name: "catalogo"
+        label: "Detalle de la Propiedad"
+        name: "inmueble"
         fields:
-          - label: "Lista de Inmuebles"
-            name: "propiedades"
+          - { label: "ID Único", name: "id", widget: "number", value_type: "int" }
+          - { label: "Título de la Propiedad", name: "titulo", widget: "string" }
+          - { label: "Precio (€)", name: "precio", widget: "number", value_type: "int" }
+          - { label: "Municipio", name: "municipio", widget: "string" }
+          - { label: "Ubicación Completa", name: "ubicacion", widget: "string" }
+          - { label: "Tipo", name: "tipo", widget: "select", options: ["venta", "alquiler"] }
+          - { label: "Habitaciones", name: "habitaciones", widget: "number", default: 1 }
+          - { label: "Baños", name: "banos", widget: "number", default: 1 }
+          - { label: "Metros Cuadrados (m²)", name: "metros_cuadrados", widget: "number", default: 0 }
+          - { label: "Garaje", name: "garaje", widget: "string", required: false }
+          - { label: "Trastero", name: "trastero", widget: "string", required: false }
+          - { label: "Etiqueta Destacada", name: "etiqueta", widget: "string", required: false }
+          - { label: "Imagen Principal", name: "imagen", widget: "image" }
+          - label: "Galería de Imágenes"
+            name: "galeria"
             widget: "list"
-            summary: '{{fields.titulo}} - {{fields.precio}} €'
+            required: false
+            field: { label: "Imagen", name: "foto", widget: "image" }
+          - label: "Coordenadas Mapa"
+            name: "coordenadas"
+            widget: "object"
             fields:
-              - { label: "ID Único", name: "id", widget: "number", value_type: "int" }
-              - { label: "Título de la Propiedad", name: "titulo", widget: "string" }
-              - { label: "Tipo", name: "tipo", widget: "select", options: ["venta", "alquiler"] }
-              - { label: "Municipio", name: "municipio", widget: "string" }
-              - { label: "Ubicación Completa", name: "ubicacion", widget: "string" }
-              - { label: "Precio (€)", name: "precio", widget: "number", value_type: "int" }
-              - { label: "Habitaciones", name: "habitaciones", widget: "number", default: 1 }
-              - { label: "Baños", name: "banos", widget: "number", default: 1 }
-              - { label: "Metros Cuadrados (m²)", name: "metros_cuadrados", widget: "number", default: 0 }
-              - { label: "Garaje", name: "garaje", widget: "select", options: ["si", "no"] }
-              - { label: "Trastero", name: "trastero", widget: "select", options: ["si", "no"] }
-              - { label: "Etiqueta Destacada", name: "etiqueta", widget: "string", required: false }
-              - { label: "Imagen Principal", name: "imagen", widget: "image" }
-              - { label: "Descripción", name: "descripcion", widget: "text" }
-              - label: "Coordenadas Mapa"
-                name: "coordenadas"
-                widget: "object"
-                fields:
-                  - { label: "Latitud", name: "latitud", widget: "number", value_type: "float" }
-                  - { label: "Longitud", name: "longitud", widget: "number", value_type: "float" }
+              - { label: "Latitud", name: "latitud", widget: "number", value_type: "float" }
+              - { label: "Longitud", name: "longitud", widget: "number", value_type: "float" }
+          - { label: "Descripción", name: "descripcion", widget: "text" }
