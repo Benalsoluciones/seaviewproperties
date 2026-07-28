@@ -1,39 +1,41 @@
-[
+
   {
-    "id": 1,
-    "titulo": "Apartamento en Los Patos",
-    "precio": 220000,
-    "municipio": "benalmadena",
-    "ubicacion": "Benalmádena, Málaga",
-    "tipo": "venta",
-    "habitaciones": 1,
-    "banos": 1,
-    "metros_cuadrados": 50,
-    "garaje":"Si",
-    "trastero":"Si",
-    "coordenadas": {
-      "latitud": 36.5863,
-      "longitud": -4.5360
-    },
-    "etiqueta": "Exclusiva",
-    "descripcion":  "Acogedor apartamento en una excelente ubicación en la zona de Torrequebrada, a tan solo 300 metros de la playa andando.\n\nIdeal para inversión o segunda residencia. Situado en una urbanización tranquila y cuidada, esta vivienda es una opción ideal tanto para quienes buscan una segunda residencia cerca del mar como para inversores interesados en alquiler vacacional, ya que cuenta con licencia turística en vigor.\n\nLa vivienda dispone de 1 dormitorio amplio, con espacio suficiente para almacenaje y descanso cómodo durante todo el año. El baño es completo y funcional, y el salón dispone de mucha luz natural y buena distribución, lo que lo hace muy agradable. La cocina está integrada de forma práctica en la vivienda, ofreciendo comodidad para el día a día o para estancias vacacionales.\n\nUno de los puntos fuertes de este apartamento es su ubicación. En pocos minutos caminando se llega a la playa, lo que permite disfrutar del mar y del paseo marítimo sin necesidad de utilizar el coche. Además, la zona de Torrequebrada es muy valorada por su tranquilidad y cercanía a servicios, restaurantes y tiendas, lo que hace que la vida diaria sea cómoda y agradable.\n\nLa urbanización cuenta con piscina comunitaria, perfecta para disfrutar del clima de la Costa del Sol durante gran parte del año. También incluye plaza de parking privada y trastero, dos extras muy demandados que aportan comodidad y espacio adicional de almacenamiento.\n\nGracias a su licencia turística, esta propiedad ofrece una gran oportunidad de rentabilidad para alquiler vacacional, en una zona con alta demanda de turistas y visitantes durante todo el año. Esto la convierte en una inversión atractiva para quienes buscan generar ingresos adicionales a través del alquiler.\n\nEn definitiva, se trata de un apartamento que combina ubicación, comodidad y potencial de inversión, ideal para quienes buscan disfrutar del estilo de vida mediterráneo o para inversores interesados en el mercado de alquiler vacacional en la Costa del Sol.\n\nLe informamos que nuestros honorarios de agencia ya están incluidos en el precio de venta, por lo que no tendrá que pagar gastos de gestión ni de asesoramiento inmobiliario.\n\nEn cumplimiento del Decreto 218/2005 de la Junta de Andalucía, de 11 de octubre, los gastos notariales y registrales, así como los impuestos que graven la transmisión de la propiedad, no están incluidos en el precio.\n\nLa información proporcionada es únicamente orientativa, no vinculante y carece de valor contractual. Esta información puede haber sido modificada, aunque todavía no se haya incorporado.\n\nPara más información, no dude en ponerse en contacto con nosotros y le informaremos de las novedades o modificaciones más recientes.",
-    "imagen": "img/los-patos/IMG-20260706-WA0046.jpg",
-    "galeria": [
-      "img/los-patos/IMG-20260706-WA0047.jpg",
-      "img/los-patos/IMG-20260706-WA0048.jpg",
-      "img/los-patos/IMG-20260706-WA0049.jpg",
-      "img/los-patos/IMG-20260706-WA0050.jpg",
-      "img/los-patos/IMG-20260706-WA0051.jpg",
-      "img/los-patos/IMG-20260706-WA0052.jpg",
-      "img/los-patos/IMG-20260706-WA0053.jpg",
-      "img/los-patos/IMG-20260706-WA0054.jpg",
-      "img/los-patos/IMG-20260706-WA0055.jpg",
-      "img/los-patos/IMG-20260706-WA0056.jpg",
-      "img/los-patos/IMG-20260706-WA0057.jpg",
-      "img/los-patos/IMG-20260706-WA0058.jpg",
-      "img/los-patos/IMG-20260706-WA0059.jpg"
-    ]
-  },
+    "propiedades": [
+      {
+        "id": 1,
+        "titulo": "Apartamento en Los Patos",
+        "precio": 220000,
+        "municipio": "benalmadena",
+        "ubicacion": "Benalmádena, Málaga",
+        "tipo": "venta",
+        "habitaciones": 1,
+        "banos": 1,
+        "metros_cuadrados": 50,
+        "garaje":"true",
+        "trastero":"true",
+        "coordenadas": {
+          "latitud": 36.5863,
+          "longitud": -4.5360
+        },
+        "etiqueta": "Exclusiva",
+        "descripcion":  "Acogedor apartamento en una excelente ubicación en la zona de Torrequebrada, a tan solo 300 metros de la playa andando.\n\nIdeal para inversión o segunda residencia. Situado en una urbanización tranquila y cuidada, esta vivienda es una opción ideal tanto para quienes buscan una segunda residencia cerca del mar como para inversores interesados en alquiler vacacional, ya que cuenta con licencia turística en vigor.\n\nLa vivienda dispone de 1 dormitorio amplio, con espacio suficiente para almacenaje y descanso cómodo durante todo el año. El baño es completo y funcional, y el salón dispone de mucha luz natural y buena distribución, lo que lo hace muy agradable. La cocina está integrada de forma práctica en la vivienda, ofreciendo comodidad para el día a día o para estancias vacacionales.\n\nUno de los puntos fuertes de este apartamento es su ubicación. En pocos minutos caminando se llega a la playa, lo que permite disfrutar del mar y del paseo marítimo sin necesidad de utilizar el coche. Además, la zona de Torrequebrada es muy valorada por su tranquilidad y cercanía a servicios, restaurantes y tiendas, lo que hace que la vida diaria sea cómoda y agradable.\n\nLa urbanización cuenta con piscina comunitaria, perfecta para disfrutar del clima de la Costa del Sol durante gran parte del año. También incluye plaza de parking privada y trastero, dos extras muy demandados que aportan comodidad y espacio adicional de almacenamiento.\n\nGracias a su licencia turística, esta propiedad ofrece una gran oportunidad de rentabilidad para alquiler vacacional, en una zona con alta demanda de turistas y visitantes durante todo el año. Esto la convierte en una inversión atractiva para quienes buscan generar ingresos adicionales a través del alquiler.\n\nEn definitiva, se trata de un apartamento que combina ubicación, comodidad y potencial de inversión, ideal para quienes buscan disfrutar del estilo de vida mediterráneo o para inversores interesados en el mercado de alquiler vacacional en la Costa del Sol.\n\nLe informamos que nuestros honorarios de agencia ya están incluidos en el precio de venta, por lo que no tendrá que pagar gastos de gestión ni de asesoramiento inmobiliario.\n\nEn cumplimiento del Decreto 218/2005 de la Junta de Andalucía, de 11 de octubre, los gastos notariales y registrales, así como los impuestos que graven la transmisión de la propiedad, no están incluidos en el precio.\n\nLa información proporcionada es únicamente orientativa, no vinculante y carece de valor contractual. Esta información puede haber sido modificada, aunque todavía no se haya incorporado.\n\nPara más información, no dude en ponerse en contacto con nosotros y le informaremos de las novedades o modificaciones más recientes.",
+        "imagen": "img/los-patos/IMG-20260706-WA0046.jpg",
+        "galeria": [
+          "img/los-patos/IMG-20260706-WA0047.jpg",
+          "img/los-patos/IMG-20260706-WA0048.jpg",
+          "img/los-patos/IMG-20260706-WA0049.jpg",
+          "img/los-patos/IMG-20260706-WA0050.jpg",
+          "img/los-patos/IMG-20260706-WA0051.jpg",
+          "img/los-patos/IMG-20260706-WA0052.jpg",
+          "img/los-patos/IMG-20260706-WA0053.jpg",
+          "img/los-patos/IMG-20260706-WA0054.jpg",
+          "img/los-patos/IMG-20260706-WA0055.jpg",
+          "img/los-patos/IMG-20260706-WA0056.jpg",
+          "img/los-patos/IMG-20260706-WA0057.jpg",
+          "img/los-patos/IMG-20260706-WA0058.jpg",
+          "img/los-patos/IMG-20260706-WA0059.jpg"
+        ]
+      },
   {
     "id": 2,
     "titulo": "Ático en venta en Torrequebrada",
@@ -44,8 +46,8 @@
     "habitaciones": 2,
     "banos": 2,
     "metros_cuadrados": 135,
-    "garaje":"Si",
-    "trastero":"No",
+    "garaje":"true",
+    "trastero":"false",
     "coordenadas": {
       "latitud": 36.5827,
       "longitud": -4.5572
@@ -92,8 +94,8 @@
     "habitaciones": 3,
     "banos": 2,
     "metros_cuadrados": 120,
-    "garaje":"",
-    "trastero":"",
+    "garaje":"false",
+    "trastero":"false",
     "coordenadas": {
       "latitud": 36.5321,
       "longitud": -4.6296
@@ -147,8 +149,8 @@
     "habitaciones": 2,
     "banos": 1,
     "metros_cuadrados": 70,
-    "garaje":"",
-    "trastero":"Si",
+    "garaje":"false",
+    "trastero":"true",
     "coordenadas": {
       "latitud": 36.7352,
       "longitud": -4.4147
@@ -188,8 +190,8 @@
     "habitaciones": 3,
     "banos": 2,
     "metros_cuadrados": 106,
-    "garaje":"",
-    "trastero":"Si",
+    "garaje":"false",
+    "trastero":"true",
     "coordenadas": {
       "latitud": 36.4987,
       "longitud": -4.6891
@@ -285,8 +287,8 @@
     "habitaciones": 1,
     "banos": 1,
     "metros_cuadrados": 47,
-    "garaje":"si",
-    "trastero":"",
+    "garaje":"true",
+    "trastero":"false",
     "coordenadas": {
       "latitud": 36.5684,
       "longitud": -4.6205
@@ -334,8 +336,8 @@
     "habitaciones": 2,
     "banos": 1,
     "metros_cuadrados": 92,
-    "garaje":"si",
-    "trastero":"Si",
+    "garaje":"true",
+    "trastero":"true",
     "coordenadas": {
       "latitud": 36.5845,
       "longitud": -4.5553
@@ -381,8 +383,8 @@
     "habitaciones": 3,
     "banos": 3,
     "metros_cuadrados": 271,
-    "garaje":"",
-    "trastero":"si",
+    "garaje":"false",
+    "trastero":"true",
     "coordenadas": {
       "latitud": 36.5834,
       "longitud": -4.5569
@@ -428,14 +430,14 @@
     "id": 10,
     "titulo": "Chalet pareado en venta en Calahonda",
     "precio": 649000,
-    "municipio":"malaga",
+    "municipio":"mijas",
     "ubicacion": "Calle Don José de Orbaneja, 36, Sitio de Calahonda, Mijas",
     "tipo": "venta",
     "habitaciones": 4,
     "banos": 3,
     "metros_cuadrados": 170,
-    "garaje":"",
-    "trastero":"Si",
+    "garaje":"false",
+    "trastero":"true",
     "coordenadas": {
       "latitud": 36.5041,
       "longitud": -4.7256
@@ -480,3 +482,4 @@
     ]
   }
 ]
+}
