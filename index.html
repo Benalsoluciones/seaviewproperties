@@ -18,6 +18,9 @@
     <!-- Estilos y Script de Leaflet (Mapas Interactivos) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!--Conexion con netlify-->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 </head>
 
 <body>
@@ -340,6 +343,18 @@
 
     <!-- Conexión con el archivo JavaScript -->
     <script src="app.js"></script>
+    <!--Conexion con netlify-->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+                });
+            }
+            });
+        }
+    </script>
 </body>
 
 </html>
