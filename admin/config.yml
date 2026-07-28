@@ -3,7 +3,7 @@ backend:
   branch: main # Cambia a "master" si tu rama principal se llama master
 
 media_folder: "img"
-public_folder: "img"
+public_folder: "/img"
 
 collections:
   - name: "catalogo_inmuebles"
