@@ -1,4 +1,18 @@
+// Función universal para formatear cualquier ruta de imagen (tarjetas y modal)
+function obtenerRutaImagen(foto) {
+    if (!foto) return '';
+    
+    const esGitHub = window.location.pathname.includes('/seaviewproperties');
+    const basePath = esGitHub ? '/seaviewproperties' : '';
 
+    if (esGitHub) {
+        const rutaLimpia = foto.startsWith('/') ? foto : `/${foto}`;
+        return `${basePath}${rutaLimpia}`;
+    } else {
+        // En Netlify o Local: si ya empieza con barra la dejamos tal cual, si no, le ponemos ./
+        return foto.startsWith('/') ? foto : `./${foto}`;
+    }
+}
 
 // Variable global para guardar los inmuebles una vez cargados
 let todasLasPropiedades = [];
@@ -100,11 +114,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const nBanos = piso.banos || piso.baños || 1;
             const nMetros = piso.metros_cuadrados || piso.metros || 0;
 
+            // LO QUE PONES EN SU LUGAR:
+            const fotoPrincipal = obtenerRutaImagen(piso.imagen);
+
             tarjeta.innerHTML = `
                 <div class="imagen-contenedor">
-                    <img src="${piso.imagen}" alt="${piso.titulo}">
+                    <img src="${fotoPrincipal}" alt="${piso.titulo}">
                     <span class="etiqueta ${piso.tipo}">${piso.tipo.toUpperCase()}</span>
                 </div>
+
                 <div class="info">
                     <h3>${piso.titulo}</h3>
                     <p class="precio">${precioFormateado} €${textoAlquiler}</p>
@@ -132,31 +150,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Función para llenar y abrir el Modal Emergente
     function abrirModalInmueble(id) {
         const propiedad = todasLasPropiedades.find(p => p.id === id);
         if (!propiedad || !modal) return;
 
-        // Detectar si estamos en GitHub Pages
-        const esGitHub = window.location.pathname.includes('/seaviewproperties');
-        const basePath = esGitHub ? '/seaviewproperties' : '';
-
+        // Si hay galería la usamos, si no, usamos la imagen principal
         const fotos = (propiedad.galeria && propiedad.galeria.length > 0) 
             ? propiedad.galeria 
             : [propiedad.imagen];
 
+        // Procesamos CADA FOTO de la galería exactamente con la misma lógica que las tarjetas
         const fotosHTML = fotos.map(foto => {
-            let rutaFoto = foto;
-
-            if (esGitHub) {
-                // En GitHub Pages: asegurar que comience con /seaviewproperties
-                const rutaLimpia = foto.startsWith('/') ? foto : `/${foto}`;
-                rutaFoto = `${basePath}${rutaLimpia}`;
-            } else {
-                // En Netlify o Local: si empieza con /, la dejamos; si no, aseguramos ruta relativa
-                rutaFoto = foto.startsWith('/') ? foto : `./${foto}`;
-            }
-
+            const rutaFoto = obtenerRutaImagen(foto);
             return `<img src="${rutaFoto}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
         }).join('');
 
