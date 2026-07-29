@@ -137,6 +137,26 @@ document.addEventListener("DOMContentLoaded", () => {
         const propiedad = todasLasPropiedades.find(p => p.id === id);
         if (!propiedad || !modal) return;
 
+        const fotos = (propiedad.galeria && propiedad.galeria.length > 0) 
+            ? propiedad.galeria 
+            : [propiedad.imagen];
+
+        // Construcción de rutas limpia y compatible con GitHub Pages, Netlify y Local
+        const fotosHTML = fotos.map(foto => {
+            // Quitamos la barra inicial si la tiene para normalizar la ruta
+            const rutaLimpia = foto.startsWith('/') ? foto.slice(1) : foto;
+            // new URL resuelve la ruta absoluta basándose en la URL real actual del navegador
+            const rutaAbsoluta = new URL(rutaLimpia, window.location.href).href;
+            return `<img src="${rutaAbsoluta}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
+        }).join('');
+
+        const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
+        const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
+        const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
+    /*function abrirModalInmueble(id) {
+        const propiedad = todasLasPropiedades.find(p => p.id === id);
+        if (!propiedad || !modal) return;
+
         const esGitHub = window.location.pathname.includes('/seaviewproperties');
         const basePath = esGitHub ? '/seaviewproperties' : '';
 
@@ -152,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
         const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
         const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
-
+*/
         contenidoModal.innerHTML = `
             <button class="btn-cerrar-modal" id="btn-cerrar-modal" title="Cerrar">&times;</button>
             <div class="modal-header">
