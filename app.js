@@ -137,19 +137,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const propiedad = todasLasPropiedades.find(p => p.id === id);
         if (!propiedad || !modal) return;
 
+        // Detectar si estamos en GitHub Pages
+        const esGitHub = window.location.pathname.includes('/seaviewproperties');
+        const basePath = esGitHub ? '/seaviewproperties' : '';
+
         const fotos = (propiedad.galeria && propiedad.galeria.length > 0) 
             ? propiedad.galeria 
             : [propiedad.imagen];
 
-        // Obtenemos el directorio base de la app (ej: '/seaviewproperties/' o '/')
-        const rutaBase = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-
         const fotosHTML = fotos.map(foto => {
-            // Quitamos la barra inicial si la tiene para evitar duplicados
-            const rutaLimpia = foto.startsWith('/') ? foto.slice(1) : foto;
-            // Construimos la ruta combinando el origen, la carpeta base y la imagen
-            const rutaFinal = `${window.location.origin}${rutaBase}${rutaLimpia}`;
-            return `<img src="${rutaFinal}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
+            let rutaFoto = foto;
+
+            if (esGitHub) {
+                // En GitHub Pages: asegurar que comience con /seaviewproperties
+                const rutaLimpia = foto.startsWith('/') ? foto : `/${foto}`;
+                rutaFoto = `${basePath}${rutaLimpia}`;
+            } else {
+                // En Netlify o Local: si empieza con /, la dejamos; si no, aseguramos ruta relativa
+                rutaFoto = foto.startsWith('/') ? foto : `./${foto}`;
+            }
+
+            return `<img src="${rutaFoto}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
         }).join('');
 
         const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
