@@ -1,3 +1,5 @@
+
+
 // Variable global para guardar los inmuebles una vez cargados
 let todasLasPropiedades = [];
 let mapaInstancia = null; // Instancia global para el mapa interactivo
@@ -14,13 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Elementos del Modal Principal
     const modal = document.getElementById("modal-detalle");
-    const btnCerrarModal = document.getElementById("cerrar-modal");
     const contenidoModal = document.getElementById("contenido-modal-inmueble");
 
     // Elementos del Visor de Imagen Ampliada (Zoom)
     const visorImagen = document.getElementById("visor-imagen");
     const imagenAmpliada = document.getElementById("imagen-ampliada");
-    const btnCerrarVisor = document.getElementById("cerrar-visor");
 
     // 1. Cargar los datos desde el archivo JSON
     fetch("propiedades.json")
@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return respuesta.json();
         })
         .then(datos => {
-            // Si el JSON tiene la clave "propiedades", usas esa lista. Si no, usa datos directamente.
             todasLasPropiedades = datos.propiedades || datos;
-            
             renderizarPropiedades(todasLasPropiedades);
         })
         .catch(error => {
@@ -44,8 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     // 2. Lógica combinada de los botones de Filtro (Tipo y Zona)
-
-    // Eventos para botones de Tipo (Todos / Venta / Alquiler)
     botonesTipo.forEach(boton => {
         boton.addEventListener("click", (e) => {
             botonesTipo.forEach(b => b.classList.remove("activo"));
@@ -56,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Eventos para botones de Zona (Todas / Benalmádena / Fuengirola / etc.)
     botonesZona.forEach(boton => {
         boton.addEventListener("click", (e) => {
             botonesZona.forEach(b => b.classList.remove("activo"));
@@ -67,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Función que evalúa ambos criterios a la vez
     function aplicarFiltrosCombinados() {
         const resultado = todasLasPropiedades.filter(piso => {
             const tipoPiso = (piso.tipo || '').trim().toLowerCase();
@@ -81,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderizarPropiedades(resultado);
     }
-/*
+
     // 3. Función encargada de pintar el HTML de las tarjetas
     function renderizarPropiedades(listaDePropiedades) {
         if (!contenedor) return;
@@ -95,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const ruta = window.location.pathname;
         const esIndex = ruta.endsWith('index.html') || ruta.endsWith('/') || ruta === '';
-
         const propiedadesAMostrar = esIndex ? listaDePropiedades.slice(0, 3) : listaDePropiedades;
 
         propiedadesAMostrar.forEach(piso => {
@@ -138,88 +131,30 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-*/
-
-// 3. Función encargada de pintar el HTML de las tarjetas
-function renderizarPropiedades(listaDePropiedades) {
-    if (!contenedor) return;
-
-    contenedor.innerHTML = "";
-
-    if (listaDePropiedades.length === 0) {
-        contenedor.innerHTML = `<p class="cargando">No hay propiedades disponibles en este momento bajo este criterio.</p>`;
-        return;
-    }
-
-    const ruta = window.location.pathname;
-    const esIndex = ruta.endsWith('index.html') || ruta.endsWith('/') || ruta === '';
-
-    const propiedadesAMostrar = esIndex ? listaDePropiedades.slice(0, 3) : listaDePropiedades;
-
-    // Detectar si estamos en la subcarpeta de GitHub Pages
-    const esGitHub = window.location.pathname.includes('/seaviewproperties');
-    const basePath = esGitHub ? '/seaviewproperties' : '';
-
-    propiedadesAMostrar.forEach(piso => {
-        const tarjeta = document.createElement("div");
-        tarjeta.classList.add("tarjeta-propiedad");
-
-        const precioFormateado = piso.precio ? piso.precio.toLocaleString('es-ES') : 'Consultar';
-        const textoAlquiler = piso.tipo === 'alquiler' ? '/mes' : '';
-        const nBanos = piso.banos || piso.baños || 1;
-        const nMetros = piso.metros_cuadrados || piso.metros || 0;
-
-        // Construir la ruta correcta de la imagen según el entorno
-        const imagenUrl = piso.imagen.startsWith('/')
-            ? `${basePath}${piso.imagen}`
-            : `${basePath}/${piso.imagen}`;
-
-        tarjeta.innerHTML = `
-            <div class="imagen-contenedor">
-                <img src="${imagenUrl}" alt="${piso.titulo}">
-                <span class="etiqueta ${piso.tipo}">${piso.tipo.toUpperCase()}</span>
-            </div>
-            <div class="info">
-                <h3>${piso.titulo}</h3>
-                <p class="precio">${precioFormateado} €${textoAlquiler}</p>
-    
-                <div class="caracteristicas">
-                    <span><i class="fa-solid fa-bed"></i> ${piso.habitaciones || 1} Hab</span>
-                    <span><i class="fa-solid fa-bath"></i> ${nBanos} Baños</span>
-                    <span><i class="fa-solid fa-ruler-combined"></i> ${nMetros} m²</span>
-                </div>
-
-                <p class="descripcion">${piso.descripcion}</p>
-                
-                <button class="btn-contacto btn-ver-detalle" data-id="${piso.id}">Ver detalles</button>
-            </div>
-        `;
-
-        contenedor.appendChild(tarjeta);
-    });
-
-    document.querySelectorAll(".btn-ver-detalle").forEach(btn => {
-        btn.addEventListener("click", (e) => {
-            const idPropiedad = parseInt(e.target.getAttribute("data-id"));
-            abrirModalInmueble(idPropiedad);
-        });
-    });
-}
 
     // 4. Función para llenar y abrir el Modal Emergente
     function abrirModalInmueble(id) {
         const propiedad = todasLasPropiedades.find(p => p.id === id);
         if (!propiedad || !modal) return;
 
-        const fotos = propiedad.galeria || [propiedad.imagen];
-        const fotosHTML = fotos.map(foto => `<img src="${foto}" alt="${propiedad.titulo}" class="foto-galeria-item">`).join('');
+        const esGitHub = window.location.pathname.includes('/seaviewproperties');
+        const basePath = esGitHub ? '/seaviewproperties' : '';
+
+        const fotos = (propiedad.galeria && propiedad.galeria.length > 0) 
+            ? propiedad.galeria 
+            : [propiedad.imagen];
+
+        const fotosHTML = fotos.map(foto => {
+            const rutaFoto = foto.startsWith('/') ? `${basePath}${foto}` : `${basePath}/${foto}`;
+            return `<img src="${rutaFoto}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
+        }).join('');
 
         const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
-
         const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
         const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
 
         contenidoModal.innerHTML = `
+            <button class="btn-cerrar-modal" id="btn-cerrar-modal" title="Cerrar">&times;</button>
             <div class="modal-header">
                 <h2>${propiedad.titulo}</h2>
                 <p class="ubicacion"><i class="fa-solid fa-location-dot"></i> ${propiedad.ubicacion}</p>
@@ -249,6 +184,7 @@ function renderizarPropiedades(listaDePropiedades) {
 
         modal.classList.add("activo");
 
+        // Evento para abrir las imágenes en el visor ampliado
         document.querySelectorAll(".foto-galeria-item").forEach(img => {
             img.addEventListener("click", (e) => {
                 if (visorImagen && imagenAmpliada) {
@@ -258,7 +194,8 @@ function renderizarPropiedades(listaDePropiedades) {
             });
         });
 
-       setTimeout(() => {
+        // Inicialización del mapa
+        setTimeout(() => {
             if (mapaInstancia) {
                 mapaInstancia.remove();
                 mapaInstancia = null;
@@ -266,7 +203,6 @@ function renderizarPropiedades(listaDePropiedades) {
 
             const elMapa = document.getElementById('mapa-inmueble');
             if (elMapa && typeof L !== 'undefined') {
-                // Zoom en 14 para encuadrar bien la zona
                 mapaInstancia = L.map('mapa-inmueble').setView([lat, lng], 14);
 
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -274,12 +210,11 @@ function renderizarPropiedades(listaDePropiedades) {
                     attribution: '&copy; OpenStreetMap'
                 }).addTo(mapaInstancia);
 
-                // Círculo del área en lugar del marcador exacto
                 const circuloArea = L.circle([lat, lng], {
-                    color: '#0d2c54',       // Borde azul corporativo
-                    fillColor: '#0d2c54',   // Relleno azul
-                    fillOpacity: 0.25,      // Transparencia suave
-                    radius: 350             // Área de 350 metros
+                    color: '#0d2c54',
+                    fillColor: '#0d2c54',
+                    fillOpacity: 0.25,
+                    radius: 350
                 }).addTo(mapaInstancia);
 
                 circuloArea.bindPopup(`<b>Ubicación aproximada</b><br>${propiedad.municipio || propiedad.zona || 'Zona residencial'}`);
@@ -289,36 +224,6 @@ function renderizarPropiedades(listaDePropiedades) {
                 }, 100);
             }
         }, 300);
-    } 
-
-    // Eventos para cerrar el Modal Principal
-    if (btnCerrarModal) {
-        btnCerrarModal.addEventListener("click", () => {
-            modal.classList.remove("activo");
-        });
-    }
-
-    if (modal) {
-        modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-                modal.classList.remove("activo");
-            }
-        });
-    }
-
-    // Eventos para cerrar el Visor a Pantalla Completa
-    if (btnCerrarVisor) {
-        btnCerrarVisor.addEventListener("click", () => {
-            visorImagen.classList.remove("activo");
-        });
-    }
-
-    if (visorImagen) {
-        visorImagen.addEventListener("click", (e) => {
-            if (e.target === visorImagen) {
-                visorImagen.classList.remove("activo");
-            }
-        });
     }
 
     // 5. Formulario de contacto
@@ -332,19 +237,15 @@ function renderizarPropiedades(listaDePropiedades) {
         });
     }
 
-    // ==========================================
-    // 6. GESTIÓN DEL BANNER DE COOKIES
-    // ==========================================
+    // 6. Gestión del Banner de Cookies
     const bannerCookies = document.getElementById("banner-cookies");
     const btnAceptarCookies = document.getElementById("btn-aceptar-cookies");
 
     if (bannerCookies && btnAceptarCookies) {
-        // Si el usuario ya aceptó previamente las cookies, ocultamos el aviso
         if (localStorage.getItem("cookiesAceptadas") === "true") {
             bannerCookies.style.display = "none";
         }
 
-        // Guardamos la decisión cuando el usuario presiona "Aceptar todo"
         btnAceptarCookies.addEventListener("click", () => {
             localStorage.setItem("cookiesAceptadas", "true");
             bannerCookies.style.display = "none";
@@ -378,5 +279,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 iconoMenu.className = 'fa-solid fa-bars';
             });
         });
+    }
+});
+
+// ==========================================
+// MANEJO GLOBAL DE CIERRES (MODAL Y VISOR DE FOTOS)
+// ==========================================
+
+// Cierre del Modal Principal (botón X o clic en el fondo fuera del contenido)
+document.addEventListener("click", (e) => {
+    const modal = document.getElementById("modal-detalle");
+    if (e.target.matches("#btn-cerrar-modal, .cerrar-modal, .btn-cerrar-modal") || e.target === modal) {
+        if (modal) {
+            modal.classList.remove("activo");
+        }
+    }
+});
+
+// Cierre del Visor Ampliado de Fotos (botón X o clic en el fondo oscuro)
+document.addEventListener("click", (e) => {
+    const visorImagen = document.getElementById("visor-imagen");
+    if (e.target.matches("#cerrar-visor, #btn-cerrar-visor, .cerrar-visor, .btn-cerrar-visor") || e.target === visorImagen) {
+        if (visorImagen) {
+            visorImagen.classList.remove("activo");
+        }
     }
 });
