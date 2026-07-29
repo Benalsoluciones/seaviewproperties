@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderizarPropiedades(resultado);
     }
-
+/*
     // 3. Función encargada de pintar el HTML de las tarjetas
     function renderizarPropiedades(listaDePropiedades) {
         if (!contenedor) return;
@@ -138,6 +138,73 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+*/
+
+// 3. Función encargada de pintar el HTML de las tarjetas
+function renderizarPropiedades(listaDePropiedades) {
+    if (!contenedor) return;
+
+    contenedor.innerHTML = "";
+
+    if (listaDePropiedades.length === 0) {
+        contenedor.innerHTML = `<p class="cargando">No hay propiedades disponibles en este momento bajo este criterio.</p>`;
+        return;
+    }
+
+    const ruta = window.location.pathname;
+    const esIndex = ruta.endsWith('index.html') || ruta.endsWith('/') || ruta === '';
+
+    const propiedadesAMostrar = esIndex ? listaDePropiedades.slice(0, 3) : listaDePropiedades;
+
+    // Detectar si estamos en la subcarpeta de GitHub Pages
+    const esGitHub = window.location.pathname.includes('/seaviewproperties');
+    const basePath = esGitHub ? '/seaviewproperties' : '';
+
+    propiedadesAMostrar.forEach(piso => {
+        const tarjeta = document.createElement("div");
+        tarjeta.classList.add("tarjeta-propiedad");
+
+        const precioFormateado = piso.precio ? piso.precio.toLocaleString('es-ES') : 'Consultar';
+        const textoAlquiler = piso.tipo === 'alquiler' ? '/mes' : '';
+        const nBanos = piso.banos || piso.baños || 1;
+        const nMetros = piso.metros_cuadrados || piso.metros || 0;
+
+        // Construir la ruta correcta de la imagen según el entorno
+        const imagenUrl = piso.imagen.startsWith('/')
+            ? `${basePath}${piso.imagen}`
+            : `${basePath}/${piso.imagen}`;
+
+        tarjeta.innerHTML = `
+            <div class="imagen-contenedor">
+                <img src="${imagenUrl}" alt="${piso.titulo}">
+                <span class="etiqueta ${piso.tipo}">${piso.tipo.toUpperCase()}</span>
+            </div>
+            <div class="info">
+                <h3>${piso.titulo}</h3>
+                <p class="precio">${precioFormateado} €${textoAlquiler}</p>
+    
+                <div class="caracteristicas">
+                    <span><i class="fa-solid fa-bed"></i> ${piso.habitaciones || 1} Hab</span>
+                    <span><i class="fa-solid fa-bath"></i> ${nBanos} Baños</span>
+                    <span><i class="fa-solid fa-ruler-combined"></i> ${nMetros} m²</span>
+                </div>
+
+                <p class="descripcion">${piso.descripcion}</p>
+                
+                <button class="btn-contacto btn-ver-detalle" data-id="${piso.id}">Ver detalles</button>
+            </div>
+        `;
+
+        contenedor.appendChild(tarjeta);
+    });
+
+    document.querySelectorAll(".btn-ver-detalle").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            const idPropiedad = parseInt(e.target.getAttribute("data-id"));
+            abrirModalInmueble(idPropiedad);
+        });
+    });
+}
 
     // 4. Función para llenar y abrir el Modal Emergente
     function abrirModalInmueble(id) {
