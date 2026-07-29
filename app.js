@@ -141,38 +141,21 @@ document.addEventListener("DOMContentLoaded", () => {
             ? propiedad.galeria 
             : [propiedad.imagen];
 
-        // Construcción de rutas limpia y compatible con GitHub Pages, Netlify y Local
+        // Obtenemos el directorio base de la app (ej: '/seaviewproperties/' o '/')
+        const rutaBase = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+
         const fotosHTML = fotos.map(foto => {
-            // Quitamos la barra inicial si la tiene para normalizar la ruta
+            // Quitamos la barra inicial si la tiene para evitar duplicados
             const rutaLimpia = foto.startsWith('/') ? foto.slice(1) : foto;
-            // new URL resuelve la ruta absoluta basándose en la URL real actual del navegador
-            const rutaAbsoluta = new URL(rutaLimpia, window.location.href).href;
-            return `<img src="${rutaAbsoluta}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
+            // Construimos la ruta combinando el origen, la carpeta base y la imagen
+            const rutaFinal = `${window.location.origin}${rutaBase}${rutaLimpia}`;
+            return `<img src="${rutaFinal}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
         }).join('');
 
         const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
         const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
         const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
-    /*function abrirModalInmueble(id) {
-        const propiedad = todasLasPropiedades.find(p => p.id === id);
-        if (!propiedad || !modal) return;
 
-        const esGitHub = window.location.pathname.includes('/seaviewproperties');
-        const basePath = esGitHub ? '/seaviewproperties' : '';
-
-        const fotos = (propiedad.galeria && propiedad.galeria.length > 0) 
-            ? propiedad.galeria 
-            : [propiedad.imagen];
-
-        const fotosHTML = fotos.map(foto => {
-            const rutaFoto = foto.startsWith('/') ? `${basePath}${foto}` : `${basePath}/${foto}`;
-            return `<img src="${rutaFoto}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
-        }).join('');
-
-        const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
-        const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
-        const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
-*/
         contenidoModal.innerHTML = `
             <button class="btn-cerrar-modal" id="btn-cerrar-modal" title="Cerrar">&times;</button>
             <div class="modal-header">
@@ -245,7 +228,99 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, 300);
     }
+    /*function abrirModalInmueble(id) {
+        const propiedad = todasLasPropiedades.find(p => p.id === id);
+        if (!propiedad || !modal) return;
 
+        const esGitHub = window.location.pathname.includes('/seaviewproperties');
+        const basePath = esGitHub ? '/seaviewproperties' : '';
+
+        const fotos = (propiedad.galeria && propiedad.galeria.length > 0) 
+            ? propiedad.galeria 
+            : [propiedad.imagen];
+
+        const fotosHTML = fotos.map(foto => {
+            const rutaFoto = foto.startsWith('/') ? `${basePath}${foto}` : `${basePath}/${foto}`;
+            return `<img src="${rutaFoto}" alt="${propiedad.titulo}" class="foto-galeria-item">`;
+        }).join('');
+
+        const precioFormateado = propiedad.precio ? propiedad.precio.toLocaleString('es-ES') : 'Consultar';
+        const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
+        const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
+
+        contenidoModal.innerHTML = `
+            <button class="btn-cerrar-modal" id="btn-cerrar-modal" title="Cerrar">&times;</button>
+            <div class="modal-header">
+                <h2>${propiedad.titulo}</h2>
+                <p class="ubicacion"><i class="fa-solid fa-location-dot"></i> ${propiedad.ubicacion}</p>
+            </div>
+
+            <div class="modal-precio">${precioFormateado} €</div>
+
+            <div class="modal-caracteristicas">
+                <span><i class="fa-solid fa-bed"></i> ${propiedad.habitaciones || 1} Hab</span>
+                <span><i class="fa-solid fa-bath"></i> ${propiedad.banos || propiedad.baños || 1} Baños</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> ${propiedad.metros_cuadrados || 0} m²</span>
+            </div>
+
+            <h3>Galería de fotos <small style="font-size: 0.8em; color: #64748b; font-weight: normal;">(haz clic en cualquier foto para ampliarla)</small></h3>
+            <div class="modal-galeria">
+                ${fotosHTML}
+            </div>
+
+            <h3>Descripción</h3>
+            <p class="descripcion-modal">${propiedad.descripcion.replace(/\n/g, "<br>")}</p>
+
+            <div class="contenedor-mapa">
+                <h3>Ubicación en el mapa</h3>
+                <div id="mapa-inmueble"></div>
+            </div>
+        `;
+
+        modal.classList.add("activo");
+
+        // Evento para abrir las imágenes en el visor ampliado
+        document.querySelectorAll(".foto-galeria-item").forEach(img => {
+            img.addEventListener("click", (e) => {
+                if (visorImagen && imagenAmpliada) {
+                    imagenAmpliada.src = e.target.src;
+                    visorImagen.classList.add("activo");
+                }
+            });
+        });
+
+        // Inicialización del mapa
+        setTimeout(() => {
+            if (mapaInstancia) {
+                mapaInstancia.remove();
+                mapaInstancia = null;
+            }
+
+            const elMapa = document.getElementById('mapa-inmueble');
+            if (elMapa && typeof L !== 'undefined') {
+                mapaInstancia = L.map('mapa-inmueble').setView([lat, lng], 14);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; OpenStreetMap'
+                }).addTo(mapaInstancia);
+
+                const circuloArea = L.circle([lat, lng], {
+                    color: '#0d2c54',
+                    fillColor: '#0d2c54',
+                    fillOpacity: 0.25,
+                    radius: 350
+                }).addTo(mapaInstancia);
+
+                circuloArea.bindPopup(`<b>Ubicación aproximada</b><br>${propiedad.municipio || propiedad.zona || 'Zona residencial'}`);
+
+                setTimeout(() => {
+                    mapaInstancia.invalidateSize();
+                }, 100);
+            }
+        }, 300);
+    }
+*/
     // 5. Formulario de contacto
     const formulario = document.getElementById("form-contacto");
     if (formulario) {
