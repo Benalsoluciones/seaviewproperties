@@ -3,7 +3,8 @@
     "propiedades": [
       {
         "id": 1,
-        "titulo": "Apartamento en Los Patos",
+        "titulo": "Apartamento en Los Patos.",
+        "categoria": "apartamento",
         "precio": 220000,
         "municipio": "benalmadena",
         "ubicacion": "Benalmádena, Málaga",
@@ -38,7 +39,8 @@
       },
   {
     "id": 2,
-    "titulo": "Ático en venta en Torrequebrada",
+    "titulo": "Ático en venta en Torrequebrada.",
+    "categoria": "atico",
     "precio": 415000,
     "municipio":"benalmadena",
     "ubicacion": "Calle Faro,22, Benalmádena, Málaga",
@@ -87,6 +89,7 @@
   {
     "id": 3,
     "titulo": "Apartamento de lujo en exclusiva zona de Fuengirola.",
+    "categoria":"apartamento",
     "precio": 1900000,
     "municipio":"fuengirola",
     "ubicacion": "Avda. Santa Amalia, Fuengirola, Málaga",
@@ -141,7 +144,8 @@
   },
   {
     "id": 4,
-    "titulo": "Chalet adosado en venta en Calle Doña",
+    "titulo": "Chalet adosado en venta en Calle Doña.",
+    "categoria":"chalet",
     "precio": 269000,
     "municipio":"malaga",
     "ubicacion": "Calle Doña, Olletas, Málaga",
@@ -182,7 +186,8 @@
   },
   {
     "id": 5,
-    "titulo": "Chalet adosado en venta en Calle Competa",
+    "titulo": "Chalet adosado en venta en Calle Competa.",
+    "categoria":"chalet",
     "precio": 490000,
     "municipio":"mijas",
     "ubicacion": "Calle Competa, La Cala de Mijas, Málaga",
@@ -214,7 +219,7 @@
   },
   {
     "id": 6,
-    "titulo": "Apartamento de diseño contemporáneo de 1 dormitorio en Los Álamos,",
+    "titulo": "Apartamento de diseño contemporáneo en Los Álamos.",
     "precio": 615000,
     "municipio":"torremolinos",
     "ubicacion": "Los Alamos, Torremolinos",
@@ -280,6 +285,7 @@
   {
     "id": 7,
     "titulo": "Apartamento en Torreblanca.",
+    "categoria":"apartamento",
     "precio": 289000,
     "municipio":"fuengirola",
     "ubicacion": "Torreblanca",
@@ -329,6 +335,7 @@
   {
     "id": 8,
     "titulo": "Piso en venta en calle Ancla.",
+    "categoria":"piso",
     "precio": 339000,
     "municipio":"benalmadena",
     "ubicacion": "Calle Ancla, Benalmádena, Málaga",
@@ -376,6 +383,7 @@
   {
     "id": 9,
     "titulo": "Atico dúlex con solarium privado.",
+    "categoria":"atico",
     "precio": 695000,
     "municipio":"benalmadena",
     "ubicacion": "Calle Faro, Torrequebreda, Benalmádena",
@@ -429,6 +437,7 @@
   {
     "id": 10,
     "titulo": "Chalet pareado en venta en Calahonda",
+    "categoria":"chalet",
     "precio": 649000,
     "municipio":"mijas",
     "ubicacion": "Calle Don José de Orbaneja, 36, Sitio de Calahonda, Mijas",

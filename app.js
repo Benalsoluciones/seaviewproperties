@@ -55,39 +55,73 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-    // 2. Lógica combinada de los botones de Filtro (Tipo y Zona)
-    botonesTipo.forEach(boton => {
-        boton.addEventListener("click", (e) => {
-            botonesTipo.forEach(b => b.classList.remove("activo"));
-            e.target.classList.add("activo");
+    // ==========================================
+    // 2. LÓGICA DE FILTRADO CON DESPLEGABLES
+    // ==========================================
 
-            filtroTipoActual = e.target.getAttribute("data-tipo");
-            aplicarFiltrosCombinados();
-        });
-    });
+    function aplicarFiltros() {
+        const valOperacion = document.getElementById('filtro-operacion').value.toLowerCase();
+        const valZona = document.getElementById('filtro-zona').value.toLowerCase();
+        const valTipo = document.getElementById('filtro-tipo').value.toLowerCase();
+        const valHabitaciones = document.getElementById('filtro-habitaciones').value;
+        const valBanos = document.getElementById('filtro-banos').value;
+        const valPrecioMin = parseFloat(document.getElementById('filtro-precio-min').value) || 0;
+        const valPrecioMax = parseFloat(document.getElementById('filtro-precio-max').value) || Infinity;
 
-    botonesZona.forEach(boton => {
-        boton.addEventListener("click", (e) => {
-            botonesZona.forEach(b => b.classList.remove("activo"));
-            e.target.classList.add("activo");
-
-            filtroZonaActual = e.target.getAttribute("data-zona");
-            aplicarFiltrosCombinados();
-        });
-    });
-
-    function aplicarFiltrosCombinados() {
         const resultado = todasLasPropiedades.filter(piso => {
+            // 1. Operación (Venta / Alquiler)
             const tipoPiso = (piso.tipo || '').trim().toLowerCase();
+            const coincideOperacion = (valOperacion === 'todos') || (tipoPiso === valOperacion);
+
+            // 2. Zona / Municipio
             const zonaPiso = (piso.municipio || piso.zona || '').trim().toLowerCase();
+            const coincideZona = (valZona === 'todas') || (zonaPiso.includes(valZona));
 
-            const coincideTipo = (filtroTipoActual === "todos") || (tipoPiso === filtroTipoActual);
-            const coincideZona = (filtroZonaActual === "todas") || (zonaPiso === filtroZonaActual);
+            // 3. Tipo de inmueble (Piso, Casa, Ático...)
+            const categoriaPiso = (piso.categoria || piso.tipo_inmueble || piso.titulo || '').trim().toLowerCase();
+            const coincideTipo = (valTipo === 'todos') || (categoriaPiso.includes(valTipo));
 
-            return coincideTipo && coincideZona;
+            // 4. Mínimo de habitaciones
+            const habs = parseInt(piso.habitaciones) || 0;
+            const coincideHabitaciones = (valHabitaciones === 'todas') || (habs >= parseInt(valHabitaciones));
+
+            // 5. Mínimo de baños
+            const banos = parseInt(piso.banos || piso.baños) || 0;
+            const coincideBanos = (valBanos === 'todos') || (banos >= parseInt(valBanos));
+
+            // 6. Rango de precio
+            const precio = parseFloat(piso.precio) || 0;
+            const coincidePrecio = (precio >= valPrecioMin) && (precio <= valPrecioMax);
+
+            // Devuelve true solo si cumple TODOS los criterios
+            return coincideOperacion && coincideZona && coincideTipo && 
+                   coincideHabitaciones && coincideBanos && coincidePrecio;
         });
 
+        // Pinta las tarjetas filtradas
         renderizarPropiedades(resultado);
+    }
+
+    // Escuchadores de eventos para que filtre en tiempo real al cambiar cualquier opción
+    document.querySelectorAll('.filtro-control').forEach(elemento => {
+        elemento.addEventListener('change', aplicarFiltros);
+        elemento.addEventListener('input', aplicarFiltros); // Para escribir en los precios
+    });
+
+    // Botón para reiniciar todos los filtros
+    const btnLimpiar = document.getElementById('btn-limpiar-filtros');
+    if (btnLimpiar) {
+        btnLimpiar.addEventListener('click', () => {
+            document.getElementById('filtro-operacion').value = 'todos';
+            document.getElementById('filtro-zona').value = 'todas';
+            document.getElementById('filtro-tipo').value = 'todos';
+            document.getElementById('filtro-habitaciones').value = 'todas';
+            document.getElementById('filtro-banos').value = 'todos';
+            document.getElementById('filtro-precio-min').value = '';
+            document.getElementById('filtro-precio-max').value = '';
+            
+            aplicarFiltros();
+        });
     }
 
     // 3. Función encargada de pintar el HTML de las tarjetas

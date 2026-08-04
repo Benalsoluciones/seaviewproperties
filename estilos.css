@@ -174,7 +174,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   4. SECCIÓN DE FILTROS
+   4. SECCIÓN DE FILTROS (DESPLEGABLES)
    ========================================== */
 .contenedor-principal {
     max-width: 1200px;
@@ -183,37 +183,64 @@ nav a:hover {
 }
 
 .filtros-seccion {
-    text-align: center;
     margin-bottom: 40px;
 }
 
-.filtros-seccion h3 {
-    color: #0d2c54;
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-
-.botones-filtro {
-    display: flex;
-    justify-content: center;
+/* Panel de Filtros en Cuadrícula */
+.contenedor-filtros {
+    background-color: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 15px;
+    align-items: end;
 }
 
-.btn-filtro {
-    background-color: white;
-    border: 2px solid #0d2c54;
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.filtro-grupo label {
+    font-size: 0.85rem;
+    font-weight: 700;
     color: #0d2c54;
-    padding: 10px 25px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s;
 }
 
-.btn-filtro:hover, .btn-filtro.activo {
-    background-color: #0d2c54;
-    color: white;
+.filtro-control {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: white;
+    color: #334155;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filtro-control:focus {
+    border-color: #00a8cc;
+    box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.15);
+}
+
+.btn-limpiar {
+    padding: 10px 15px;
+    background-color: #e2e8f0;
+    color: #0d2c54;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.btn-limpiar:hover {
+    background-color: #cbd5e1;
 }
 
 /* ==========================================

@@ -78,25 +78,92 @@
     <!-- Sección de Catálogo -->
     <main class="contenedor-principal">
         <section class="filtros-seccion">
-            <h2>Nuestro Catálogo de Propiedades</h2><br>
-            <p>Usa los filtros para encontrar lo que buscas</p><br>
-            <!-- Grupo 1: Filtros de Operación -->
-            <div class="botones-filtro" style="margin-bottom: 12px;">
-                <button class="btn-filtro btn-filtro-tipo activo" data-tipo="todos">Todos</button>
-                <button class="btn-filtro btn-filtro-tipo" data-tipo="venta">Venta</button>
-                <button class="btn-filtro btn-filtro-tipo" data-tipo="alquiler">Alquiler</button>
-            </div>
+            <span class="subtitulo-seccion"
+                style="display:block; color:#00a8cc; font-size:14px; text-transform:uppercase; font-weight:600; letter-spacing:1px; margin-bottom:10px; text-align:center;">
+                Nuestra Selección
+            </span>
+            <h2 style="text-align: center; color: #0d2c54; font-size: 36px; margin-bottom: 25px; font-weight: 700;">
+                Inmuebles Destacados
+            </h2>
 
-            <!-- Grupo 2: Filtros por Municipio / Zona -->
-            <div class="botones-filtro">
-                <button class="btn-filtro btn-filtro-zona activo" data-zona="todas">Todas las zonas</button>
-                <button class="btn-filtro btn-filtro-zona" data-zona="malaga">Málaga</button>
-                <button class="btn-filtro btn-filtro-zona" data-zona="torremolinos">Torremolinos</button>
-                <button class="btn-filtro btn-filtro-zona" data-zona="benalmadena">Benalmádena</button>
-                <button class="btn-filtro btn-filtro-zona" data-zona="fuengirola">Fuengirola</button>
-                <button class="btn-filtro btn-filtro-zona" data-zona="mijas">Mijas</button>
+            <!-- Panel de Filtros Desplegables -->
+            <div class="contenedor-filtros">
+                <!-- Operación -->
+                <div class="filtro-grupo">
+                    <label for="filtro-operacion">Operación</label>
+                    <select id="filtro-operacion" class="filtro-control">
+                        <option value="todos">Todos (Venta / Alquiler)</option>
+                        <option value="venta">Venta</option>
+                        <option value="alquiler">Alquiler</option>
+                    </select>
+                </div>
+
+                <!-- Zona / Municipio -->
+                <div class="filtro-grupo">
+                    <label for="filtro-zona">Zona</label>
+                    <select id="filtro-zona" class="filtro-control">
+                        <option value="todas">Todas las zonas</option>
+                        <option value="benalmadena">Benalmádena</option>
+                        <option value="fuengirola">Fuengirola</option>
+                        <option value="torremolinos">Torremolinos</option>
+                        <option value="malaga">Málaga</option>
+                        <option value="mijas">Mijas</option>
+                    </select>
+                </div>
+
+                <!-- Tipo de Inmueble -->
+                <div class="filtro-grupo">
+                    <label for="filtro-tipo">Tipo de inmueble</label>
+                    <select id="filtro-tipo" class="filtro-control">
+                        <option value="todos">Todos los tipos</option>
+                        <option value="piso">Piso / Apartamento</option>
+                        <option value="casa">Casa / Chalet</option>
+                        <option value="atico">Ático</option>
+                        <option value="estudio">Estudio</option>
+                    </select>
+                </div>
+
+                <!-- Habitaciones -->
+                <div class="filtro-grupo">
+                    <label for="filtro-habitaciones">Habitaciones</label>
+                    <select id="filtro-habitaciones" class="filtro-control">
+                        <option value="todas">Cualquiera</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4 o más</option>
+                    </select>
+                </div>
+
+                <!-- Baños -->
+                <div class="filtro-grupo">
+                    <label for="filtro-banos">Baños</label>
+                    <select id="filtro-banos" class="filtro-control">
+                        <option value="todos">Cualquiera</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                    </select>
+                </div>
+
+                <!-- Precio Mínimo -->
+                <div class="filtro-grupo">
+                    <label for="filtro-precio-min">Precio Mín (€)</label>
+                    <input type="number" id="filtro-precio-min" placeholder="Ej: 100000" class="filtro-control" step="10000">
+                </div>
+
+                <!-- Precio Máximo -->
+                <div class="filtro-grupo">
+                    <label for="filtro-precio-max">Precio Máx (€)</label>
+                    <input type="number" id="filtro-precio-max" placeholder="Ej: 500000" class="filtro-control" step="10000">
+                </div>
+
+                <!-- Botón para Limpiar -->
+                <div class="filtro-grupo btn-limpiar-contenedor">
+                    <button id="btn-limpiar-filtros" class="btn-limpiar">Limpiar filtros</button>
+                </div>
             </div>
-        </section>
+        </section> 
 
         <section id="contenedor-propiedades" class="grid-propiedades">
             <p class="cargando">Cargando catálogo...</p>
