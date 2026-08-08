@@ -227,16 +227,47 @@ nav a:hover {
     box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.15);
 }
 
+/* Contenedor de Botones (Buscar + Limpiar) */
+.btn-acciones-contenedor {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+}
+
+/* Botón Buscar (Principal) */
+.btn-buscar {
+    flex: 1;
+    padding: 10px 12px;
+    background-color: #0d2c54;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-buscar:hover {
+    background-color: #00a8cc;
+}
+
+.btn-buscar:active {
+    transform: scale(0.98);
+}
+
+/* Botón Limpiar (Secundario) */
 .btn-limpiar {
-    padding: 10px 15px;
+    flex: 1;
+    padding: 10px 12px;
     background-color: #e2e8f0;
     color: #0d2c54;
     border: none;
     border-radius: 8px;
     font-weight: 600;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100%;
+    transition: background-color 0.2s ease;
 }
 
 .btn-limpiar:hover {

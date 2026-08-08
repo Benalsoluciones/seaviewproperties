@@ -102,13 +102,17 @@ document.addEventListener("DOMContentLoaded", () => {
         renderizarPropiedades(resultado);
     }
 
-    // Escuchadores de eventos para que filtre en tiempo real al cambiar cualquier opción
-    document.querySelectorAll('.filtro-control').forEach(elemento => {
-        elemento.addEventListener('change', aplicarFiltros);
-        elemento.addEventListener('input', aplicarFiltros); // Para escribir en los precios
-    });
+    // ------------------------------------------
+    // ESCUCHADORES DE EVENTOS DE BOTONES
+    // ------------------------------------------
 
-    // Botón para reiniciar todos los filtros
+    // 1. Botón Buscar: Ejecuta el filtrado solo al hacer clic
+    const btnBuscar = document.getElementById('btn-buscar-filtros');
+    if (btnBuscar) {
+        btnBuscar.addEventListener('click', aplicarFiltros);
+    }
+
+    // 2. Botón Limpiar: Resetea todos los campos y recarga la lista completa
     const btnLimpiar = document.getElementById('btn-limpiar-filtros');
     if (btnLimpiar) {
         btnLimpiar.addEventListener('click', () => {
