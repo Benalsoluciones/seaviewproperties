@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+       <loc>https://seaviewproperties-spain.es/</loc>
+       <lastmod>2026-08-08T07:27:47+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://seaviewproperties-spain.es/index.html</loc>
+       <lastmod>2026-08-08T07:27:48+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://seaviewproperties-spain.es/inmuebles.html</loc>
+       <lastmod>2026-08-08T07:27:47+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://seaviewproperties-spain.es/contacto.html</loc>
+       <lastmod>2026-08-08T07:27:47+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://seaviewproperties-spain.es/politica-privacidad.html</loc>
+       <lastmod>2026-08-08T07:27:47+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://seaviewproperties-spain.es/politica-cookies.html</loc>
+       <lastmod>2026-08-08T07:27:48+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://seaviewproperties-spain.es/aviso-legal.html</loc>
+       <lastmod>2026-08-08T07:27:47+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+</urlset>
