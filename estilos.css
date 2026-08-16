@@ -69,52 +69,17 @@ body {
    2. CABECERA (HEADER)
    ========================================== */
 header {
-
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    /* 1. Forzamos a que ocupe todo el ancho de la pantalla sin límites */
     width: 100% !important;
-    max-width: 100% !important; 
-    
-    /* 2. Dejamos un aire vertical elegante y solo 3% o 4% a los lados */
-    padding: 10px 4% !important; 
-    
+    max-width: 100% !important;
+    padding: 10px 4% !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
-
-}
-
-.logo h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 32px;
-    color: #0d2c54; /* Azul oscuro */
-    font-weight: 700; /* Un grosor más fuerte y corporativo */
-    letter-spacing: -0.5px;
-}
-
-.logo h1 span {
-    color: #00a8cc; /* Turquesa mar */
-    font-weight: 400;
-}
-
-nav a {
-    font-family: 'Inter', sans-serif;
-    text-decoration: none;
-    color: #555;
-    margin-left: 28px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #00a8cc;
 }
 
 /* ==========================================
@@ -184,6 +149,22 @@ nav a:hover {
 
 .filtros-seccion {
     margin-bottom: 40px;
+    padding: 20px 15px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filtros-seccion .subtitulo-seccion {
+    text-align: center;
+}
+
+.filtros-seccion h2 {
+    text-align: center;
+    color: #0d2c54;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 /* Panel de Filtros en Cuadrícula */
@@ -486,8 +467,7 @@ nav a:hover {
 /* --- EFECTOS HOVER (Al pasar el ratón) --- */
 
 /* TikTok: Turquesa corporativo */
-.icono-tiktok:hover,
-.icono-social.tiktok:hover {
+.icono-tiktok:hover {
     background-color: #00a8cc;
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(0, 168, 204, 0.4);
@@ -741,7 +721,7 @@ nav a:hover {
 }
 
 /* Resaltar la página actual en el menú */
-nav a.activo-nav {
+.nav-menu a.activo-nav {
     color: #00a8cc;
     border-bottom: 2px solid #00a8cc;
     padding-bottom: 5px;
@@ -866,14 +846,6 @@ nav a.activo-nav {
 .enlace-logo:hover .texto-logo {
     opacity: 0.9;
 }
-
-/* Ajuste general para la cabecera */
-header {
-    align-items: center; 
-
-}
-
-
 
 /* ==========================================
    12. MENÚ COMPLETO (ORDENADORES Y MÓVIL)
@@ -1150,15 +1122,6 @@ header {
     font-style: italic; /* Un toque sutil para cerrar el párrafo */
 }
 
-/* Línea divisoria sutil antes de los inmuebles */
-.divisor-sutil {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-    margin: 40px auto;
-    max-width: 600px;
-}
-
 /* Colores de marca aplicados al texto */
     .marca-texto {
         font-weight: 700; /* Le da fuerza al nombre dentro del párrafo */
@@ -1276,6 +1239,7 @@ header {
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.2s;
+    cursor: zoom-in;
 }
 
 .modal-galeria img:hover {
@@ -1356,11 +1320,6 @@ header {
     color: #e11d48;
 }
 
-/* Indicador visual de que las fotos de la galería se pueden clicar */
-.modal-galeria img {
-    cursor: zoom-in;
-}
-
 /*Para texto descriptivo de los inmuebles en ventana emergente*/
 .descripcion-modal {
     line-height: 1.8;
@@ -1389,71 +1348,61 @@ header {
     z-index: 1; /* Para evitar conflictos de capas con el modal */
 }
 
-/* --- CONTENEDOR DE FILTROS RESPONSIVE PARA LOS BOTONES DE FILTROS--- */
-
-.filtros-seccion {
-    padding: 20px 15px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Variante de contacto en página dedicada */
+.seccion-contacto--pagina {
+    border-top: none;
+    margin-top: 0;
 }
 
-/* Fila de botones de filtro */
-.botones-filtro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* En pantallas medianas se adaptan en varias filas */
-    gap: 8px; /* Espacio uniforme entre botones */
-    margin-bottom: 12px;
+/* Texto auxiliar en galería del modal */
+.galeria-ayuda {
+    font-size: 0.8em;
+    color: #64748b;
+    font-weight: normal;
 }
 
-/* Estilo individual de cada botón de filtro */
-.btn-filtro {
+.ubicacion {
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.texto-logo-properties {
+    font-weight: 400;
+}
+
+.mapa-iframe {
+    border: 0;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* ==========================================
+   PÁGINAS LEGALES
+   ========================================== */
+.legal-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.legal-container h1 {
+    color: #0d2c54;
+    margin-bottom: 20px;
+}
+
+.legal-container h2 {
+    color: #1a3d6d;
+    margin-top: 25px;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-bottom: 20px;
     padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 20px; /* Bordes redondeados más elegantes */
-    border: 1px solid #cbd5e1;
-    background-color: #ffffff;
-    color: #475569;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    white-space: nowrap; /* Evita que el texto de un botón se rompa en 2 líneas */
-}
-
-/* Estado activo y hover */
-.btn-filtro:hover {
-    background-color: #f1f5f9;
-    border-color: #94a3b8;
-}
-
-.btn-filtro.activo {
-    background-color: #0d2c54; /* El color azul oscuro de tu marca */
-    color: #ffffff;
-    border-color: #0d2c54;
-    box-shadow: 0 2px 6px rgba(13, 44, 84, 0.25);
-}
-
-/* --- ADAPTACIÓN ESPECIAL PARA MÓVILES (Menos de 600px) --- */
-@media (max-width: 600px) {
-    .botones-filtro {
-        /* En móviles permitimos carrusel/scroll horizontal si hay muchos municipios */
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding-bottom: 8px;
-        -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
-        scrollbar-width: none; /* Oculta barra de scroll en Firefox */
-    }
-
-    /* Ocultar barra de scroll visual en Chrome/Safari para mantener diseño limpio */
-    .botones-filtro::-webkit-scrollbar {
-        display: none;
-    }
-
-    .btn-filtro {
-        padding: 7px 14px;
-        font-size: 13px;
-        flex-shrink: 0; /* Impide que los botones se deformen o aplasten */
-    }
+    background: #0d2c54;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }

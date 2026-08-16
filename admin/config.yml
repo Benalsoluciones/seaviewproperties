@@ -20,6 +20,7 @@ collections:
             fields:
               - { label: "ID Único", name: "id", widget: "number", value_type: "int" }
               - { label: "Título de la Propiedad", name: "titulo", widget: "string" }
+              - { label: "Categoría", name: "categoria", widget: "select", options: ["apartamento", "piso", "chalet", "casa", "atico", "estudio"] }
               - { label: "Precio (€)", name: "precio", widget: "number", value_type: "int" }
               - { label: "Municipio", name: "municipio", widget: "string" }
               - { label: "Ubicación Completa", name: "ubicacion", widget: "string" }

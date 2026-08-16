@@ -220,6 +220,7 @@
   {
     "id": 6,
     "titulo": "Apartamento de diseño contemporáneo en Los Álamos.",
+    "categoria": "apartamento",
     "precio": 615000,
     "municipio":"torremolinos",
     "ubicacion": "Los Alamos, Torremolinos",
