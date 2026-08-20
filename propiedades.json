@@ -553,6 +553,45 @@
       "/img/mane-residences/Captura de pantalla (629).png",
       "/img/mane-residences/Captura de pantalla (630).png"
     ]
+  },
+  {
+    "id": 12,
+    "titulo": "Chalet adosado en Montealto, Benalmádena.",
+    "categoria":"piso",
+    "precio": 479650,
+    "municipio":"benalmadena",
+    "ubicacion": "Montealto, Benalmádena, Málaga",
+    "tipo": "venta",
+    "habitaciones": 2,
+    "banos": 2,
+    "metros_cuadrados": 175,
+    "garaje":"true",
+    "trastero":"true",
+    "coordenadas": {
+      "latitud": 36.6024,
+      "longitud": -4.5653
+    },
+    "etiqueta": "Exclusiva",
+    "descripcion": "Excelente oportunidad para adquirir un exclusivo apartamento de lujo en Mane Residences, en la zona de Montealto, Benalmádena. Construido en 2025, la vivienda cuenta con licencia turística aprobada por la comunidad, lo que la convierte en una magnífica opción tanto como residencia habitual o vacacional como para inversión. Situada en una zona tranquila y perfectamente comunicada con la autovía, disfruta de espectaculares vistas al mar Mediterráneo y de una excelente orientación que proporciona abundante luz natural durante gran parte del día. La propiedad dispone de un amplio y luminoso salón-comedor con moderna cocina integrada, dos dormitorios y dos baños completos, uno de ellos en suite, todo con calefacción central. Además, cuenta con armarios empotrados completamente revestidos, ofreciendo una excelente capacidad de almacenamiento. Desde el salón se accede a una fantástica terraza privada, ideal para disfrutar de las vistas al mar, las puestas de sol y el agradable clima de la Costa del Sol. El precio incluye 2 plazas de aparcamiento en el garaje subterráneo y trastero. La exclusiva urbanización cerrada, diseñada en diferentes niveles para favorecer las vistas y la privacidad, ofrece excelentes zonas comunes, entre las que destacan una piscina comunitaria con vistas al mar, gimnasio equipado, espacio social para reuniones y una agradable zona zen de relajación. Le informamos que nuestros honorarios profesionales de intermediación inmobiliaria ya están incluidos en el precio de venta, por lo que el comprador no tendrá que abonar ningún importe adicional por gestión ni asesoramiento inmobiliario. En cumplimiento del Decreto 218/2005 de la Junta de Andalucía, de 11 de octubre, los gastos notariales y registrales, así como los impuestos aplicables y demás gastos inherentes a la compraventa, no están incluidos en el precio de venta. La información proporcionada tiene carácter meramente orientativo, no constituye una oferta contractual y puede estar sujeta a modificaciones, errores u omisiones. El inmueble podría experimentar cambios de precio, ser reservado, vendido o retirado del mercado sin previo aviso. Para más información o para concertar una visita, no dude en ponerse en contacto con nosotros. Estaremos encantados de atenderle y mostrarle esta magnífica propiedad.",
+    "imagen": "img/rocas-blancas-montealto/roca1.jpg",
+    "galeria": [
+      "/img/rocas-blancas-montealto/roca1.jpg",
+      "/img/rocas-blancas-montealto/roca2.jpg",
+      "/img/rocas-blancas-montealto/roca3.jpg",
+      "/img/rocas-blancas-montealto/roca4.jpg",
+      "/img/rocas-blancas-montealto/roca5.jpg",
+      "/img/rocas-blancas-montealto/roca6.jpg",
+      "/img/rocas-blancas-montealto/roca7.jpg",
+      "/img/rocas-blancas-montealto/roca8.jpg",
+      "/img/rocas-blancas-montealto/roca9.jpg",
+      "/img/rocas-blancas-montealto/roca10.jpg",
+      "/img/rocas-blancas-montealto/roca11.jpg",
+      "/img/rocas-blancas-montealto/roca12.jpg",
+      "/img/rocas-blancas-montealto/roca13.jpg",
+      "/img/rocas-blancas-montealto/roca14.jpg",
+      "/img/rocas-blancas-montealto/roca15.jpg",
+      "/img/rocas-blancas-montealto/roca16.jpg"
+    ]
   }
 ]
 }
