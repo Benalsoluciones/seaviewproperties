@@ -523,6 +523,41 @@
       "id": 11,
       "ubicacion": "Ad. Carlota Alessandri",
       "metros_cuadrados": 68
+    },
+    {
+      "habitaciones": 3,
+      "garaje": "true",
+      "precio": 757500,
+      "descripcion": "Exclusivo ático en Mane Residences, Montealto (Benalmádena), una vivienda de 281 m² construidos y 99 m² útiles que combina diseño contemporáneo, luminosidad y espectaculares vistas panorámicas al mar Mediterráneo. Dispone de Licencia Turística aprobada por la comunidad, convirtiéndose en una excelente opción tanto como residencia habitual como inversión. La vivienda cuenta con un amplio y luminoso salón conectado de forma abierta con el comedor y la cocina, 3 dormitorios, 2 baños completos (uno en suite), armarios empotrados completamente revestidos, una amplia terraza a nivel del salón y un solárium privado en la planta superior. Incluye 2 plazas de garaje subterráneo y trastero. Construido en 2025 y en buen estado, dispone de calefacción central, aire acondicionado, ascensor y acceso y vivienda adaptados para personas con movilidad reducida. El complejo residencial, diseñado con una disposición escalonada para favorecer la privacidad y las vistas, ofrece piscina comunitaria con vistas al mar, gimnasio equipado, espacio social y área zen, dentro de un recinto cerrado con servicios exclusivos. Su ubicación permite disfrutar de un entorno tranquilo y unas excelentes comunicaciones con la autovía. En cumplimiento del Decreto 218/2005, de 11 de octubre, se informa de que los gastos notariales, registrales, impuestos aplicables (ITP o IVA y AJD, según corresponda) y demás gastos derivados de la compraventa no están incluidos en el precio. Los honorarios profesionales de intermediación inmobiliaria están incluidos en el precio de venta, sin coste adicional para el comprador. La información facilitada es orientativa y puede estar sujeta a errores, omisiones o modificaciones; el inmueble podrá variar de precio, quedar reservado, venderse o retirarse del mercado sin previo aviso.",
+      "municipio": "benalmádena",
+      "banos": 2,
+      "imagen": "/img/img-20260821-wa0017.jpg",
+      "coordenadas": {
+        "latitud": 36.6024,
+        "longitud": -4.5653
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/img-20260821-wa0016.jpg",
+        "/img/img-20260821-wa0014.jpg",
+        "/img/img-20260821-wa0013.jpg",
+        "/img/img-20260821-wa0010.jpg",
+        "/img/img-20260821-wa0008.jpg",
+        "/img/img-20260821-wa0008.jpg",
+        "/img/img-20260821-wa0007.jpg",
+        "/img/img-20260821-wa0015.jpg",
+        "/img/img-20260821-wa0006.jpg",
+        "/img/img-20260821-wa0005.jpg",
+        "/img/img-20260821-wa0004.jpg",
+        "/img/img-20260821-wa0003.jpg",
+        "/img/img-20260821-wa0011.jpg",
+        "/img/img-20260821-wa0012.jpg"
+      ],
+      "titulo": "Ático en venta en Montealto, Benalmádena.",
+      "id": 12,
+      "trastero": "true",
+      "ubicacion": "Avenidad Rocas Blancas, Benalmádena.",
+      "metros_cuadrados": 281
     }
   ]
 }
