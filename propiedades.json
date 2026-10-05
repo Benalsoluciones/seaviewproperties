@@ -609,6 +609,36 @@
       "trastero": "true",
       "ubicacion": "Calle Faro, Torrequebrada, Benalmádena.",
       "metros_cuadrados": 281
+    },
+    {
+      "habitaciones": 3,
+      "garaje": "true",
+      "precio": 898000,
+      "descripcion": "Exclusivo ático dúplex de 171 m² construidos en Altos del Higuerón, Benalmádena, una de las zonas más privilegiadas y demandadas de la Costa del Sol. La vivienda, totalmente renovada y rediseñada en 2021, ofrece impresionantes vistas panorámicas al mar Mediterráneo, las montañas y la bahía de Fuengirola, combinando amplitud, confort y un cuidado diseño. Su orientación sur y sus grandes ventanales de suelo a techo proporcionan abundante luz natural. La zona principal se distribuye en un amplio salón-comedor de concepto abierto, cocina moderna totalmente equipada y una acogedora zona de estar conectada con una espectacular terraza mediante cortinas de cristal retráctiles, permitiendo disfrutar del espacio tanto cerrado como completamente abierto. En esta planta se encuentra también un dormitorio de invitados con baño. La planta superior dispone de una elegante suite principal con vestidor y baño, además de un tercer dormitorio con baño privado, aseo y ducha a ras de suelo. La vivienda cuenta con suelos de madera maciza, armarios empotrados, zona de trabajo privada y varios televisores de pantalla plana. Dispone de Licencia Turística, aire acondicionado central, bomba de frío/calor, WiFi, ascensor, plaza de garaje subterránea privada y trastero. El residencial ofrece seguridad 24 horas, jardines cuidados y dos piscinas panorámicas. En sus inmediaciones se encuentran supermercados, cafeterías, restaurantes y una reconocida experiencia gastronómica con estrella Michelin. La urbanización dispone además de transporte gratuito hacia las playas de Fuengirola y El Higuerón Beach Club, así como acceso a las instalaciones del Hilton Hotel, incluyendo spa y club deportivo. Situado en una quinta planta exterior con ascensor, este ático representa una excelente oportunidad tanto como residencia habitual o segunda vivienda como inversión gracias a su licencia turística. En cumplimiento del Decreto 218/2005, de 11 de octubre, se informa de que los gastos notariales, registrales, impuestos aplicables (ITP o IVA y AJD, según corresponda) y demás gastos derivados de la compraventa no están incluidos en el precio. Los honorarios profesionales de intermediación inmobiliaria están incluidos en el precio de venta, sin coste adicional para el comprador. La información facilitada es orientativa y puede estar sujeta a errores, omisiones o modificaciones; el inmueble podrá variar de precio, quedar reservado, venderse o retirarse del mercado sin previo aviso.",
+      "municipio": "benalmadena",
+      "categoria": "atico",
+      "banos": 3,
+      "imagen": "/img/img-20260930-wa0018.jpg",
+      "coordenadas": {
+        "latitud": 36.5862,
+        "longitud": -4.595
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/img-20260930-wa0020.jpg",
+        "/img/img-20260930-wa0021.jpg",
+        "/img/img-20260930-wa0019.jpg",
+        "/img/img-20260930-wa0018.jpg",
+        "/img/img-20260930-wa0017.jpg",
+        "/img/img-20260930-wa0015.jpg",
+        "/img/img-20260930-wa0016.jpg",
+        "/img/img-20260930-wa0022.jpg"
+      ],
+      "titulo": "Ático en venta en Retamar",
+      "id": 13,
+      "trastero": "true",
+      "ubicacion": "Altos del Higueron, Benalmádena",
+      "metros_cuadrados": 171
     }
   ]
 }
