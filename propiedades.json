@@ -618,7 +618,7 @@
       "municipio": "benalmadena",
       "categoria": "atico",
       "banos": 3,
-      "imagen": "/img/img-20260930-wa0018.jpg",
+      "imagen": "/img/terraza-moderna-con-vistas-al-mar.png",
       "coordenadas": {
         "latitud": 36.5862,
         "longitud": -4.595
@@ -632,7 +632,9 @@
         "/img/img-20260930-wa0017.jpg",
         "/img/img-20260930-wa0015.jpg",
         "/img/img-20260930-wa0016.jpg",
-        "/img/img-20260930-wa0022.jpg"
+        "/img/img-20260930-wa0022.jpg",
+        "/img/dormitorio-moderno-con-cama-acogedora-y-armarios-de-madera.png",
+        "/img/dormitorio-acogedor-con-cama-malva-y-ventana.png"
       ],
       "titulo": "Ático en venta en Retamar",
       "id": 18,
