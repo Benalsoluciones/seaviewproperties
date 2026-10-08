@@ -644,10 +644,42 @@
         "/img/img-20260930-wa0016.jpg"
       ],
       "titulo": "Ático en venta en Retamar",
-      "id": 18,
+      "id": 15,
       "trastero": "true",
       "ubicacion": "Altos del Higueron, Benalmádena",
       "metros_cuadrados": 171
+    },
+    {
+      "habitaciones": 2,
+      "garaje": "true",
+      "precio": 295000,
+      "descripcion": " Apartamento en planta baja con jardín privado en Riviera del Sol, Mijas Costa\n\nDescubre esta agradable propiedad situada en *Riviera del Sol, Mijas Costa*, en una tranquila zona residencial perfectamente comunicada y próxima a todos los servicios, campos de golf y a las magníficas playas de la Costa del Sol.\n\nLa vivienda cuenta con *98 m²* y dispone de *dos dormitorios y dos baños*, ofreciendo una distribución cómoda y funcional, ideal tanto como residencia habitual como para disfrutar de temporadas de vacaciones.\n\nEl luminoso salón-comedor tiene acceso directo a una *amplia terraza y a un jardín privado*, creando un agradable espacio exterior perfecto para relajarse, disfrutar del clima mediterráneo o compartir momentos con familiares y amigos.\n\nLa propiedad dispone además de *cocina independiente totalmente equipada, dormitorios con **armarios empotrados* y aire acondicionado para garantizar el confort durante todo el año.\n\nDentro de la urbanización podrá disfrutar de *piscina comunitaria y zonas ajardinadas, en un entorno tranquilo y agradable. La vivienda incluye también **plaza de garaje subterránea y trastero*, aportando un extra de comodidad y capacidad de almacenamiento.\n\nSu ubicación en Riviera del Sol permite disfrutar de un excelente equilibrio entre tranquilidad y proximidad a servicios, restaurantes, comercios, campos de golf y el litoral. *Marbella y Fuengirola se encuentran a pocos minutos en coche*, mientras que Málaga y su aeropuerto ofrecen una excelente conexión nacional e internacional.\n\nUna magnífica oportunidad para quienes buscan una vivienda con *espacios exteriores privados, piscina, garaje y una ubicación privilegiada en la Costa del Sol*.\n\n*Una propiedad con gran potencial como hogar, segunda residencia o inversión.*\n\n### Información legal\n\nEn cumplimiento del *Decreto 218/2005, de 11 de octubre, de la Junta de Andalucía, se informa al cliente de que los **gastos notariales, registrales, impuestos (ITP) y demás gastos inherentes a la compraventa no están incluidos en el precio*.\n\nLos *honorarios de intermediación inmobiliaria están incluidos en el precio*.",
+      "municipio": "mijas costa",
+      "categoria": "apartamento",
+      "banos": 2,
+      "imagen": "/img/screenshot_20261008_144625_samsung-browser.jpg",
+      "coordenadas": {
+        "latitud": 36.50567,
+        "longitud": -4.710151
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/screenshot_20261008_144632_samsung-browser.jpg",
+        "/img/screenshot_20261008_144635_samsung-browser.jpg",
+        "/img/screenshot_20261008_144640_samsung-browser.jpg",
+        "/img/screenshot_20261008_144647_samsung-browser.jpg",
+        "/img/screenshot_20261008_144653_samsung-browser.jpg",
+        "/img/screenshot_20261008_144705_samsung-browser.jpg",
+        "/img/screenshot_20261008_144729_samsung-browser.jpg",
+        "/img/screenshot_20261008_144658_samsung-browser.jpg",
+        "/img/screenshot_20261008_144717_samsung-browser.jpg",
+        "/img/screenshot_20261008_144723_samsung-browser.jpg"
+      ],
+      "titulo": "Apartamento en Riviera del sol",
+      "id": 14,
+      "trastero": "true",
+      "ubicacion": "mijas costa",
+      "metros_cuadrados": 95
     }
   ]
 }
