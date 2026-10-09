@@ -680,6 +680,39 @@
       "trastero": "true",
       "ubicacion": "mijas costa",
       "metros_cuadrados": 95
+    },
+    {
+      "habitaciones": 3,
+      "garaje": "false",
+      "precio": 290000,
+      "descripcion": "* Propiedad: Ático dúplex reformado de 143 m² con orientación Este y vistas despejadas en Torreblanca (Costa del Sol). Es una opción ideal como vivienda habitual o para inversión.\n * Distribución:\n   * Planta principal: 2 dormitorios (uno de ellos con armario empotrado triple), 1 baño completo, 1 aseo, cocina equipada integrada en el salón y una amplia terraza.\n   * Planta superior: Dormitorio principal en suite con baño privado y acceso a una segunda terraza exclusiva.\n * Zonas comunes: Urbanización dotada de piscina, gimnasio y jardines.\n * Ubicación y conexiones:\n   * Fácil acceso a las carreteras principales.\n   * A pocos minutos de la playa, del centro de Fuengirola y del aeropuerto de Málaga.\n   * Cercano a colegios e institutos.\n   * Parada de autobús y taxi a 100 m.\n   * Parque infantil y parque para perros a 100 m.\n * Condiciones legales y honorarios:\n   * Honorarios de agencia: Incluidos en el precio de venta (sin costes adicionales por gestión o asesoramiento).\n   * Gastos no incluidos: Gastos notariales, registrales, ITP y otros gastos derivados de la compraventa no están incluidos (cumplimiento del Decreto 218/2005 de la Junta de Andalucía).\n   * Nota legal: La información es orientativa, sin valor contractual y sujeta a posibles cambios, errores o disponibilidad sin previo aviso.",
+      "municipio": "fuengirola",
+      "categoria": "atico",
+      "banos": 3,
+      "imagen": "/img/piscina-azul-con-vistas-al-mar.png",
+      "coordenadas": {
+        "latitud": 36.571862,
+        "longitud": -4.600106
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/cocina-nórdica-con-escalera-y-cestas-de-mimbre.png",
+        "/img/salón-costero-con-cocina-y-escalera-de-caracol.png",
+        "/img/salón-costero-con-escalera-de-caracol.png",
+        "/img/chatgpt-image-30-sept-2026-15_29_05.png",
+        "/img/chatgpt-image-30-sept-2026-15_32_15.png",
+        "/img/chatgpt-image-30-sept-2026-15_36_16.png",
+        "/img/file_00000000be0081f4b482c00e5cae882f.png",
+        "/img/dormitorio-escandinavo-con-acentos-azules-y-amarillos.png",
+        "/img/dormitorio-escandinavo-con-encanto-costero.png",
+        "/img/file_00000000f7bc82108b0016f8118c2061.png",
+        "/img/file_000000005db48246a47284b604c14cd1.png"
+      ],
+      "titulo": "atico duplex",
+      "id": 16,
+      "trastero": "false",
+      "ubicacion": "calle perdices, fuengirola",
+      "metros_cuadrados": 143
     }
   ]
 }
