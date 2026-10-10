@@ -713,6 +713,33 @@
       "trastero": "false",
       "ubicacion": "calle perdices, fuengirola",
       "metros_cuadrados": 143
+    },
+    {
+      "habitaciones": 2,
+      "garaje": "true",
+      "precio": 699000,
+      "descripcion": "# Exclusivo apartamento de lujo en Jade Tower, Fuengirola\n\nDescubra esta elegante propiedad de obra reciente, construida en 2024, situada en **Jade Tower**, uno de los complejos residenciales más modernos y exclusivos de Fuengirola, y una de las direcciones más destacadas de la Costa del Sol.\n\nUna vivienda de diseño contemporáneo que combina calidad, tecnología, confort y una ubicación privilegiada, ideal para quienes buscan un estilo de vida sofisticado junto al Mediterráneo.\n\n## Ubicación privilegiada en el corazón de Fuengirola\n\nJade Tower disfruta de una ubicación excepcional en pleno centro de Fuengirola, a tan solo **300 metros aproximadamente de la playa**. Su entorno permite acceder cómodamente a una amplia oferta de restaurantes, comercios, zonas de ocio y todos los servicios necesarios para el día a día.\n\nAdemás, el Aeropuerto Internacional de Málaga se encuentra a aproximadamente 20 minutos, lo que convierte esta propiedad en una excelente opción tanto como residencia habitual como para disfrutar de estancias vacacionales en la Costa del Sol.\n\n## Diseño contemporáneo, luminosidad y confort\n\nSituado en la segunda planta, este apartamento ofrece una superficie de 97 m² y destaca por su distribución funcional, sus acabados modernos y sus amplios ventanales, que aportan una agradable sensación de luminosidad y amplitud.\n\nLa vivienda dispone de dos dormitorios y dos baños, incluyendo un elegante dormitorio principal con baño en suite, concebido para ofrecer un espacio privado de descanso y bienestar.\n\nLa cocina de diseño, integrada en la zona de salón, crea un ambiente diáfano y acogedor, ideal tanto para la vida cotidiana como para recibir invitados.\n\nUno de los grandes atractivos de la propiedad es su magnífica terraza de 19,6 m², con vistas parciales al mar. Un espacio perfecto para disfrutar de desayunos al aire libre, momentos de relax bajo el sol o agradables veladas con el Mediterráneo como telón de fondo.\n\nLa vivienda incorpora, además, prestaciones tecnológicas y de confort de última generación, como sistema domótico, inodoro japonés con función de ducha de última generación y descalcificador de agua.\n\n## Características principales\n\n* Construcción de 2024, en estado prácticamente nuevo.\n* 97 m² de superficie.\n* Terraza de 19,6 m² con vistas parciales al mar.\n* Dos dormitorios.\n* Dos baños completos.\n* Dormitorio principal con baño en suite.\n* Situado en la segunda planta.\n* Cocina de diseño abierta al salón.\n* Amplios ventanales y abundante luz natural.\n* Sistema domótico.\n* Inodoro japonés con función de ducha de última generación.\n* Descalcificador de agua.\n* Dos plazas de aparcamiento privadas incluidas.\n* Trastero incluido.\n* Sistema de videovigilancia y control de acceso inteligente.\n* A unos 300 metros de la playa.\n* A unos 20 minutos del Aeropuerto Internacional de Málaga.\n\n## Jade Tower: una experiencia residencial de estilo resort\n\nJade Tower va más allá del concepto tradicional de vivienda, ofreciendo a sus residentes una cuidada selección de instalaciones comunitarias diseñadas para disfrutar del bienestar, el ocio y la comodidad sin salir de casa.\n\nEntre sus exclusivas zonas comunes destacan:\n\n* Piscina exterior para adultos.\n* Piscina infantil.\n* Piscina interior climatizada.\n* Spa con sauna y jacuzzi.\n* Gimnasio profesional completamente equipado.\n* Espacio de coworking.\n* Sala de cine privada.\n* Gastrobar.\n* Jardines paisajísticos.\n* Servicio de seguridad y sistemas inteligentes de control de acceso.\n\nUn entorno residencial concebido para disfrutar de una experiencia de vida contemporánea, con servicios que aportan un valor añadido tanto a la vivienda como al día a día de sus residentes.\n\n## Una inversión exclusiva en la Costa del Sol\n\nCon tan solo 116 apartamentos y áticos de lujo, Jade Tower constituye una de las promociones residenciales más exclusivas y demandadas de la zona.\n\nSu privilegiada ubicación en el centro de Fuengirola, la proximidad a la playa, sus completas instalaciones y la oferta limitada de viviendas convierten esta propiedad en una oportunidad especialmente atractiva para quienes buscan una residencia habitual de alto nivel, una segunda vivienda junto al mar o una inversión inmobiliaria con proyección a largo plazo.\n\nLa inclusión de dos plazas de aparcamiento privadas y un trastero representa, además, un valor añadido especialmente interesante en una ubicación tan céntrica.\n\n**Una propiedad que reúne ubicación, diseño, tecnología y bienestar en una de las direcciones residenciales más exclusivas de Fuengirola.** Una oportunidad para disfrutar del estilo de vida mediterráneo con el confort y las prestaciones de una promoción contemporánea de alto nivel.",
+      "municipio": "fuengirola",
+      "categoria": "apartamento",
+      "banos": 2,
+      "imagen": "/img/img-20261009-wa0006.jpg",
+      "tipo": "venta",
+      "galeria": [
+        "/img/img-20261009-wa0007.jpg",
+        "/img/img-20261009-wa0009.jpg",
+        "/img/img-20261009-wa0013.jpg",
+        "/img/img-20261009-wa0017.jpg",
+        "/img/img-20261009-wa0016.jpg",
+        "/img/img-20261009-wa0019.jpg",
+        "/img/img-20261009-wa0025.jpg",
+        "/img/img-20261009-wa0026.jpg",
+        "/img/img-20261009-wa0027.jpg"
+      ],
+      "titulo": "apartamento de lujo en fuengirola",
+      "id": 17,
+      "trastero": "true",
+      "ubicacion": "Avda. Santa Amalia, Fuengirola, Màlaga",
+      "metros_cuadrados": 124
     }
   ]
 }
