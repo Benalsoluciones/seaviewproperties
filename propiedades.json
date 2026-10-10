@@ -756,6 +756,37 @@
       "trastero": "true",
       "ubicacion": "Avda. Santa Amalia, Fuengirola, Màlaga",
       "metros_cuadrados": 124
+    },
+    {
+      "habitaciones": 2,
+      "garaje": "true",
+      "precio": 499950,
+      "municipio": "Fuengirola",
+      "categoria": "atico",
+      "banos": 2,
+      "imagen": "/img/captura-de-pantalla-56-.png",
+      "coordenadas": {
+        "latitud": 36.567595,
+        "longitud": -4.620439
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/rosso-sunsetviews-iii-calle.jpg",
+        "/img/rosso-sunsetviews-iii-lateral.jpg",
+        "/img/rosso_sunsetviews-iii.jpg",
+        "/img/rosso_sunsetviews-iii-5.jpg",
+        "/img/rosso_sunsetviews-iii-2.jpg",
+        "/img/rosso_sunsetviews-iii-4.jpg",
+        "/img/captura-de-pantalla-59-.png",
+        "/img/rosso_sunsetviews-iii-8.jpg",
+        "/img/captura-de-pantalla-58-.png",
+        "/img/captura-de-pantalla-57-.png"
+      ],
+      "titulo": "Ático de obra nueva en Fuengirola",
+      "id": 18,
+      "trastero": "true",
+      "ubicacion": "Calle. Reina Doña Juana",
+      "metros_cuadrados": 202
     }
   ]
 }
