@@ -723,6 +723,10 @@
       "categoria": "apartamento",
       "banos": 2,
       "imagen": "/img/img-20261009-wa0006.jpg",
+      "coordenadas": {
+        "latitud": 36.532311,
+        "longitud": -4.62703
+      },
       "tipo": "venta",
       "galeria": [
         "/img/img-20261009-wa0007.jpg",
