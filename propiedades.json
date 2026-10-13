@@ -1,5 +1,34 @@
 {
   "propiedades": [
+  {
+      "habitaciones": 3,
+      "garaje": "true",
+      "precio": 445000,
+      "descripcion": "Promoción de obra nueva en Torrequebrada, Benalmádena, una ubicación privilegiada de la Costa del Sol, a tan solo 300 metros de la playa. El residencial está compuesto por 8 viviendas de 1, 2 y 3 dormitorios, entre ellas 2 exclusivos áticos dúplex de 3 dormitorios. Esta vivienda, situada en una primera planta exterior con ascensor, cuenta con 157 m² construidos, 3 dormitorios, 3 baños y una amplia terraza. El proyecto destaca por su diseño funcional, la distribución optimizada de los espacios, la luminosidad y la calidad de los materiales previstos. Todas las viviendas incluyen plaza de garaje y trastero en la planta sótano, con acceso directo a la vivienda, dentro de un recinto cerrado. Además, disponen de cocinas amuebladas y equipadas y sistemas de climatización frío/calor completamente instalados. La promoción cuenta con aire acondicionado y ofrece una excelente combinación de tranquilidad, proximidad al mar y acceso a servicios. En las inmediaciones se encuentran las playas de la zona, restaurantes, el campo de golf de Torrequebrada, colegios, supermercados, centro de salud y otros servicios esenciales. Una oportunidad ideal para disfrutar de una vivienda de obra nueva en una de las zonas más atractivas de Benalmádena. Los honorarios profesionales de intermediación inmobiliaria están incluidos en el precio de venta, sin coste adicional para el comprador. Los gastos notariales, registrales, impuestos aplicables (ITP o IVA y AJD, según corresponda) y demás gastos derivados de la compraventa no están incluidos. En cumplimiento del Decreto 218/2005, de 11 de octubre, la información facilitada tiene carácter orientativo y puede estar sujeta a errores, omisiones o modificaciones. El precio, la disponibilidad y las condiciones de la promoción deberán confirmarse con el equipo comercial.",
+      "municipio": "benalmadena",
+      "categoria": "piso",
+      "banos": 2,
+      "imagen": "img/id19_Rosso_Stella/Captura de pantalla (635).png",
+      "coordenadas": {
+        "latitud": 36.5834,
+        "longitud": -4.5594
+      },
+      "tipo": "venta",
+      "galeria": [
+        "img/id19_Rosso_Stella/Captura de pantalla (634).png",
+        "img/id19_Rosso_Stella/Captura de pantalla (635).png",
+        "img/id19_Rosso_Stella/Captura de pantalla (636).png",
+        "img/id19_Rosso_Stella/Captura de pantalla (637).png",
+        "img/id19_Rosso_Stella/ROSSO_STELLA8-5.jpg",
+        "img/id19_Rosso_Stella/ROSSO_STELLA8-6.jpg",
+        "img/id19_Rosso_Stella/Plano de apartamento con terraza y áreas.png"
+      ],
+      "titulo": "Piso en Nueva Torrequebrada",
+      "id": 19,
+      "trastero": "false",
+      "ubicacion": "Calle Navio 3, Nueva Torrequebrada, Benalmádena",
+      "metros_cuadrados": 152
+    },
     {
       "habitaciones": 1,
       "garaje": "true",
@@ -752,3 +781,4 @@
     }
   ]
 }
+
