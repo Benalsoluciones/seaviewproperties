@@ -3,7 +3,7 @@
   {
       "habitaciones": 3,
       "garaje": "true",
-      "precio": 445000,
+      "precio": 684000,
       "descripcion": "Promoción de obra nueva en Torrequebrada, Benalmádena, una ubicación privilegiada de la Costa del Sol, a tan solo 300 metros de la playa. El residencial está compuesto por 8 viviendas de 1, 2 y 3 dormitorios, entre ellas 2 exclusivos áticos dúplex de 3 dormitorios. Esta vivienda, situada en una primera planta exterior con ascensor, cuenta con 157 m² construidos, 3 dormitorios, 3 baños y una amplia terraza. El proyecto destaca por su diseño funcional, la distribución optimizada de los espacios, la luminosidad y la calidad de los materiales previstos. Todas las viviendas incluyen plaza de garaje y trastero en la planta sótano, con acceso directo a la vivienda, dentro de un recinto cerrado. Además, disponen de cocinas amuebladas y equipadas y sistemas de climatización frío/calor completamente instalados. La promoción cuenta con aire acondicionado y ofrece una excelente combinación de tranquilidad, proximidad al mar y acceso a servicios. En las inmediaciones se encuentran las playas de la zona, restaurantes, el campo de golf de Torrequebrada, colegios, supermercados, centro de salud y otros servicios esenciales. Una oportunidad ideal para disfrutar de una vivienda de obra nueva en una de las zonas más atractivas de Benalmádena. Los honorarios profesionales de intermediación inmobiliaria están incluidos en el precio de venta, sin coste adicional para el comprador. Los gastos notariales, registrales, impuestos aplicables (ITP o IVA y AJD, según corresponda) y demás gastos derivados de la compraventa no están incluidos. En cumplimiento del Decreto 218/2005, de 11 de octubre, la información facilitada tiene carácter orientativo y puede estar sujeta a errores, omisiones o modificaciones. El precio, la disponibilidad y las condiciones de la promoción deberán confirmarse con el equipo comercial.",
       "municipio": "benalmadena",
       "categoria": "piso",
@@ -529,7 +529,7 @@
         "latitud": 36.6024,
         "longitud": -4.5653
       },
-      "tipo": "venta",
+      "tipo": "reservado",
       "galeria": [
         "/img/img-20260821-wa0016.jpg",
         "/img/img-20260821-wa0014.jpg",
@@ -778,7 +778,77 @@
       "trastero": "true",
       "ubicacion": "Calle. Reina Doña Juana",
       "metros_cuadrados": 202
+    },
+    {
+      "habitaciones": 3,
+      "garaje": "true",
+      "precio": 565000,
+      "descripcion": "Piso con 200 metros cuadrados de de espacio, diseño moderno y unas vistas despejadas al mar Mediterráneo. Tendrás todo lo que necesitas sin salir de casa. Con 3 dormitorios amplios y luminosos, 2 baños completos de diseño, parking privado y trastero incluidos. Piscina comunitaria para disfrutar del sol. En una ubicación privilegiada, cerca de la estación del tren de cercanias. Ha 20 minutos del aeropuesrto de Málaga. Con todos los servicios cerca de este inmueble.Información legal\n\nEn cumplimiento del *Decreto 218/2005, de 11 de octubre, de la Junta de Andalucía, se informa al cliente de que los **gastos notariales, registrales, impuestos (ITP) y demás gastos inherentes a la compraventa no están incluidos en el precio*.\n\nLos *honorarios de intermediación inmobiliaria están incluidos en el precio*",
+      "municipio": "benalmadena",
+      "categoria": "piso",
+      "banos": 2,
+      "imagen": "img/id20_Karina_Torrequebrada/IMG-20260619-WA0001.jpg",
+      "coordenadas": {
+        "latitud": 36.5834,
+        "longitud": -4.5569
+      },
+      "tipo": "venta",
+      "galeria": [
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0002.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0003.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0004.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0005.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0006.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0007.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0008.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0009.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0010.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0011.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0012.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0013.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0014.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0015.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0016.jpg",
+        "img/id20_Karina_Torrequebrada/IMG-20260619-WA0017.jpg"
+
+      ],
+      "titulo": "Piso en Torrequebrada.",
+      "id": 20,
+      "trastero": "true",
+      "ubicacion": "Torrequebrada, Benalmádena",
+      "metros_cuadrados": 200
+    },
+    {
+      "habitaciones": 3,
+      "garaje": "true",
+      "precio": 445000,
+      "descripcion": "Piso en primera planta,con 152 metros cuadrados de de espacio, ideal para disfrutar del estilo de vida de la Costa del Sol.  Tendrás todo lo que necesitas alrededor, a tan sólo 250 metros de la playa, algunas tan famosas comom la de la Viborilla o el Trocadero. Con 3 dormitorios amplios, 2 baños completos, gran terraza y patio privado, perfectos para relajarte. Con plaza de parking y acceso a una fantastica piscina comunitaria para disfrutar del sol. En una ubicación privilegiada, cerca de la estación del tren de cercanias. A tan sólo 20 minutos del aeropuesrto de Málaga. Con todos los servicios cerca de este inmueble. Información legal\n\nEn cumplimiento del *Decreto 218/2005, de 11 de octubre, de la Junta de Andalucía, se informa al cliente de que los *gastos notariales, registrales, impuestos (ITP) y demás gastos inherentes a la compraventa no están incluidos en el precio*.\n\nLos *honorarios de intermediación inmobiliaria están incluidos en el precio*",
+      "municipio": "benalmadena",
+      "categoria": "piso",
+      "banos": 2,
+      "imagen": "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0005.jpg",
+      "coordenadas": {
+        "latitud": 36.5834,
+        "longitud": -4.5569
+      },
+      "tipo": "venta",
+      "galeria": [
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0003.jpg",
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0004.jpg",
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0005.jpg",
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0006.jpg",
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0007.jpg",
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0008.jpg",
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0009.jpg",
+        "img/id21_Nueva_Torrequebrada_viborilla/IMG-20260924-WA0010.jpg"
+      ],
+      "titulo": "Piso en Torrequebrada.",
+      "id": 21,
+      "trastero": "false",
+      "ubicacion": "Torrequebrada, Benalmádena",
+      "metros_cuadrados": 152
     }
+
   ]
 }
 

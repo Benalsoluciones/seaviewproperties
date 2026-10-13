@@ -315,6 +315,11 @@ header {
     color: #0369a1;
 }
 
+.etiqueta.reservado {
+    background-color: #e0f2fe;
+    color: #f30606;
+}
+
 .tarjeta-propiedad h3 {
     font-size: 18px;
     color: #0d2c54;
