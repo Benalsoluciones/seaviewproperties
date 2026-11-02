@@ -1413,20 +1413,23 @@ header {
 }
 
 /* ==========================================
-   BOTÓN COMPARTIR POR WHATSAPP
+   BOTONES DE COMPARTIR (WHATSAPP Y EMAIL)
    ========================================== */
 .modal-acciones {
     margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     justify-content: flex-start;
 }
 
-.btn-compartir-whatsapp {
+/* Estilos base compartidos */
+.btn-compartir-whatsapp,
+.btn-compartir-email {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #25d366;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -1435,11 +1438,16 @@ header {
     padding: 12px 24px;
     border-radius: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
-    min-height: 44px; /* Altura mínima recomendada para área táctil móvil */
+    min-height: 44px; /* Altura recomendada para área táctil en móvil */
     cursor: pointer;
     border: none;
     width: auto;
+}
+
+/* WhatsApp */
+.btn-compartir-whatsapp {
+    background-color: #25d366;
+    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
 }
 
 .btn-compartir-whatsapp:hover {
@@ -1448,11 +1456,26 @@ header {
     box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3);
 }
 
-.btn-compartir-whatsapp:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(37, 211, 102, 0.2);
+/* Email (Usando azul corporativo mar para guardar la línea estética) */
+.btn-compartir-email {
+    background-color: #1a5b8e;
+    box-shadow: 0 4px 6px rgba(26, 91, 142, 0.2);
 }
 
+.btn-compartir-email:hover {
+    background-color: #14466f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(26, 91, 142, 0.3);
+}
+
+/* Estado activo para ambos */
+.btn-compartir-whatsapp:active,
+.btn-compartir-email:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Iconos */
 .icono-whatsapp-svg {
     width: 20px;
     height: 20px;
@@ -1461,14 +1484,21 @@ header {
     vertical-align: middle;
 }
 
-/* Ajustes Responsive */
+.btn-compartir-email i {
+    font-size: 18px;
+}
+
+/* Ajustes Responsive para Móviles */
 @media (max-width: 480px) {
     .modal-acciones {
+        flex-direction: column;
         justify-content: center;
+        gap: 10px;
     }
-    .btn-compartir-whatsapp {
-        width: 100%; /* Ancho completo en pantallas pequeñas */
+    .btn-compartir-whatsapp,
+    .btn-compartir-email {
+        width: 100%; /* Ocupan todo el ancho de la pantalla en móvil */
         font-size: 15px;
-        padding: 14px 20px; /* Incrementamos la comodidad táctil en móviles */
+        padding: 14px 20px;
     }
 }

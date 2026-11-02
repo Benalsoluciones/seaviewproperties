@@ -169,11 +169,18 @@ function abrirModalInmueble(id, modal, contenidoModal, visorImagen, imagenAmplia
     const lat = propiedad.coordenadas?.latitud || propiedad.coordenadas?.lat || 36.5962;
     const lng = propiedad.coordenadas?.longitud || propiedad.coordenadas?.lng || -4.5273;
 
-    // Generar enlace dinámico de WhatsApp para compartir el inmueble
+   // Generar enlace dinámico de WhatsApp y Correo para compartir el inmueble
     const baseUri = window.location.origin + window.location.pathname;
     const shareUrl = `${baseUri}?id=${propiedad.id}`;
+    
+    // Configuración para WhatsApp
     const textoCompartir = `¡Mira este increíble inmueble de SeaView Properties! 🌟🏡\n\n*${propiedad.titulo}*\n💰 Precio: *${precioFormateado} €*\n📍 Ubicación: ${propiedad.ubicacion}\n\nVer todos los detalles, fotos y ubicación aquí:\n👉 ${shareUrl}`;
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(textoCompartir)}`;
+
+    // Configuración para Correo Electrónico
+    const asuntoEmail = `Inmueble de interés: ${propiedad.titulo} - SeaView Properties`;
+    const cuerpoEmail = `Hola,\n\nTe comparto este inmueble de SeaView Properties que te puede interesar:\n\n* ${propiedad.titulo}\n* Precio: ${precioFormateado} €\n* Ubicación: ${propiedad.ubicacion}\n\nPuedes ver la galería completa de fotos y la ubicación aquí:\n${shareUrl}\n\n¡Un saludo!`;
+    const emailUrl = `mailto:?subject=${encodeURIComponent(asuntoEmail)}&body=${encodeURIComponent(cuerpoEmail)}`;
 
     contenidoModal.innerHTML = `
         <button class="btn-cerrar-modal" id="btn-cerrar-modal" title="Cerrar">&times;</button>
@@ -194,6 +201,11 @@ function abrirModalInmueble(id, modal, contenidoModal, visorImagen, imagenAmplia
                 </svg>
                 <span>Compartir por WhatsApp</span>
             </a>
+
+            <a href="${emailUrl}" class="btn-compartir-email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Compartir por Email</span>
+            </a>
         </div>
         <h3>Galería de fotos <small class="galeria-ayuda">(haz clic en cualquier foto para ampliarla)</small></h3>
         <div class="modal-galeria">${fotosHTML}</div>
@@ -203,7 +215,7 @@ function abrirModalInmueble(id, modal, contenidoModal, visorImagen, imagenAmplia
             <h3>Ubicación en el mapa</h3>
             <div id="mapa-inmueble"></div>
         </div>
-    `;
+    `; 
 
     modal.classList.add('activo');
 
