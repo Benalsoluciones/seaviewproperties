@@ -169,47 +169,6 @@
       "metros_cuadrados": 120
     },
     {
-      "habitaciones": 2,
-      "garaje": "false",
-      "precio": 269000,
-      "descripcion": "Acogedora vivienda completamente reformada situada en la zona de San Juan Bosco, en Málaga, ideal para quienes buscan una propiedad con personalidad, lista para entrar a vivir y ubicada en un entorno tranquilo, bien comunicado y con todos los servicios a su alcance. Una excelente oportunidad tanto como residencia habitual como para inversión.\n\nLa vivienda cuenta con 70 m² construidos distribuidos en una sola planta, ofreciendo comodidad y accesibilidad para todo tipo de familias. Originalmente disponía de tres dormitorios, aunque actualmente se ha redistribuido en dos para dar lugar a un espectacular dormitorio principal de grandes dimensiones, una característica poco habitual en la zona. Además, dispone de un amplio y luminoso salón con ventana al exterior y una cocina totalmente equipada con electrodomésticos, lista para su uso desde el primer día.\n\nUno de los grandes atractivos de esta propiedad es su amplio patio privado, que incorpora una práctica zona de lavadero y ofrece un espacio perfecto para disfrutar del excelente clima de Málaga durante todo el año. Se trata de un rincón muy luminoso, con gran privacidad y donde apenas se percibe el ruido exterior, creando un ambiente tranquilo y acogedor.\n\nLa reforma se ha realizado con mucho gusto, combinando materiales y acabados modernos con el encanto de la arquitectura tradicional. Destacan la iluminación LED integrada en los techos, los elegantes arcos, los techos altos y los detalles originales que aportan personalidad a la vivienda. Dispone de suelos de gres, aire acondicionado con bomba de frío y calor en el salón y en el dormitorio principal, y todas las estancias, incluido el baño, cuentan con ventanas al exterior equipadas con mosquiteras, proporcionando abundante luz natural y una excelente ventilación.\n\nLa vivienda se vende completamente amueblada y lista para entrar a vivir, permitiendo disfrutar de ella desde el primer momento sin necesidad de realizar ninguna reforma o inversión adicional. Además, prácticamente solo tiene un vecino en uno de sus laterales, lo que aporta una agradable sensación de independencia y mayor privacidad.\n\nSu ubicación es otro de sus grandes puntos fuertes. Se encuentra en el barrio de San Juan Bosco, una zona tranquila y perfectamente comunicada, a pocos minutos del Colegio Salesianos, de la Universidad de El Ejido y a tan solo diez minutos caminando del Centro Histórico de Málaga. En los alrededores encontrará supermercados, comercios, transporte público, centros educativos y todos los servicios necesarios para el día a día.\n\nGracias a su excelente estado de conservación, su ubicación estratégica y la elevada demanda de alquiler en la zona, esta propiedad representa una magnífica oportunidad tanto para quienes buscan una vivienda habitual como para inversores interesados en obtener una alta rentabilidad.\n\nEn definitiva, se trata de una vivienda que combina el encanto de la arquitectura tradicional con las comodidades de una reforma moderna, ofreciendo confort, luminosidad, privacidad y una ubicación privilegiada en una de las zonas con mayor proyección de Málaga.\n\nLe informamos que nuestros honorarios de agencia ya están incluidos en el precio de venta, por lo que no tendrá que pagar gastos de gestión ni de asesoramiento inmobiliario.\n\nEn cumplimiento del Decreto 218/2005 de la Junta de Andalucía, de 11 de octubre, los gastos notariales y registrales, así como los impuestos que graven la transmisión de la propiedad, no están incluidos en el precio.\n\nLa información proporcionada es únicamente orientativa, no vinculante y carece de valor contractual. Esta información puede haber sido modificada, aunque todavía no se haya incorporado.\n\nPara más información o para concertar una visita, no dude en ponerse en contacto con nosotros. Estaremos encantados de atenderle y ayudarle a descubrir esta magnífica vivienda.",
-      "municipio": "malaga",
-      "categoria": "chalet",
-      "banos": 1,
-      "imagen": "/img/olletas/IMG-20260725-WA0017.jpg",
-      "coordenadas": {
-        "latitud": 36.7352,
-        "longitud": -4.4147
-      },
-      "tipo": "venta",
-      "etiqueta": "Exclusiva",
-      "galeria": [
-        "/img/olletas/IMG-20260725-WA0015.jpg",
-        "/img/olletas/IMG-20260725-WA0016.jpg",
-        "/img/olletas/IMG-20260725-WA0017.jpg",
-        "/img/olletas/IMG-20260725-WA0018.jpg",
-        "/img/olletas/IMG-20260725-WA0019.jpg",
-        "/img/olletas/IMG-20260725-WA0020.jpg",
-        "/img/olletas/IMG-20260725-WA0021.jpg",
-        "/img/olletas/IMG-20260725-WA0022.jpg",
-        "/img/olletas/IMG-20260725-WA0023.jpg",
-        "/img/olletas/IMG-20260725-WA0024.jpg",
-        "/img/olletas/IMG-20260725-WA0025.jpg",
-        "/img/olletas/IMG-20260725-WA0026.jpg",
-        "/img/olletas/IMG-20260725-WA0027.jpg",
-        "/img/olletas/IMG-20260725-WA0028.jpg",
-        "/img/olletas/IMG-20260725-WA0029.jpg",
-        "/img/olletas/IMG-20260725-WA0030.jpg",
-        "/img/olletas/IMG-20260725-WA0031.jpg",
-        "/img/olletas/IMG-20260725-WA0032.jpg"
-      ],
-      "titulo": "Chalet adosado en venta en Calle Doña.",
-      "id": 4,
-      "trastero": "true",
-      "ubicacion": "Calle Doña, Olletas, Málaga",
-      "metros_cuadrados": 70
-    },
-    {
       "habitaciones": 1,
       "garaje": "true",
       "precio": 239000,
@@ -512,7 +471,7 @@
       "titulo": "Piso en venta en Torremolinos.",
       "id": 11,
       "trastero": "false",
-      "ubicacion": "Ad. Carlota Alessandri",
+      "ubicacion": "Ad. Carlota Alessandri, Torremolinos,Málaga",
       "metros_cuadrados": 68
     },
     {
@@ -597,7 +556,7 @@
       "titulo": "Ático en venta en Retamar",
       "id": 15,
       "trastero": "true",
-      "ubicacion": "Altos del Higueron, Benalmádena",
+      "ubicacion": "Altos del Higueron, Benalmádena, Málaga",
       "metros_cuadrados": 171
     },
     {
@@ -634,7 +593,7 @@
       "titulo": "Apartamento en Riviera del sol",
       "id": 14,
       "trastero": "true",
-      "ubicacion": "mijas costa",
+      "ubicacion": "mijas costa, Málaga",
       "metros_cuadrados": 95
     },
     {
@@ -710,7 +669,7 @@
       "garaje": "true",
       "precio": 499950,
       "descripcion": "Proyecto residencial compuesto por 116 viviendas distribuidas en tres fases, diseñado para quienes valoran el bienestar, la calidad y el estilo de vida mediterráneo.",
-      "municipio": "Fuengirola",
+      "municipio": "fuengirola",
       "categoria": "atico",
       "banos": 2,
       "imagen": "img/id18Rosso/Captura de pantalla (56).png",
@@ -739,7 +698,7 @@
       "titulo": "Ático de obra nueva en Fuengirola",
       "id": 18,
       "trastero": "true",
-      "ubicacion": "Calle. Reina Doña Juana",
+      "ubicacion": "Calle. Reina Doña Juana, Fuengirola, Málaga",
       "metros_cuadrados": 202
     },
     {
@@ -777,7 +736,7 @@
       "titulo": "Piso en Torrequebrada.",
       "id": 20,
       "trastero": "true",
-      "ubicacion": "Torrequebrada, Benalmádena",
+      "ubicacion": "Torrequebrada, Benalmádena, Málaga",
       "metros_cuadrados": 200
     },
     {
@@ -807,7 +766,7 @@
       "titulo": "Piso en Torrequebrada.",
       "id": 21,
       "trastero": "false",
-      "ubicacion": "Torrequebrada, Benalmádena",
+      "ubicacion": "Torrequebrada, Benalmádena, Málaga",
       "metros_cuadrados": 152
     },
     {
@@ -821,7 +780,7 @@
       "imagen": "/img/balcón-mediterráneo-con-vistas-al-mar.png",
       "coordenadas": {
         "latitud": 36.598751,
-        "longitud": 4.57223
+        "longitud": -4.57223
       },
       "tipo": "venta",
       "galeria": [
@@ -839,7 +798,7 @@
       "titulo": "Piso en venta en Benalmádena pueblo",
       "id": 22,
       "trastero": "false",
-      "ubicacion": "Benalmadena Pueblo  benalmadena",
+      "ubicacion": "Benalmadena Pueblo Málaga",
       "metros_cuadrados": 100
     },
     {
@@ -873,13 +832,13 @@
       "garaje": "true",
       "precio": 480000,
       "descripcion": "Apartamento de obra nueva con amplia terraza en Torremolinos\n\nDescubre este elegante apartamento de obra nueva una exclusiva promoción residencial situada  Torremolinos, a pocos pasos de La Carihuela y muy cerca de Puerto Marina.\n\nUbicada en primera planta, esta vivienda ofrece una distribución funcional y luminosa, con 75,97 m² interiores, 2 dormitorios, 1 baño y una espectacular terraza de 47,68 m², ideal para disfrutar del clima mediterráneo durante todo el año.\n\nLa vivienda cuenta con cocina completamente amueblada y equipada con electrodomésticos, baño con mampara y mueble de lavabo, climatización frío/calor por conductos y ventanas con rotura de puente térmico y doble acristalamiento.\n\nAdemás, el precio incluye 2 plazas de garaje, aportando comodidad y valor añadido.\n\nLa urbanización dispone de piscina desbordante comunitaria, jardines mediterráneos y una zona wellness diseñada para practicar ejercicio, yoga y entrenamiento funcional.\n\nUna excelente oportunidad para quienes buscan una vivienda moderna junto al mar, tanto como residencia habitual, segunda vivienda o inversión en la Costa del Sol.\n\nCaracterísticas principales:\n\n- 2 dormitorios y 1 baño\n- 75,97 m² interiores\n- 47,68 m² de terraza\n- 123,65 m² construidos totales\n- 2 plazas de garaje incluidas\n- Piscina comunitaria y jardines\n- Zona wellness\n- Ubicación privilegiada cerca de la playa y Puerto Marina\n\nContacta con SeaView Properties para recibir más información sobre disponibilidad, planos y opciones de compra.\n\n📞 654 83 03 33\n✉️ seaviewproperties@hotmail.com\n🌐 www.seaviewproperties-spain.es",
-      "municipio": "Torremolinos",
+      "municipio": "torremolinos",
       "categoria": "apartamento",
       "banos": 1,
       "imagen": "/img/img-20261015-wa0037.jpg",
       "coordenadas": {
         "latitud": 36.602412,
-        "longitud": 4.516541
+        "longitud": -4.516541
       },
       "tipo": "venta",
       "galeria": [
@@ -897,6 +856,118 @@
       "trastero": "false",
       "ubicacion": "Torremolinos Málaga",
       "metros_cuadrados": 124
+    },
+    {
+      "habitaciones": 3,
+      "garaje": "true",
+      "precio": 430000,
+      "descripcion": "Vivienda luminosa de 3 dormitorios  y amplia terraza\n\nTe presentamos esta fantástica vivienda, cuidada al detalle, luminosa y con una distribución pensada para disfrutar del confort y la calidad de vida. Una propiedad que combina espacios interiores acogedores con agradables zonas exteriores, ideal para quienes buscan amplitud y comodidad.\n\nLa vivienda dispone de 3 dormitorios y 2 baños. El dormitorio principal ofrece un espacio confortable, mientras que las otras dos habitaciones permiten múltiples posibilidades, ya sea como dormitorios adicionales, despacho o zona de invitados.\n\nEl salón-comedor destaca por su amplitud y excelente entrada de luz natural, creando un ambiente cálido y agradable. Desde esta estancia se accede al exterior.\n\nUno de sus grandes atractivos es su fantástica terraza, amplia y funcional, con espacio suficiente para crear una zona de comedor exterior y un rincón de relax donde disfrutar del aire libre durante todo el año.\n\nLa cocina se entrega equipada, con muebles de madera, buena capacidad de almacenamiento y un diseño práctico para el día a día.\n\nLa propiedad cuenta además con suelos de madera, paredes en tonos neutros, climatización y una estética actual y cuidada. Una vivienda lista para entrar a vivir, sin necesidad de reformas.\n\nCaracterísticas principales:\n\n- 3 dormitorios.\n- 2 baños.\n- Amplio salón-comedor.\n- Cocina equipada.\n- Zonas ajardinadas.\n- Gran terraza exterior.\n- Suelos de madera.\n- Climatización.\n- Vivienda luminosa y bien distribuida.\n- Lista para entrar a vivir.\n\nUna excelente oportunidad para familias, parejas o para quienes necesitan espacio adicional y valoran especialmente disfrutar de los espacios exteriores.\n\nEn SeaView Properties te acompañamos durante todo el proceso de compra, ofreciéndote un servicio cercano y profesional para encontrar la vivienda que mejor se adapte a tus necesidades.",
+      "municipio": "benalmadena",
+      "categoria": "piso",
+      "banos": -1,
+      "imagen": "/img/whatsapp-image-2026-11-09-at-18.37.30.jpeg",
+      "coordenadas": {
+        "latitud": 36.596151,
+        "longitud": -4.541173
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/whatsapp-image-2026-11-09-at-18.38.01.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.38.01-1-.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.15.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.13.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.13-1-.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.14-1-.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.46.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.46-1-.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.13-2-.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.38.27.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.38.34.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.15-1-.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.37.16.jpeg",
+        "/img/whatsapp-image-2026-11-09-at-18.41.48.jpeg"
+      ],
+      "titulo": "Piso en venta Benalmádena",
+      "id": 25,
+      "trastero": "true",
+      "ubicacion": "Calle Bahía 1,Benalmádena, Málaga",
+      "metros_cuadrados": 119
+    },
+    {
+      "habitaciones": 1,
+      "garaje": "true",
+      "precio": 345000,
+      "descripcion": "Apartamento de 2 dormitorios con terraza, garaje y piscinas en Benalmádena Costa\n\nSeaView Properties presenta esta magnífica vivienda situada en Avenida Gandhi, en una de las zonas residenciales más tranquilas y consolidadas de Benalmádena Costa.\n\nUna ubicación privilegiada para disfrutar del auténtico estilo de vida mediterráneo, combinando tranquilidad, cercanía al mar y todos los servicios necesarios para el día a día.\n\nLa propiedad cuenta con 64,70 m² útiles y una agradable terraza cubierta de 10,50 m², un espacio ideal para desayunar al aire libre, disfrutar de una comida o relajarse después de un día de playa.\n\nDesde la terraza se disfrutan agradables vistas al jardín privado situado en la planta inferior, así como vistas hacia Selwo Marina, aportando luminosidad y una agradable sensación de amplitud.\n\nSu distribución interior es funcional y aprovecha muy bien cada espacio. Dispone de hall de entrada, luminoso salón-comedor, cocina independiente, dos amplios dormitorios con armarios y dos baños completos.\n\nLa orientación y disposición de la vivienda favorecen la ventilación cruzada, proporcionando un ambiente confortable durante todo el año, especialmente en los meses de verano.\n\nComo valor añadido, la propiedad incluye una plaza de aparcamiento privada en planta sótano, con una superficie construida de 15,77 m², una comodidad especialmente valorada en esta zona de la Costa del Sol.\n\nLa urbanización dispone de dos piscinas comunitarias, perfectas para disfrutar del excelente clima de Benalmádena y relajarse sin necesidad de desplazarse.\n\nUbicación y alrededores\n\nSu excelente localización permite disfrutar de algunos de los lugares más atractivos de Benalmádena:\n\n- Playa: a tan solo 6-7 minutos caminando.\n- Parque de la Paloma: aproximadamente 3 minutos a pie, un magnífico espacio verde con jardines, senderos y zonas de recreo.\n- Castillo de Bil-Bil: próximo al paseo marítimo y a sus agradables terrazas frente al mar.\n- Puerto Marina: aproximadamente 5 minutos en coche, con restaurantes, comercios y una amplia oferta de ocio.\n- Servicios: supermercados, farmacias, centros de salud, colegios y restaurantes en las inmediaciones.\n- Comunicaciones: excelente acceso a la autovía A-7 y conexiones con Fuengirola, Torremolinos y Málaga.\n- Aeropuerto de Málaga-Costa del Sol: aproximadamente 15 minutos en \n\nPor sus características, ubicación y zonas comunes, esta propiedad representa una excelente oportunidad tanto como residencia habitual, segunda vivienda para disfrutar de las vacaciones o inversión inmobiliaria.\n\nSeaView Properties te acompaña durante todo el proceso de compra, ofreciéndote un asesoramiento personalizado y profesional para encontrar tu hogar ideal en la Costa del Sol.",
+      "municipio": "benalmadena",
+      "categoria": "piso",
+      "banos": 1,
+      "imagen": "/img/img-20261103-wa0018.jpg",
+      "coordenadas": {
+        "latitud": 36.5917671,
+        "longitud": -45327515
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/img-20261103-wa0016.jpg",
+        "/img/img-20261103-wa0035.jpg",
+        "/img/img-20261103-wa0020.jpg",
+        "/img/img-20261103-wa0017.jpg",
+        "/img/img-20261103-wa0026.jpg",
+        "/img/img-20261103-wa0019.jpg",
+        "/img/img-20261103-wa0021.jpg",
+        "/img/img-20261103-wa0024.jpg",
+        "/img/img-20261103-wa0030.jpg",
+        "/img/img-20261103-wa0023.jpg",
+        "/img/img-20261103-wa0029.jpg"
+      ],
+      "titulo": "Piso en venta en Benalmádena",
+      "id": 26,
+      "trastero": "false",
+      "ubicacion": "Avenida Gandi, 3 Benalmádena, Málaga",
+      "metros_cuadrados": 74
+    },
+    {
+      "habitaciones": 4,
+      "garaje": "true",
+      "precio": 595000,
+      "descripcion": "ESPECTACULAR ÁTICO DÚPLEX CON SOLÁRIUM Y VISTAS PANORÁMICAS AL MAR – EL PINILLO, TORREMOLINOS\n\nSeaView Properties presenta esta magnífica propiedad situada en la prestigiosa urbanización Las Colinas de Parque Olivar, en El Pinillo (Torremolinos). Un extraordinario ático dúplex que destaca por su amplitud, luminosidad, excelentes espacios exteriores y espectaculares vistas panorámicas de 360° al mar y a la montaña.\n\nCon una superficie total anunciada de 379 m², esta vivienda ofrece una combinación perfecta de comodidad, privacidad y estilo de vida mediterráneo.\n\nDISTRIBUCIÓN Y CARACTERÍSTICAS\n\nLa propiedad dispone de una magnífica terraza de 121 m², con una agradable distribución en forma de L que bordea la vivienda, y un espectacular solárium privado de 103 m², ambos con impresionantes vistas despejadas al mar y a la montaña.\n\nSu interior cuenta con un amplio y acogedor salón-comedor, con grandes ventanales que proporcionan abundante luz natural y acceso directo a la terraza.\n\nLa cocina es independiente, está totalmente equipada con materiales de primeras calidades y dispone de zona de lavadero.\n\nLa zona de descanso se distribuye en:\n\n- 4 amplios dormitorios con armarios empotrados.\n- Dormitorio principal con baño en suite, vestidor y acceso directo a la terraza.\n- 2 baños completos, uno de ellos integrado en el dormitorio principal.\n- Excelente distribución y espacios pensados para el confort familiar.\n\nLa vivienda cuenta además con plaza de garaje privada y trastero.\n\nURBANIZACIÓN Y ZONAS COMUNES\n\nUbicada en una urbanización tranquila, familiar y muy bien cuidada, ofrece excelentes instalaciones comunitarias:\n\n- Piscinas comunitarias.\n- Pista de pádel.\n- Zonas ajardinadas.\n- Área infantil.\n\nUBICACIÓN Y ENTORNO\n\nSu localización en El Pinillo es uno de sus grandes atractivos. Se encuentra próxima a supermercados, centros educativos, transporte público, zonas deportivas y espacios naturales.\n\nDistancias aproximadas:\n\n- 16 km del centro de Málaga.\n- 8,5 km del aeropuerto de Málaga.\n- 1,5 km de la estación de tren.\n- 2 km del centro de Torremolinos.\n- 1,7 km de la playa de La Carihuela.\n- 3,5 km de Puerto Marina, Benalmádena.\n\nGASTOS DE LA PROPIEDAD\n\n- Comunidad: 87 €/mes.\n- IBI: 680 €/año.\n- Tasa de basura: 240 €/año.\n\nUna propiedad excepcional para quienes buscan amplitud, privacidad, grandes espacios exteriores y unas vistas privilegiadas, tanto como residencia habitual como para disfrutar de una segunda vivienda en la Costa del Sol.\n\nSeaView Properties\nTu hogar en la Costa del Sol.",
+      "municipio": "torremolinos",
+      "categoria": "atico",
+      "banos": 2,
+      "imagen": "/img/img-20261111-wa0005.jpg",
+      "coordenadas": {
+        "latitud": 36.608427,
+        "longitud": -4.525745
+      },
+      "tipo": "venta",
+      "galeria": [
+        "/img/img-20261111-wa0006.jpg",
+        "/img/img-20261111-wa0004.jpg",
+        "/img/img-20261111-wa0007.jpg",
+        "/img/img-20261111-wa0003.jpg",
+        "/img/img-20261111-wa0017.jpg",
+        "/img/img-20261111-wa0026.jpg",
+        "/img/img-20261111-wa0015.jpg",
+        "/img/img-20261111-wa0021.jpg",
+        "/img/img-20261111-wa0014.jpg",
+        "/img/img-20261111-wa0020.jpg",
+        "/img/img-20261111-wa0031.jpg",
+        "/img/img-20261111-wa0032.jpg",
+        "/img/img-20261111-wa0019.jpg",
+        "/img/img-20261111-wa0028.jpg",
+        "/img/img-20261111-wa0027.jpg",
+        "/img/img-20261111-wa0011.jpg",
+        "/img/img-20261111-wa0008.jpg",
+        "/img/img-20261111-wa0023.jpg",
+        "/img/img-20261111-wa0034.jpg",
+        "/img/img-20261111-wa0038.jpg",
+        "/img/img-20261111-wa0025.jpg"
+      ],
+      "titulo": "Ático en venta en el Pinillo,Torremolinos",
+      "id": 27,
+      "trastero": "false",
+      "ubicacion": "Pasaje Mendelssohn, El pinillo, Torremolinos, Málaga",
+      "metros_cuadrados": 379
     }
   ]
 }
